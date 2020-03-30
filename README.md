@@ -14,7 +14,7 @@ Lecturer: Dr. Ian McLoughlin
 The Project instructions can be found at: https://github.com/JPLee01/pandas-project/blob/master/Project%20Instructions.pdf
 
 Table of Contents
-=================
+------------------------------------------------------------------------------------------------
 
 [Fisher\'s Iris Data Set](#fishers-iris-data-set)
 
@@ -27,7 +27,7 @@ Table of Contents
 [3.1 Background](#3.1-Background)
 
 ## 1 Introduction
-============
+------------------------------------------------------------------------------------------------
 
 This analysis of Fisher\'s Iris Flower Data Set has been carried out as
 an assignment of the Programming & Scripting Module. The aim of this
@@ -36,7 +36,7 @@ handling within Python, including data types and structures handling,
 data splicing, plots generation and interpretation.
 
 ## 2 Project Repository
-==================
+------------------------------------------------------------------------------------------------
 
 The Project Repository is the source where all the work associated with
 the project will be stored. It contains the following files and can be
@@ -50,7 +50,7 @@ located [here](https://github.com/JPLee01/pandas-project):
                                   
 
 ## 3 Fishers Iris Data Set
-============
+------------------------------------------------------------------------------------------------
 ### 3.1 Background
 
 The data analysed in this project is the \"Iris Flower Data
@@ -61,7 +61,7 @@ use of linear combinations of multiple characterising features of a
 species to discriminate it from related species. Within the paper Fisher
 studied the following three related species of Iris flowers:
 
-![Iris Species](https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2F%40jebaseelanravi96%2Fmachine-learning-iris-classification-33aa18a4a983&psig=AOvVaw30aRkryq3n3MqPc5nmBuK7&ust=1585675501146000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJj6htvbwugCFQAAAAAdAAAAABAD)
+![Iris Species](https://miro.medium.com/max/1400/0*Uw37vrrKzeEWahdB)
 
 Fifty samples of each species were collected and analysed. (It should be
 noted that the data for the Setosa and Iris Versicolor were already
@@ -79,10 +79,10 @@ characteristics:
 
 These characteristics can be seen below:
 
-![Iris Characteristics](https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.goodaudience.com%2Fclassifying-flowers-using-logistic-regression-in-sci-kit-learn-38262416e4c6&psig=AOvVaw3xmsbPQGze8EhuqfXR4sy1&ust=1585675591435000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjKkYjcwugCFQAAAAAdAAAAABAD)
+![Iris Characteristics](https://miro.medium.com/max/800/1*1q79O5DCx_XNrAARXSFzpg.png)
 
 References
-==========
+------------------------------------------------------------------------------------------------
 
 1.  UCI Machine Learning Repository -- Iris Data Set, [[http://archive.ics.uci.edu/ml/datasets/Iris]{.underline}](http://archive.ics.uci.edu/ml/datasets/Iris)
 
