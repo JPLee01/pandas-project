@@ -16,15 +16,15 @@ The Project instructions can be found at: https://github.com/JPLee01/pandas-proj
 Table of Contents
 =================
 
-[Fisher\'s Iris Data Set](#Fisher\'s-Iris-Data-Set)
+[Fisher\'s Iris Data Set](#fishers-iris-data-set)
 
-[1. Introduction](#introduction)
+[1. Introduction](#1-introduction)
 
-[2. Project Repository](#project-repository)
+[2. Project Repository](#2-project-repository)
 
-[3. Fisher\'s Iris Data Set](#fishers-iris-data-set)
+[3. Fisher\'s Iris Data Set](#3-Fishers-Iris-Data-Set)
 
-[3.1 Background](#background)
+[3.1 Background](#3.1-Background)
 
 ## 1 Introduction
 ============
@@ -61,9 +61,7 @@ use of linear combinations of multiple characterising features of a
 species to discriminate it from related species. Within the paper Fisher
 studied the following three related species of Iris flowers:
 
-![Machine learning-Iris classification - Jebaseelan Ravi -
-Medium](https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2F%40jebaseelanravi96%2Fmachine-learning-iris-classification-33aa18a4a983&psig=AOvVaw30aRkryq3n3MqPc5nmBuK7&ust=1585675501146000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJj6htvbwugCFQAAAAAdAAAAABAD){width="6.263888888888889in"
-height="1.8770833333333334in"}
+![Iris Species](https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2F%40jebaseelanravi96%2Fmachine-learning-iris-classification-33aa18a4a983&psig=AOvVaw30aRkryq3n3MqPc5nmBuK7&ust=1585675501146000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJj6htvbwugCFQAAAAAdAAAAABAD)
 
 Fifty samples of each species were collected and analysed. (It should be
 noted that the data for the Setosa and Iris Versicolor were already
@@ -81,8 +79,7 @@ characteristics:
 
 These characteristics can be seen below:
 
-![iris](https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.goodaudience.com%2Fclassifying-flowers-using-logistic-regression-in-sci-kit-learn-38262416e4c6&psig=AOvVaw3xmsbPQGze8EhuqfXR4sy1&ust=1585675591435000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjKkYjcwugCFQAAAAAdAAAAABAD){width="3.6474048556430447in"
-height="3.647743875765529in"}
+![Iris Characteristics](https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.goodaudience.com%2Fclassifying-flowers-using-logistic-regression-in-sci-kit-learn-38262416e4c6&psig=AOvVaw3xmsbPQGze8EhuqfXR4sy1&ust=1585675591435000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjKkYjcwugCFQAAAAAdAAAAABAD)
 
 References
 ==========
