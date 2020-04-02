@@ -41,9 +41,9 @@ print(df.sample(10), "\n")
 print("Sample of Rows 70-80 of Data:")
 print(df[70:80], "\n")
 
-#Using the pandas.describe Command to provide a Summary Statistics of the Data
-print("Summary Statistics of the Data:")
-print(df.describe(),'\n') 
+#Using the pandas.describe Command to provide a Summary Statistics of the Data (Rounded to 3 Decimal Places)
+print("Summary Statistics of the Data (Rounded to 3 Decimal Places):")
+print(round(df.describe(),3),'\n') 
 
 
 
@@ -53,3 +53,5 @@ print(df.describe(),'\n')
 #Lists: https://www.geeksforgeeks.org/print-lists-in-python-4-different-ways/
 #Pandas Head, Tail, Slice: https://note.nkmk.me/en/python-pandas-head-tail/
 #Pandas Cheat Sheet: https://www.dataquest.io/blog/pandas-cheat-sheet/
+#Pandas Rounding of Describe Result: https://stackoverflow.com/questions/25272024/round-each-number-in-a-python-pandas-data-frame-by-2-decimals
+

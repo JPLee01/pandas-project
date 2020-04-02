@@ -46,7 +46,7 @@ located [here](https://github.com/JPLee01/pandas-project):
   ---------   |   --------------------------------------------------------
   LICENSE     |    MIT License for the project
   README.md   |    This file; A Description of the Project and Instructions
-  Iris.Data.csv |  Iris Flower Data Set
+  IrisData.csv |  Iris Flower Data Set
                                   
 
 ## 3 Fishers Iris Data Set
