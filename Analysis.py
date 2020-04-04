@@ -5,8 +5,13 @@
 import pandas as pd
 
 #Import Numpty and Scipy.stats for analysis
-import numpy as np
-from scipy import stats
+#Import Sys to allow the "Print Results" to be written to a Txt File
+#import numpy as np
+#from scipy import stats
+import sys
+
+#Create a Txt File called Analysis and excute the Write Function (Allows the "Print Results" to be written onto the Analysis Txt File)
+sys.stdout = open("Analysis.txt", "w")
 
 #Import the data
 f = pd.read_csv("IrisData.csv")
@@ -18,8 +23,10 @@ df = pd.DataFrame(f)
 #List of the Species in the data (Removing unique Species)
 Specieslist = df["species"].unique()
 print ("The Species present in this dataset are:")
+
 for i in Specieslist:
     print('>', i)
+print() #Print a blank line for cleaner output on the text file 
 
 #Amount of samples of each Species in the Data
 print("Amount of samples of each Species:")
@@ -42,10 +49,14 @@ print("Sample of Rows 70-80 of Data:")
 print(df[70:80], "\n")
 
 #Using the pandas.describe Command to provide a Summary Statistics of the Data (Rounded to 3 Decimal Places)
+#Rounded to 3 Decimal Places using the Round command
 print("Summary Statistics of the Data (Rounded to 3 Decimal Places):")
 print(round(df.describe(),3),'\n') 
+    
 
 
+#Close and Save the Analyisi Text File
+sys.stdout.close()
 
 #References:
 #DataFrame: https://www.geeksforgeeks.org/python-pandas-dataframe/
@@ -54,4 +65,5 @@ print(round(df.describe(),3),'\n')
 #Pandas Head, Tail, Slice: https://note.nkmk.me/en/python-pandas-head-tail/
 #Pandas Cheat Sheet: https://www.dataquest.io/blog/pandas-cheat-sheet/
 #Pandas Rounding of Describe Result: https://stackoverflow.com/questions/25272024/round-each-number-in-a-python-pandas-data-frame-by-2-decimals
-
+#How to Save the  "Print Results" to a text file: https://kite.com/python/answers/how-to-redirect-print-output-to-a-text-file-in-python
+#How to import Stdout: https://kite.com/python/docs/sys.stdout
