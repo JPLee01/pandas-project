@@ -200,7 +200,29 @@ plt.title(title, fontsize=18)
 plt.show()
 
 
+#Create a KDE Plot of Setosa - Sepal Length Vs. Sepal Width
+sns.kdeplot(data=SetosaData[["sepal_length","sepal_width"]], cmap="Reds", shade=True, shade_lowest=False)
+title="KDE Plot of Setosa - Sepal Length Vs. Sepal Width"
+plt.xlabel("Sepal Length(Cm)")
+plt.ylabel("Sepal Width(Cm)")
+plt.title(title, fontsize=18)
+plt.show()
 
+#Create a KDE Plot of Versicolor - Sepal Length Vs. Sepal Width
+sns.kdeplot(data=VersicolorData[["sepal_length","sepal_width"]], cmap="Blues", shade=True, shade_lowest=False)
+title="KDE Plot of Versicolor - Sepal Length Vs. Sepal Width"
+plt.xlabel("Sepal Length(Cm)")
+plt.ylabel("Sepal Width(Cm)")
+plt.title(title, fontsize=18)
+plt.show()
+
+#Create a KDE Plot of Virginica - Sepal Length Vs. Sepal Width
+sns.kdeplot(data=VirginicaData[["sepal_length","sepal_width"]], cmap="Greens", shade=True, shade_lowest=False)
+title="KDE Plot of VVirginica - Sepal Length Vs. Sepal Width"
+plt.xlabel("Sepal Length(Cm)")
+plt.ylabel("Sepal Width(Cm)")
+plt.title(title, fontsize=18)
+plt.show()
 
 #References:
 #General Reference: https://www.youtube.com/watch?v=nKxLfUrkLE8
