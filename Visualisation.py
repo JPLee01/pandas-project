@@ -145,7 +145,6 @@ plt.title(title, fontsize=18)
 plt.show()
 
 
-
 #Create a Violin Plot of comparing the Petal Length of each of the Species
 sns.violinplot(x="species",y="petal_length",data=f)
 plt.xlabel("Species", fontsize=12)
@@ -181,22 +180,22 @@ plt.title(title, fontsize=18)
 plt.show()
 
 
-#Create a Scatter plot depicting the relationship between Sepal Length and Petal Length of the Species
-sns.scatterplot(x="sepal_length", y="petal_length", hue="species", data=f)
+#Create a Scatter plot depicting the relationship between Sepal Length and Sepal Width of the Species
+sns.scatterplot(x="sepal_length", y="sepal_width", hue="species", data=f)
 plt.xlabel("Sepal Length(Cm)", fontsize=12)
-plt.ylabel("Petal Length(Cm)", fontsize=12)
-plt.legend(loc='upper left', fontsize=10)
-title="Relationship Between Sepal Length and Petal Length"
+plt.ylabel("Sepal Width(Cm)", fontsize=12)
+plt.legend(loc='best', fontsize=10)
+title="Relationship Between Sepal Length and Sepal Width"
 plt.title(title, fontsize=18)
 plt.show()
 
 
-#Create a Scatter plot depicting the relationship between Sepal Width and Petal Width of the Species
-sns.scatterplot(x="sepal_width", y="petal_width", hue="species", data=f)
-plt.xlabel("Sepal width(Cm)", fontsize=12)
+#Create a Scatter plot depicting the relationship between Petal Length and Petal Width of the Species
+sns.scatterplot(x="petal_length", y="petal_width", hue="species", data=f)
+plt.xlabel("Petal Length(Cm)", fontsize=12)
 plt.ylabel("Petal Width(Cm)", fontsize=12)
-plt.legend(loc='upper left', fontsize=10)
-title="Relationship Between Sepal Width and Petal Width"
+plt.legend(loc='best', fontsize=10)
+title="Relationship Between Petal Length and Petal Width"
 plt.title(title, fontsize=18)
 plt.show()
 
@@ -212,3 +211,5 @@ plt.show()
 #Use of plotly.express for Scatter Plots: https://coderzcolumn.com/tutorials/data-science/build-dashboard-using-python-dash-plotly-and-deploy-online-pythonanywhere
 #Use of plotly.express  advanced/interactive Plots: https://plotly.com/python/plotly-express/
 #Box Plots: https://cmdlinetips.com/2018/03/how-to-make-boxplots-in-python-with-pandas-and-seaborn/
+#Box Plots: https://seaborn.pydata.org/generated/seaborn.boxplot.html
+#Scatterplots: https://seaborn.pydata.org/generated/seaborn.scatterplot.html
