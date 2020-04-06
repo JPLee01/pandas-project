@@ -11,15 +11,18 @@ import pandas as pd
 import numpy as np
 
 #Import Sys to allow the "Print Results" to be written to a Txt File
-import sys
+#import sys
 
 #Import matplotlib.pyplot, seaborn and polly.express for Visualisation of the data 
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-#Create a Txt File called Visualisation and excute the Write Function (Allows the "Print Results" to be written onto the Visualisation Txt File)
-#sys.stdout = open("Visualisation.txt", "w")
+#Create a Txt File called Visualisation and excute the Write Function (Allows the "Print Results" to be written onto the Visualisation Pdf File)
+#sys.stdout = open("Visualisation.pdf", "w")
 
+#Set a global style for all the Seaborn Plots in the program
+sns.set(style='darkgrid')
+sns.set_palette("colorblind",3)
 
 #Import the data
 f = pd.read_csv("IrisData.csv")
@@ -32,6 +35,7 @@ SetosaData = df[df.species == "setosa"]
 VersicolorData = df[df.species == "versicolor"]
 VirginicaData = df[df.species == "virginica"]
 
+
 #Create a Histrogram Comparing the Frequency of Sepal Width of Each of the Species
 bins = np.linspace(0, 5, 30)
 plt.hist(SetosaData.sepal_width, bins, alpha=0.5, label="Setosa")
@@ -43,6 +47,7 @@ plt.legend(loc='upper right')
 title="Species Sepal Width"
 plt.title(title, fontsize=18)
 plt.show()
+#pdf.savefig()
 ######plt.savefig("Frequency of Sepal Width of Each of the Species.png", dpi=72,)#########
 
 
@@ -57,6 +62,7 @@ plt.legend(loc='best')
 title="Species Sepal Length"
 plt.title(title, fontsize=18)
 plt.show()
+#pdf.savefig()
 ######plt.savefig("Frequency of Sepal Length of Each of the Species.png", dpi=72,)#########
 
 #Create a Histrogram Comparing the Frequency of Petal Width of Each of the Species
@@ -88,7 +94,7 @@ plt.show()
 
 
 #Create a Boxplot Displaying the Distribution of the Setosa Data
-sns.boxplot(data=SetosaData, orient="h", palette="Set1")
+sns.boxplot(data=SetosaData, orient="h")
 plt.xlabel("Size (Cm)", fontsize=12)
 plt.ylabel("Setosa Data", fontsize=12)
 title="Distribution of Setosa Data"
@@ -96,7 +102,7 @@ plt.title(title, fontsize=18)
 plt.show()
 
 #Create a Boxplot Displaying the Distribution of the Versicolor Data
-sns.boxplot(data=VersicolorData, orient="h", palette="Set2")
+sns.boxplot(data=VersicolorData, orient="h")
 plt.xlabel("Size (Cm)", fontsize=12)
 plt.ylabel("Versicolor Data", fontsize=12)
 title="Distribution of Versicolor Data"
@@ -104,7 +110,7 @@ plt.title(title, fontsize=18)
 plt.show()
 
 #Create a Boxplot Displaying the Distribution of the Virginica Data
-sns.boxplot(data=VirginicaData, orient="h", palette="Set3")
+sns.boxplot(data=VirginicaData, orient="h")
 plt.xlabel("Size (Cm)", fontsize=12)
 plt.ylabel("Virginica Data", fontsize=12)
 title="Distribution of Virginica Data"
@@ -201,7 +207,7 @@ plt.show()
 
 
 #Create a KDE Plot of Setosa - Sepal Length Vs. Sepal Width
-sns.kdeplot(data=SetosaData[["sepal_length","sepal_width"]], cmap="Reds", shade=True, shade_lowest=False)
+sns.kdeplot(data=SetosaData[["sepal_length","sepal_width"]], cmap="Purples_d", shade=True, shade_lowest=False)
 title="KDE Plot of Setosa - Sepal Length Vs. Sepal Width"
 plt.xlabel("Sepal Length(Cm)")
 plt.ylabel("Sepal Width(Cm)")
@@ -209,7 +215,7 @@ plt.title(title, fontsize=18)
 plt.show()
 
 #Create a KDE Plot of Versicolor - Sepal Length Vs. Sepal Width
-sns.kdeplot(data=VersicolorData[["sepal_length","sepal_width"]], cmap="Blues", shade=True, shade_lowest=False)
+sns.kdeplot(data=VersicolorData[["sepal_length","sepal_width"]], cmap="plasma", shade=True, shade_lowest=False)
 title="KDE Plot of Versicolor - Sepal Length Vs. Sepal Width"
 plt.xlabel("Sepal Length(Cm)")
 plt.ylabel("Sepal Width(Cm)")
@@ -218,11 +224,21 @@ plt.show()
 
 #Create a KDE Plot of Virginica - Sepal Length Vs. Sepal Width
 sns.kdeplot(data=VirginicaData[["sepal_length","sepal_width"]], cmap="Greens", shade=True, shade_lowest=False)
-title="KDE Plot of VVirginica - Sepal Length Vs. Sepal Width"
+title="KDE Plot of Virginica - Sepal Length Vs. Sepal Width"
 plt.xlabel("Sepal Length(Cm)")
 plt.ylabel("Sepal Width(Cm)")
 plt.title(title, fontsize=18)
 plt.show()
+
+
+
+#Create a Pairpot 
+sns.pairplot(data=f,hue="species")
+title="Pair Plot for Dataset"
+plt.suptitle(title, fontsize=18)
+plt.show()
+
+
 
 #References:
 #General Reference: https://www.youtube.com/watch?v=nKxLfUrkLE8
@@ -235,3 +251,4 @@ plt.show()
 #Box Plots: https://cmdlinetips.com/2018/03/how-to-make-boxplots-in-python-with-pandas-and-seaborn/
 #Box Plots: https://seaborn.pydata.org/generated/seaborn.boxplot.html
 #Scatterplots: https://seaborn.pydata.org/generated/seaborn.scatterplot.html
+#Seaborn.kdeplot: https://seaborn.pydata.org/generated/seaborn.kdeplot.html#seaborn-kdeplot
