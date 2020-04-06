@@ -274,7 +274,6 @@ plt.title(title, fontsize=18)
 plt.show()
 
 
-
 #Create a Pairpot 
 g = sns.pairplot(data=f,hue="species")
 #Changing of the Upper Plots to Scatterplots
@@ -313,4 +312,6 @@ plt.show()
 #Seaborn.kdeplot: https://seaborn.pydata.org/generated/seaborn.kdeplot.html#seaborn-kdeplot
 #Pairplots: https://seaborn.pydata.org/generated/seaborn.pairplot.html
 #Pairgrid (Change layout results within the Pairplot): https://seaborn.pydata.org/generated/seaborn.PairGrid.html
-#Histrogram and Adding 4 plots together: https://python-graph-gallery.com/25-histogram-with-several-variables-seaborn/
+#Pairgrid (Change layout results within the Pairplot): https://seaborn.pydata.org/tutorial/distributions.html
+#Histrogram: https://python-graph-gallery.com/25-histogram-with-several-variables-seaborn/
+#Histrogram: https://pythonbasics.org/seaborn-distplot/
