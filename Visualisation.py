@@ -205,6 +205,49 @@ title="Relationship Between Petal Length and Petal Width"
 plt.title(title, fontsize=18)
 plt.show()
 
+#Create a Histogram for Sepal Length of each of the Species
+sns.distplot(SetosaData.sepal_length, label="Setosa")
+sns.distplot(VersicolorData.sepal_length, label="Versicolor")
+sns.distplot(VirginicaData.sepal_length, label="Virginica")
+plt.xlabel("Species", fontsize=12)
+plt.ylabel("Sepal Length (Cm)", fontsize=12)
+plt.legend(loc='best')
+title="Histogram for Sepal Length of each of the Species"
+plt.title(title, fontsize=18)
+plt.show()
+
+#Create a Histogram for Sepal Width of each of the Species
+sns.distplot(SetosaData.sepal_width, label="Setosa")
+sns.distplot(VersicolorData.sepal_width, label="Versicolor")
+sns.distplot(VirginicaData.sepal_width, label="Virginica")
+plt.xlabel("Species", fontsize=12)
+plt.ylabel("Sepal Width (Cm)", fontsize=12)
+plt.legend(loc='best')
+title="Histogram for Sepal Width of each of the Species"
+plt.title(title, fontsize=18)
+plt.show()
+
+#Create a Histogram for Petal Length of each of the Species
+sns.distplot(SetosaData.petal_length, label="Setosa")
+sns.distplot(VersicolorData.petal_length, label="Versicolor")
+sns.distplot(VirginicaData.petal_length, label="Virginica")
+plt.xlabel("Species", fontsize=12)
+plt.ylabel("Petal Length (Cm)", fontsize=12)
+plt.legend(loc='upper right')
+title="Histogram for Petal Length of each of the Species"
+plt.title(title, fontsize=18)
+plt.show()
+
+#Create a Histogram for Petal Width of each of the Species
+sns.distplot(SetosaData.petal_width, label="Setosa")
+sns.distplot(VersicolorData.petal_width, label="Versicolor")
+sns.distplot(VirginicaData.petal_width, label="Virginica")
+plt.xlabel("Species", fontsize=12)
+plt.ylabel("Petal Length (Cm)", fontsize=12)
+plt.legend(loc='upper right')
+title="Histogram for Petal Width of each of the Species"
+plt.title(title, fontsize=18)
+plt.show()
 
 #Create a KDE Plot of Setosa - Sepal Length Vs. Sepal Width
 sns.kdeplot(data=SetosaData[["sepal_length","sepal_width"]], cmap="Purples_d", shade=True, shade_lowest=False)
@@ -233,7 +276,16 @@ plt.show()
 
 
 #Create a Pairpot 
-sns.pairplot(data=f,hue="species")
+g = sns.pairplot(data=f,hue="species")
+#Changing of the Upper Plots to Scatterplots
+g = g.map_upper(sns.scatterplot)
+#Changing of the Diagional Plots to a Stepped Histrogram
+g = g.map_diag(plt.hist, histtype="step", linewidth=3)
+#Changing of the Lower Plots to KDE Plots
+g = g.map_lower(sns.kdeplot)
+#Addition of a legend
+g = g.add_legend()
+#Addition of a title at the top of the Plot
 title="Pair Plot for Dataset"
 plt.suptitle(title, fontsize=18)
 plt.show()
@@ -243,6 +295,8 @@ plt.show()
 #References:
 #General Reference: https://www.youtube.com/watch?v=nKxLfUrkLE8
 #General Reference: https://www.youtube.com/watch?v=a9UrKTVEeZA&t=747s
+#General Reference: https://www.kaggle.com/biphili/seaborn-matplotlib-plot-to-visualize-iris-data
+#General Reference: https://www.kaggle.com/kstaud85/iris-data-visualization
 #Violin Plot: https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
 #Plotting of two Histrograms on a Single Chart: https://stackoverflow.com/questions/6871201/plot-two-histograms-on-single-chart-with-matplotlib
 #Seabon Cheat Sheet: https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Seaborn_Cheat_Sheet.pdf
@@ -252,3 +306,6 @@ plt.show()
 #Box Plots: https://seaborn.pydata.org/generated/seaborn.boxplot.html
 #Scatterplots: https://seaborn.pydata.org/generated/seaborn.scatterplot.html
 #Seaborn.kdeplot: https://seaborn.pydata.org/generated/seaborn.kdeplot.html#seaborn-kdeplot
+#Pairplots: https://seaborn.pydata.org/generated/seaborn.pairplot.html
+#Pairgrid (Change layout results within the Pairplot): https://seaborn.pydata.org/generated/seaborn.PairGrid.html
+
