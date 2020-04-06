@@ -292,6 +292,11 @@ plt.show()
 
 
 
+
+
+
+
+
 #References:
 #General Reference: https://www.youtube.com/watch?v=nKxLfUrkLE8
 #General Reference: https://www.youtube.com/watch?v=a9UrKTVEeZA&t=747s
@@ -308,4 +313,4 @@ plt.show()
 #Seaborn.kdeplot: https://seaborn.pydata.org/generated/seaborn.kdeplot.html#seaborn-kdeplot
 #Pairplots: https://seaborn.pydata.org/generated/seaborn.pairplot.html
 #Pairgrid (Change layout results within the Pairplot): https://seaborn.pydata.org/generated/seaborn.PairGrid.html
-
+#Histrogram and Adding 4 plots together: https://python-graph-gallery.com/25-histogram-with-several-variables-seaborn/
