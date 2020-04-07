@@ -26,7 +26,15 @@ Table of Contents
 
 [3.1 Background](#3.1-Background)
 
-[4. Problem Statement](#4.Problem-Statement)
+[4. Problem Statement](#4-Problem-Statement)
+
+[5. Issues and Inconsistencies with Data Set](#5-Issues-and-Inconsistencies-with-Data-Set)
+
+[6. User Guide](#6-User-Guide)
+
+[6.1 Downloading the Repository](#6.1-Downloading-the-Repository)
+
+[6.2  Running the Program](#6.2-Running-the-Program)
 
 ## 1 Introduction
 ------------------------------------------------------------------------------------------------
@@ -72,25 +80,48 @@ available from a previous study by Fishers colleague Botanist Edgar
 Anderson). Within each species Fisher studied four distinct
 characteristics:
 
-1.  Sepal Length
-
-2.  Sepal Width
-
-3.  Petal Length
-
-4.  Petal Width
+1.  Sepal Length (Cm)
+2.  Sepal Width (Cm)
+3.  Petal Length (Cm)
+4.  Petal Width (Cm)
 
 These characteristics can be seen below:
 
 ![Iris Characteristics](https://miro.medium.com/max/800/1*1q79O5DCx_XNrAARXSFzpg.png)
 
 ## 4  Problem Statement
+
 As part of the assignmnent the student was given a set of instruction which can be viewed [here](https://github.com/JPLee01/pandas-project/blob/master/Project%20Instructions.pdf). As seen, within the instrctions a problem statement was printed. It stated that this project will invovle an analysis of the Iris data set. Python code will be utilised for this analysis and the student will be required to give explanations of the python code. The problem statement also explained it was required for the project that a program(s) be created that:
 * outputs a summary of each variable to a single text file,
 * saves a histogram of each variable to png files, and
 * outputs a scatter plot of each pair of variables.
 
-## 5 
+## 5 Issues and Inconsistencies with Data Set
+
+It should be noted that there are three inconsistencies between the data set sourced from UCI[1](#references) and the data set presented by Fisher[2](#references). These three inconsistencies are as follows:
+1.  35th sample: the fourth feature is given as "0.1" where Fisher had originally given "0.2".
+2.  38th sample: the second feature is given as "3.1" where Fisher had originally given "3.6".
+3.  38th sample: the third feature is given as "1.5" where Fisher had originally given "1.4".
+
+Please be advised that these three errors have not been rectified in the data set analysed.
+
+##  6 User Guide
+
+This section will describe the steps required to download and run the files in the repository.
+
+### 6.1 Downloading the Repository
+
+The repository is stored at the following: https://github.com/JPLee01/pandas-project
+
+To download the repository, do the following:
+1.  CLick on the adove link to open the repository
+2.  Once in the repository, click on the green “clone or download” button on the right side of the screen.
+3.  Select "Download ZIP". This will open a prompt allowing you to save the file to a desired location on your computer.
+4.  Navigate to where  the ZIP files are located on your computer and extract the compressed (.zip) files.
+
+### 6.2 Running the Program
+
+
 
 
 
