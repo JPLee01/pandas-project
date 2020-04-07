@@ -26,6 +26,8 @@ Table of Contents
 
 [3.1 Background](#3.1-Background)
 
+[4. Problem Statement](#4.Problem-Statement)
+
 ## 1 Introduction
 ------------------------------------------------------------------------------------------------
 
@@ -47,7 +49,8 @@ located [here](https://github.com/JPLee01/pandas-project):
   LICENSE     |    MIT License for the project
   README.md   |    This file; A Description of the Project and Instructions
   IrisData.csv |  Iris Flower Data Set
-                                  
+  Analysis.py | Python Programme for carrying out analysis of the Iris Data set
+  Visualisation.py | Python Programme for creating visualisations of the Iris Data set
 
 ## 3 Fishers Iris Data Set
 ------------------------------------------------------------------------------------------------
@@ -80,6 +83,16 @@ characteristics:
 These characteristics can be seen below:
 
 ![Iris Characteristics](https://miro.medium.com/max/800/1*1q79O5DCx_XNrAARXSFzpg.png)
+
+## 4  Problem Statement
+As part of the assignmnent the student was given a set of instruction which can be viewed [here](https://github.com/JPLee01/pandas-project/blob/master/Project%20Instructions.pdf). As seen, within the instrctions a problem statement was printed. It stated that this project will invovle an analysis of the Iris data set. Python code will be utilised for this analysis and the student will be required to give explanations of the python code. The problem statement also explained it was required for the project that a program(s) be created that:
+* outputs a summary of each variable to a single text file,
+* saves a histogram of each variable to png files, and
+* outputs a scatter plot of each pair of variables.
+
+## 5 
+
+
 
 References
 ------------------------------------------------------------------------------------------------
