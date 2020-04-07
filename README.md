@@ -36,6 +36,8 @@ Table of Contents
 
 [6.2  Running the Program](#6.2-Running-the-Program)
 
+[6.3  Libaries](#6.3-Libaries)
+
 ## 1 Introduction
 ------------------------------------------------------------------------------------------------
 
@@ -87,7 +89,7 @@ characteristics:
 
 These characteristics can be seen below:
 
-![Iris Characteristics](https://miro.medium.com/max/800/1*1q79O5DCx_XNrAARXSFzpg.png)
+  ![Iris Characteristics](https://miro.medium.com/max/800/1*1q79O5DCx_XNrAARXSFzpg.png)
 
 ## 4  Problem Statement
 
@@ -120,7 +122,12 @@ To download the repository, do the following:
 4.  Navigate to where  the ZIP files are located on your computer and extract the compressed (.zip) files.
 
 ### 6.2 Running the Program
+Once the repository has been downloaded, you will need to ensure that you are running it in the correct environment. It should be noted that this repository has been written using Python 3.8.2, and consequently it will require a Python version of 3.7 at a minimum to run as designed. The repository also requires a number of external Python libraries [seen below](#6.3-Libaries) to execute correctly. Once the correct version of Python has been installed complete with necessary libaries, and the ZIP has been downloaded and extracted the user can run the program. The running of any of the programs from the command line can be executed as follows:
+1.  Open a command prompt (cmd) or equivalent on your computer.([Cmdr](https://cmder.net) is recommended for Windows computers, Mac Computers via the terminal)
+2.  Navigate to the desired location through the use of the change directory (cd) command.
+3.  Run the program by typing:  **python *programs_name*.py**
 
+### 6.3 Libaries
 
 
 
