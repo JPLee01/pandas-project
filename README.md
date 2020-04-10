@@ -155,7 +155,7 @@ For clarity comments within the code have been removed from this document, but t
 ### 7.1 Analysis.py Program Explained
 As seen above the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program is primiarly concerned with the general and statistical analysis of the data set.
 
-### Importing the Libaries
+#### Importing the Libaries
 As seen above a munber of libaries are requred to successfully write and run the programs code. For the Analysis.py program the following libaries were imported:
 ```
 import pandas as pd 
@@ -163,7 +163,7 @@ import numpy as np
 import sys
 ```
 
-### Importing the Data Set and Creation of a DataFrame
+#### Importing the Data Set and Creation of a DataFrame
 The data set is imported from the Csv file through the use of the pandas.read fuction, Once imported this data set is used in the creation of a DataFrame to allow for greater ease of analysis.
 
 This is implemented as follows:
@@ -174,7 +174,7 @@ df = pd.DataFrame(f)
 
 It should be noted that this procedure is also repreted in the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program.
 
-### List of the Species in the Data Set
+#### List of the Species in the Data Set
 To create a list of the species present in the data set the following code is executed:
   * Note the .unique() command is added to remove any unique (error) species in the data set and print() command is added to allow a gap between results within the [Analysis.txt](https://github.com/JPLee01/pandas-project/blob/master/Analysis.txt) file.
 ```
@@ -193,8 +193,8 @@ The Species present in this dataset are:
 > virginica
 ```
 
-### Amount of Samples of each Species in the Data Set
-In order to create a list showing the amount of species present in the data set the following code is executed:
+#### Print the Amount of Samples of each Species in the Data Set
+In order to create a list displaying the amount of species present in the data set the following code is executed:
   * Note this code makes use of the Pandas.DataFrame.value_counts command and the '\n' function to produce each species on a seperate line.
 ```
 print("Amount of samples of each Species:")
@@ -209,7 +209,7 @@ virginica     50
 Name: species, dtype: int64 
 ```
 
-### Print the First 10 Rows of Data
+#### Print the First 10 Rows of Data
 To display the first 10 rows of data from the data set the Pandas.DataFrame.head command is used within the code:
 ```
 print("Sample of the First 10 Rows of Data:")
@@ -230,6 +230,95 @@ Sample of the First 10 Rows of Data:
 8           4.4          2.9           1.4          0.2  setosa
 9           4.9          3.1           1.5          0.1  setosa 
 ```
+
+#### Print the Last 10 Rows of Data
+To display the list 10 rows of data from the data set the Pandas.DataFrame.tail command is used within the code:
+```
+print("Sample of the Last 10 Rows of Data:")
+print(df.tail(10), "\n")
+```
+This code produces the following results:
+```
+Sample of the Last 10 Rows of Data:
+     sepal_length  sepal_width  petal_length  petal_width    species
+140           6.7          3.1           5.6          2.4  virginica
+141           6.9          3.1           5.1          2.3  virginica
+142           5.8          2.7           5.1          1.9  virginica
+143           6.8          3.2           5.9          2.3  virginica
+144           6.7          3.3           5.7          2.5  virginica
+145           6.7          3.0           5.2          2.3  virginica
+146           6.3          2.5           5.0          1.9  virginica
+147           6.5          3.0           5.2          2.0  virginica
+148           6.2          3.4           5.4          2.3  virginica
+149           5.9          3.0           5.1          1.8  virginica 
+```
+
+#### Print a Random Sample of 10 Rows of Data
+To display a random 10 rows of data from the data set the Pandas.DataFrame.sample command is used within the code:
+```
+print("Random sample of 10 Rows of Data:")
+print(df.sample(10), "\n")
+```
+This code produces the following results:
+```
+Random sample of 10 Rows of Data:
+     sepal_length  sepal_width  petal_length  petal_width     species
+112           6.8          3.0           5.5          2.1   virginica
+76            6.8          2.8           4.8          1.4  versicolor
+149           5.9          3.0           5.1          1.8   virginica
+66            5.6          3.0           4.5          1.5  versicolor
+25            5.0          3.0           1.6          0.2      setosa
+107           7.3          2.9           6.3          1.8   virginica
+17            5.1          3.5           1.4          0.3      setosa
+115           6.4          3.2           5.3          2.3   virginica
+111           6.4          2.7           5.3          1.9   virginica
+146           6.3          2.5           5.0          1.9   virginica
+```
+
+#### Print the Middle 10 Rows of Data (70-80)
+To display the middle 10 rows of data the Pandas.DataFrame.slice command is used within the code:
+```
+print("Sample of Rows 70-80 of Data:")
+print(df[70:80], "\n")
+```
+This code produces the following results:
+```
+Sample of Rows 70-80 of Data:
+    sepal_length  sepal_width  petal_length  petal_width     species
+70           5.9          3.2           4.8          1.8  versicolor
+71           6.1          2.8           4.0          1.3  versicolor
+72           6.3          2.5           4.9          1.5  versicolor
+73           6.1          2.8           4.7          1.2  versicolor
+74           6.4          2.9           4.3          1.3  versicolor
+75           6.6          3.0           4.4          1.4  versicolor
+76           6.8          2.8           4.8          1.4  versicolor
+77           6.7          3.0           5.0          1.7  versicolor
+78           6.0          2.9           4.5          1.5  versicolor
+79           5.7          2.6           3.5          1.0  versicolor 
+```
+
+#### Print a Summary Statistics for all the Species (Rounded to 3 Decimal Places)
+To display a Summary Statistics for all the Species the Pandas.DataFrame.describe command is used within the code:
+  * Note the Pandas.Round command is also implemented to round the results to 3 decimal places for aesthetics.
+```
+print("Summary Statistics of all the Species (Rounded to 3 Decimal Places):")
+print(round(df.describe(),3),'\n') 
+```
+This code produces the following results:
+```
+Summary Statistics of all the Species (Rounded to 3 Decimal Places):
+       sepal_length  sepal_width  petal_length  petal_width
+count       150.000      150.000       150.000      150.000
+mean          5.843        3.054         3.759        1.199
+std           0.828        0.434         1.764        0.763
+min           4.300        2.000         1.000        0.100
+25%           5.100        2.800         1.600        0.300
+50%           5.800        3.000         4.350        1.300
+75%           6.400        3.300         5.100        1.800
+max           7.900        4.400         6.900        2.500 
+```
+
+
 
 
 
