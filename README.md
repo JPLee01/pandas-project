@@ -175,7 +175,8 @@ df = pd.DataFrame(f)
 It should be noted that this procedure is also repreted in the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program.
 
 ### List of the Species in the Data Set
-To create a list of the species present in the data set the following code is executed. Note the .unique() command is added to remove any unique (error) species in the data set and print() command is added to allow a gap between results within the [Analysis.txt](https://github.com/JPLee01/pandas-project/blob/master/Analysis.txt) file.
+To create a list of the species present in the data set the following code is executed:
+  * Note the .unique() command is added to remove any unique (error) species in the data set and print() command is added to allow a gap between results within the [Analysis.txt](https://github.com/JPLee01/pandas-project/blob/master/Analysis.txt) file.
 ```
 Specieslist = df["species"].unique()
 print ("The Species present in this dataset are:")
@@ -190,6 +191,44 @@ The Species present in this dataset are:
 > setosa
 > versicolor
 > virginica
+```
+
+### Amount of Samples of each Species in the Data Set
+In order to create a list showing the amount of species present in the data set the following code is executed:
+  * Note this code makes use of the Pandas.DataFrame.value_counts command and the '\n' function to produce each species on a seperate line.
+```
+print("Amount of samples of each Species:")
+print(df['species'].value_counts(), '\n')
+```
+This code produces the following results:
+```
+Amount of samples of each Species:
+setosa        50
+versicolor    50
+virginica     50
+Name: species, dtype: int64 
+```
+
+### Print the First 10 Rows of Data
+To display the first 10 rows of data from the data set the Pandas.DataFrame.head command is used within the code:
+```
+print("Sample of the First 10 Rows of Data:")
+print(df.head(10), "\n")
+```
+The result of this code is as follows:
+```
+Sample of the First 10 Rows of Data:
+   sepal_length  sepal_width  petal_length  petal_width species
+0           5.1          3.5           1.4          0.2  setosa
+1           4.9          3.0           1.4          0.2  setosa
+2           4.7          3.2           1.3          0.2  setosa
+3           4.6          3.1           1.5          0.2  setosa
+4           5.0          3.6           1.4          0.2  setosa
+5           5.4          3.9           1.7          0.4  setosa
+6           4.6          3.4           1.4          0.3  setosa
+7           5.0          3.4           1.5          0.2  setosa
+8           4.4          2.9           1.4          0.2  setosa
+9           4.9          3.1           1.5          0.1  setosa 
 ```
 
 
