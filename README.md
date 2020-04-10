@@ -38,6 +38,8 @@ Table of Contents
 
 [6.3  Libaries](#6.3-Libaries)
 
+[7. Python Programs and Results Explained](#7-Python-Programs-and-Results-Explained)
+
 ## 1 Introduction
 ------------------------------------------------------------------------------------------------
 
@@ -92,14 +94,14 @@ These characteristics can be seen below:
   ![Iris Characteristics](https://miro.medium.com/max/800/1*1q79O5DCx_XNrAARXSFzpg.png)
 
 ## 4  Problem Statement
-
+------------------------------------------------------------------------------------------------
 As part of the assignmnent the student was given a set of instruction which can be viewed [here](https://github.com/JPLee01/pandas-project/blob/master/Project%20Instructions.pdf). As seen, within the instrctions a problem statement was printed. It stated that this project will invovle an analysis of the Iris data set. Python code will be utilised for this analysis and the student will be required to give explanations of the python code. The problem statement also explained it was required for the project that a program(s) be created that:
 * outputs a summary of each variable to a single text file,
 * saves a histogram of each variable to png files, and
 * outputs a scatter plot of each pair of variables.
 
 ## 5 Issues and Inconsistencies with Data Set
-
+------------------------------------------------------------------------------------------------
 It should be noted that there are three inconsistencies between the data set sourced from UCI[1](#references) and the data set presented by Fisher[2](#references). These three inconsistencies are as follows:
 1.  35th sample: the fourth feature is given as "0.1" where Fisher had originally given "0.2".
 2.  38th sample: the second feature is given as "3.1" where Fisher had originally given "3.6".
@@ -108,7 +110,7 @@ It should be noted that there are three inconsistencies between the data set sou
 Please be advised that these three errors have not been rectified in the data set analysed.
 
 ##  6 User Guide
-
+------------------------------------------------------------------------------------------------
 This section will describe the steps required to download and run the files in the repository.
 
 ### 6.1 Downloading the Repository
@@ -125,7 +127,10 @@ To download the repository, do the following:
 Once the repository has been downloaded, you will need to ensure that you are running it in the correct environment. It should be noted that this repository has been written using Python 3.8.2, and consequently it will require a Python version of 3.7 at a minimum to run as designed. The repository also requires a number of external Python libraries [seen below](#6.3-Libaries) to execute correctly. Once the correct version of Python has been installed complete with necessary libaries, and the ZIP has been downloaded and extracted the user can run the program. The running of any of the programs from the command line can be executed as follows:
 1.  Open a command prompt (cmd) or equivalent on your computer.([Cmdr](https://cmder.net) is recommended for Windows computers, Mac Computers via the terminal)
 2.  Navigate to the desired location through the use of the change directory (cd) command.
-3.  Run the program by typing:  **python  *programs_name*.py**
+3.  Run the program by typing:  
+```
+python <programme_name.py>
+```
 
 ### 6.3 Libaries
 The following Python libraries were used in the writing of the programs code and are required to successfully run the programs:
@@ -134,6 +139,16 @@ The following Python libraries were used in the writing of the programs code and
 * [Matplotlib.pyplot](https://matplotlib.org/tutorials/introductory/pyplot.html) - Used for the manipulation of elements and the creation of certain plots graphs, plots and charts within the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program.
 * [Seaborn](https://seaborn.pydata.org/) - Used for the creation and manipulation of all plots in the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program. (Seaborn allows for the extetion of the functionality of Matplotlib).
 * [Sys](https://docs.python.org/3/library/sys.html) - Used for the creation and writing of text files in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program.
+
+## 7 Python Programs and Results Explained
+------------------------------------------------------------------------------------------------
+This section will describe the Pyton programs and subsequent code which was created as well as the results these progmans yeilded.
+
+It should be noted that two separate python programmes have been written for this project:
+1.  [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) - A program which was created to carry out the general and statistical analysis of the data. It outputs results were produced into the [Analysis.txt](https://github.com/JPLee01/pandas-project/blob/master/Analysis.txt) file.
+2.  [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) - A program which was created to produce visualisations of the data set. It outputs were stored as .png files in the [repository](https://github.com/JPLee01/pandas-project#2-project-repository) the programe is stored in.
+
+
 
 
 
