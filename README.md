@@ -24,7 +24,7 @@ Table of Contents
 
 [3. Fisher\'s Iris Data Set](#3-Fishers-Iris-Data-Set)
 
-[3.1 Background](#3.1-Background)
+  [3.1 Background](#3.1-Background)
 
 [4. Problem Statement](#4-Problem-Statement)
 
@@ -32,13 +32,15 @@ Table of Contents
 
 [6. User Guide](#6-User-Guide)
 
-[6.1 Downloading the Repository](#6.1-Downloading-the-Repository)
+  [6.1 Downloading the Repository](#6.1-Downloading-the-Repository)
 
-[6.2  Running the Program](#6.2-Running-the-Program)
+  [6.2  Running the Program](#6.2-Running-the-Program)
 
-[6.3  Libaries](#6.3-Libaries)
+  [6.3  Libaries](#6.3-Libaries)
 
 [7. Python Programs and Results Explained](#7-Python-Programs-and-Results-Explained)
+
+  [7.1 Analysis.py Program Explained](#7.1-Analysis.py-Program-Explained)
 
 ## 1 Introduction
 ------------------------------------------------------------------------------------------------
@@ -145,9 +147,50 @@ The following Python libraries were used in the writing of the programs code and
 This section will describe the Pyton programs and subsequent code which was created as well as the results these progmans yeilded.
 
 It should be noted that two separate python programmes have been written for this project:
-1.  [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) - A program which was created to carry out the general and statistical analysis of the data. It outputs results were produced into the [Analysis.txt](https://github.com/JPLee01/pandas-project/blob/master/Analysis.txt) file.
+1.  [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) - A program which was created to carry out the general and statistical analysis of the data set. It outputs results were produced into the [Analysis.txt](https://github.com/JPLee01/pandas-project/blob/master/Analysis.txt) file.
 2.  [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) - A program which was created to produce visualisations of the data set. It outputs were stored as .png files in the [repository](https://github.com/JPLee01/pandas-project#2-project-repository) the programe is stored in.
 
+For clarity comments within the code have been removed from this document, but these can be viewed within the specific Python programmes.
+
+### 7.1 Analysis.py Program Explained
+As seen above the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program is primiarly concerned with the general and statistical analysis of the data set.
+
+### Importing the Libaries
+As seen above a munber of libaries are requred to successfully write and run the programs code. For the Analysis.py program the following libaries were imported:
+```
+import pandas as pd 
+import numpy as np
+import sys
+```
+
+### Importing the Data Set and Creation of a DataFrame
+The data set is imported from the Csv file through the use of the pandas.read fuction, Once imported this data set is used in the creation of a DataFrame to allow for greater ease of analysis.
+
+This is implemented as follows:
+```
+f = pd.read_csv("IrisData.csv")
+df = pd.DataFrame(f)
+```
+
+It should be noted that this procedure is also repreted in the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program.
+
+### List of the Species in the Data Set
+To create a list of the species present in the data set the following code is executed. Note the .unique() command is added to remove any unique (error) species in the data set and print() command is added to allow a gap between results within the [Analysis.txt](https://github.com/JPLee01/pandas-project/blob/master/Analysis.txt) file.
+```
+Specieslist = df["species"].unique()
+print ("The Species present in this dataset are:")
+for i in Specieslist:
+    print('>', i)
+print()
+```
+
+The result of this code is as follows:
+```
+The Species present in this dataset are:
+> setosa
+> versicolor
+> virginica
+```
 
 
 
