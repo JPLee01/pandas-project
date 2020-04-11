@@ -12,6 +12,8 @@ import sys
 
 #Create a Txt File called Analysis and excute the Write Function (Allows the "Print Results" to be written onto the Analysis Txt File)
 sys.stdout = open("Analysis.txt", "w")
+print ("The following is the results of the analysis of the Iris Data Set")
+print() #Print a blank line for cleaner output on the text file 
 
 #Import the data
 f = pd.read_csv("IrisData.csv")
@@ -20,14 +22,14 @@ f = pd.read_csv("IrisData.csv")
 df = pd.DataFrame(f)
 
 #General Overview of the Data Section
-#List of the Species in the data (Removing unique Species)
+#List of the Species in the Data Set (Removing unique Species)
 Specieslist = df["species"].unique()
 print ("The Species present in this dataset are:")
 for i in Specieslist:
     print('>', i)
 print() #Print a blank line for cleaner output on the text file 
 
-#Amount of samples of each Species in the Data
+#Amount of samples of each Species in the Data Set
 print("Amount of samples of each Species:")
 print(df['species'].value_counts(), '\n')
 

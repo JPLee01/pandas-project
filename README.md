@@ -140,7 +140,7 @@ The following Python libraries were used in the writing of the programs code and
 * [Pandas](https://pandas.pydata.org/) - Used for import, management, data manipulation and analysis in both the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) and [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) programs.
 * [Matplotlib.pyplot](https://matplotlib.org/tutorials/introductory/pyplot.html) - Used for the manipulation of elements and the creation of certain plots graphs, plots and charts within the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program.
 * [Seaborn](https://seaborn.pydata.org/) - Used for the creation and manipulation of all plots in the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program. (Seaborn allows for the extetion of the functionality of Matplotlib).
-* [Sys](https://docs.python.org/3/library/sys.html) - Used for the creation and writing of text files in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program.
+* [Sys](https://docs.python.org/3/library/sys.html) - A module more than a library within Python used for the creation and writing of text files in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program.
 
 ## 7 Python Programs and Results Explained
 ------------------------------------------------------------------------------------------------
@@ -172,7 +172,7 @@ f = pd.read_csv("IrisData.csv")
 df = pd.DataFrame(f)
 ```
 
-It should be noted that this procedure is also repreted in the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program.
+It should be noted that this procedure is also repeated in the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program.
 
 #### List of the Species in the Data Set
 To create a list of the species present in the data set the following code is executed:
@@ -297,7 +297,7 @@ Sample of Rows 70-80 of Data:
 79           5.7          2.6           3.5          1.0  versicolor 
 ```
 
-#### Print a Summary Statistics for all the Species (Rounded to 3 Decimal Places)
+#### Print Summary Statistics for all the Species (Rounded to 3 Decimal Places)
 To display a Summary Statistics for all the Species the Pandas.DataFrame.describe command is used within the code:
   * Note the Pandas.Round command is also implemented to round the results to 3 decimal places for aesthetics.
 ```
@@ -318,7 +318,87 @@ min           4.300        2.000         1.000        0.100
 max           7.900        4.400         6.900        2.500 
 ```
 
+#### Print Summary Statistics for each of the Species (Rounded to 3 Decimal Places)
+In order to create a summary statistics for each of the Species we first need to create DataFrames for each of the species, to do this we use the Pandas.DataFrame command to further breakdown the origional DataFrame:
+```
+setosa = f[f['species']=="setosa"]
+versicolor = f[f['species']=="versicolor"]
+virginica = f[f['species']=="virginica"]
+```
+We then use the Pandas.DataFrame.describe and the Pandas.Round commands as above for each species. 
 
+To create Summary Statistics for Setosa (Rounded to 3 Decimal Places):
+```
+print("Summary Statistics for Setosa (Rounded to 3 Decimal Places):")
+print(round(setosa.describe(),3),'\n')
+```
+The result of this code is as follows:
+```
+Summary Statistics for Setosa (Rounded to 3 Decimal Places):
+       sepal_length  sepal_width  petal_length  petal_width
+count        50.000       50.000        50.000       50.000
+mean          5.006        3.418         1.464        0.244
+std           0.352        0.381         0.174        0.107
+min           4.300        2.300         1.000        0.100
+25%           4.800        3.125         1.400        0.200
+50%           5.000        3.400         1.500        0.200
+75%           5.200        3.675         1.575        0.300
+max           5.800        4.400         1.900        0.600 
+```
+To create Summary Statistics for Versicolor (Rounded to 3 Decimal Places):
+```
+print("Summary Statistics for Versicolor (Rounded to 3 Decimal Places):")
+print(round(versicolor.describe(),3),'\n')
+```
+The result of this code is as follows:
+```
+Summary Statistics for Versicolor (Rounded to 3 Decimal Places):
+       sepal_length  sepal_width  petal_length  petal_width
+count        50.000       50.000         50.00       50.000
+mean          5.936        2.770          4.26        1.326
+std           0.516        0.314          0.47        0.198
+min           4.900        2.000          3.00        1.000
+25%           5.600        2.525          4.00        1.200
+50%           5.900        2.800          4.35        1.300
+75%           6.300        3.000          4.60        1.500
+max           7.000        3.400          5.10        1.800 
+```
+To create Summary Statistics for Virginica (Rounded to 3 Decimal Places):
+```
+print("Summary Statistics for Virginica (Rounded to 3 Decimal Places):")
+print(round(virginica.describe(),3),'\n')
+```
+The result of this code is as follows:
+```
+Summary Statistics for Virginica (Rounded to 3 Decimal Places):
+       sepal_length  sepal_width  petal_length  petal_width
+count        50.000       50.000        50.000       50.000
+mean          6.588        2.974         5.552        2.026
+std           0.636        0.322         0.552        0.275
+min           4.900        2.200         4.500        1.400
+25%           6.225        2.800         5.100        1.800
+50%           6.500        3.000         5.550        2.000
+75%           6.900        3.175         5.875        2.300
+max           7.900        3.800         6.900        2.500 
+```
+
+### To create a Text File and Save the Results of the Analysis.py to it
+In oder to create a text file and save the results to it we make use of the [Sys](https://docs.python.org/3/library/sys.html) module within Python.
+1.  Fist at the begining of the program we import the sys module:
+```
+import sys
+```
+2.  This the allows the use of the sys.stdout and write function to create a text file called "Analysis.txt" and allows the results of the Analysis.py programe to be written into the Analysis.txt. An opening sentance is inserted explaining that the following are results of the analysis of the Iris Data Set:
+```
+sys.stdout = open("Analysis.txt", "w")
+print ("The following is the results of the analysis of the Iris Data Set")
+print()
+```
+3.  At the end of the program the text file is saved and closed as follows:
+
+```
+sys.stdout.close()
+```
 
 
 
