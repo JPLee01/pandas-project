@@ -262,17 +262,17 @@ print(df.sample(10), "\n")
 This code produces the following results:
 ```
 Random sample of 10 Rows of Data:
-     sepal_length  sepal_width  petal_length  petal_width     species
-112           6.8          3.0           5.5          2.1   virginica
-76            6.8          2.8           4.8          1.4  versicolor
-149           5.9          3.0           5.1          1.8   virginica
-66            5.6          3.0           4.5          1.5  versicolor
-25            5.0          3.0           1.6          0.2      setosa
-107           7.3          2.9           6.3          1.8   virginica
-17            5.1          3.5           1.4          0.3      setosa
-115           6.4          3.2           5.3          2.3   virginica
-111           6.4          2.7           5.3          1.9   virginica
-146           6.3          2.5           5.0          1.9   virginica
+    sepal_length  sepal_width  petal_length  petal_width     species
+119           6.0          2.2           5.0          1.5   virginica
+126           6.2          2.8           4.8          1.8   virginica
+55            5.7          2.8           4.5          1.3  versicolor
+118           7.7          2.6           6.9          2.3   virginica
+83            6.0          2.7           5.1          1.6  versicolor
+39            5.1          3.4           1.5          0.2      setosa
+59            5.2          2.7           3.9          1.4  versicolor
+18            5.7          3.8           1.7          0.3      setosa
+38            4.4          3.0           1.3          0.2      setosa
+35            5.0          3.2           1.2          0.2      setosa 
 ```
 
 #### Print the Middle 10 Rows of Data (70-80)
@@ -383,7 +383,7 @@ max           7.900        3.800         6.900        2.500
 ```
 
 ### To create a Text File and Save the Results of the Analysis.py to it
-In oder to create a text file and save the results to it we make use of the [Sys](https://docs.python.org/3/library/sys.html) module within Python.
+In oder to create a text file and save the results to it we make use of the [Sys](https://docs.python.org/3/library/sys.html) module within Python [3](#references).
 1.  Fist at the begining of the program we import the sys module:
 ```
 import sys
@@ -406,8 +406,8 @@ sys.stdout.close()
 References
 ------------------------------------------------------------------------------------------------
 
-1.  UCI Machine Learning Repository -- Iris Data Set, [[http://archive.ics.uci.edu/ml/datasets/Iris]{.underline}](http://archive.ics.uci.edu/ml/datasets/Iris)
+1.  UCI Machine Learning Repository -- Iris Data Set, <http://archive.ics.uci.edu/ml/datasets/Iris>
 
 2.  The Use of Multiple Measurements in Taxonomic Problems, <http://www.comp.tmu.ac.jp/morbier/R/Fisher-1936-Ann._Eugen.pdf>
 
-3.  
+3.  How to redirect the print to a .txt file using the [Sys](https://docs.python.org/3/library/sys.html) module within Python, <https://stackoverflow.com/questions/7152762/how-to-redirect-print-output-to-a-file-using-python>

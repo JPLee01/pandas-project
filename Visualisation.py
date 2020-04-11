@@ -10,15 +10,16 @@ import pandas as pd
 #Import Numpty for Analysis of the data 
 import numpy as np
 
-#Import Sys to allow the "Print Results" to be written to a Txt File
+#Import Sys to allow the Plots to be written to a PDF File
 #import sys
 
 #Import matplotlib.pyplot, seaborn and polly.express for Visualisation of the data 
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-#Create a Txt File called Visualisation and excute the Write Function (Allows the "Print Results" to be written onto the Visualisation Pdf File)
-#sys.stdout = open("Visualisation.pdf", "w")
+#Create a Txt File called Visualisation and excute the Write Function (Allows the "Plots" to be written onto the Visualisation PDF File)
+#sys.stdout = open("Visualisation.docx", "w")
+
 
 #Set a global style for all the Seaborn Plots in the program
 sns.set(style='darkgrid')
@@ -36,6 +37,10 @@ VersicolorData = df[df.species == "versicolor"]
 VirginicaData = df[df.species == "virginica"]
 
 
+#Create a PDF File called Visualisation and excute the Write Function (Allows the "Plots" to be written onto the Visualisation PDF File)
+from matplotlib.backends.backend_pdf import PdfPages
+pp = PdfPages('Visualisation.pdf')
+
 #Create a Histrogram Comparing the Frequency of Sepal Width of Each of the Species
 bins = np.linspace(0, 5, 30)
 plt.hist(SetosaData.sepal_width, bins, alpha=0.5, label="Setosa")
@@ -46,9 +51,11 @@ plt.ylabel("Frequency of Occurrence", fontsize=12)
 plt.legend(loc='upper right')
 title="Species Sepal Width"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
-#pdf.savefig()
-######plt.savefig("Frequency of Sepal Width of Each of the Species.png", dpi=72,)#########
+plt.savefig("Histrogram Comparing the Frequency of Sepal Width of Each of the Species.png", dpi=72,)
+pp.savefig("Histrogram Comparing the Frequency of Sepal Width of Each of the Species")
+
 
 
 #Create a Histrogram Comparing the Frequency of Sepal Length of Each of the Species
@@ -61,8 +68,9 @@ plt.ylabel("Frequency of Occurrence", fontsize=12)
 plt.legend(loc='best')
 title="Species Sepal Length"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
-#pdf.savefig()
+pp.savefig()
 ######plt.savefig("Frequency of Sepal Length of Each of the Species.png", dpi=72,)#########
 
 #Create a Histrogram Comparing the Frequency of Petal Width of Each of the Species
@@ -75,7 +83,9 @@ plt.ylabel("Frequency of Occurrence", fontsize=12)
 plt.legend(loc='upper right')
 title="Species Petal Width"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 ######plt.savefig("Frequency of Petal Width of Each of the Species.png", dpi=72,)#########
 
 
@@ -89,7 +99,9 @@ plt.ylabel("Frequency of Occurrence", fontsize=12)
 plt.legend(loc='upper right')
 title="Species Petal Length"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 ######plt.savefig("Frequency of Petal Lengthof Each of the Species.png", dpi=72,)#########
 
 
@@ -99,7 +111,9 @@ plt.xlabel("Size (Cm)", fontsize=12)
 plt.ylabel("Setosa Data", fontsize=12)
 title="Distribution of Setosa Data"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 #Create a Boxplot Displaying the Distribution of the Versicolor Data
 sns.boxplot(data=VersicolorData, orient="h")
@@ -107,7 +121,9 @@ plt.xlabel("Size (Cm)", fontsize=12)
 plt.ylabel("Versicolor Data", fontsize=12)
 title="Distribution of Versicolor Data"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 #Create a Boxplot Displaying the Distribution of the Virginica Data
 sns.boxplot(data=VirginicaData, orient="h")
@@ -115,7 +131,9 @@ plt.xlabel("Size (Cm)", fontsize=12)
 plt.ylabel("Virginica Data", fontsize=12)
 title="Distribution of Virginica Data"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 
 #Create a Boxplot comparing the Distributions of Petal Length of Each Species
@@ -124,7 +142,9 @@ plt.xlabel("Species", fontsize=12)
 plt.ylabel("Petal Length (Cm)", fontsize=12)
 title="Compare the Distributions of Petal Length"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 #Create a Boxplot comparing the Distributions of Petal Width of Each Species
 sns.boxplot(x="species" , y="petal_width" , data=f)
@@ -132,7 +152,9 @@ plt.xlabel("Species", fontsize=12)
 plt.ylabel("Petal Width (Cm)", fontsize=12)
 title="Compare the Distributions of Petal Width"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 #Create a Boxplot comparing the Distributions of Sepal Length of Each Species
 sns.boxplot(x="species" , y="sepal_length" , data=f)
@@ -140,7 +162,9 @@ plt.xlabel("Species", fontsize=12)
 plt.ylabel("Sepal Length (Cm)", fontsize=12)
 title="Compare the Distributions of Sepal Length"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 #Create a Boxplot comparing the Distributions of Sepal Width of Each Species
 sns.boxplot(x="species" , y="sepal_width" , data=f)
@@ -148,7 +172,9 @@ plt.xlabel("Species", fontsize=12)
 plt.ylabel("Sepal Width (Cm)", fontsize=12)
 title="Compare the Distributions of Sepal Width"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 
 #Create a Violin Plot of comparing the Petal Length of each of the Species
@@ -157,7 +183,9 @@ plt.xlabel("Species", fontsize=12)
 plt.ylabel("Petal Length(Cm)", fontsize=12)
 title="Violin Plots of Petal Length"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 #Create a Violin Plot of Petal Width of each of the Species
 sns.violinplot(x="species",y="petal_width",data=f)
@@ -165,7 +193,9 @@ plt.xlabel("Species", fontsize=12)
 plt.ylabel("Petal Width(Cm)", fontsize=12)
 title="Violin Plots of Petal Width"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 
 #Create a Violin Plot of Sepalal Length of each of the Species
@@ -174,7 +204,9 @@ plt.xlabel("Species", fontsize=12)
 plt.ylabel("Sepalal Length(Cm)", fontsize=12)
 title="Violin Plots of Sepalal Length"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 
 #Create a Violin Plot of Sepalal Width of each of the Species
@@ -183,7 +215,9 @@ plt.xlabel("Species", fontsize=12)
 plt.ylabel("Sepalal Width(Cm)", fontsize=12)
 title="Violin Plots of Sepalal Width"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 
 #Create a Scatter plot depicting the relationship between Sepal Length and Sepal Width of the Species
@@ -193,7 +227,9 @@ plt.ylabel("Sepal Width(Cm)", fontsize=12)
 plt.legend(loc='best', fontsize=10)
 title="Relationship Between Sepal Length and Sepal Width"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 
 #Create a Scatter plot depicting the relationship between Petal Length and Petal Width of the Species
@@ -203,7 +239,9 @@ plt.ylabel("Petal Width(Cm)", fontsize=12)
 plt.legend(loc='best', fontsize=10)
 title="Relationship Between Petal Length and Petal Width"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 #Create a Histogram for Sepal Length of each of the Species
 sns.distplot(SetosaData.sepal_length, label="Setosa")
@@ -214,7 +252,9 @@ plt.ylabel("Sepal Length (Cm)", fontsize=12)
 plt.legend(loc='best')
 title="Histogram for Sepal Length of each of the Species"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 #Create a Histogram for Sepal Width of each of the Species
 sns.distplot(SetosaData.sepal_width, label="Setosa")
@@ -225,7 +265,9 @@ plt.ylabel("Sepal Width (Cm)", fontsize=12)
 plt.legend(loc='best')
 title="Histogram for Sepal Width of each of the Species"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 #Create a Histogram for Petal Length of each of the Species
 sns.distplot(SetosaData.petal_length, label="Setosa")
@@ -236,7 +278,9 @@ plt.ylabel("Petal Length (Cm)", fontsize=12)
 plt.legend(loc='upper right')
 title="Histogram for Petal Length of each of the Species"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 #Create a Histogram for Petal Width of each of the Species
 sns.distplot(SetosaData.petal_width, label="Setosa")
@@ -247,7 +291,9 @@ plt.ylabel("Petal Length (Cm)", fontsize=12)
 plt.legend(loc='upper right')
 title="Histogram for Petal Width of each of the Species"
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 #Create a KDE Plot of Setosa - Sepal Length Vs. Sepal Width
 sns.kdeplot(data=SetosaData[["sepal_length","sepal_width"]], cmap="Purples_d", shade=True, shade_lowest=False)
@@ -255,7 +301,9 @@ title="KDE Plot of Setosa - Sepal Length Vs. Sepal Width"
 plt.xlabel("Sepal Length(Cm)")
 plt.ylabel("Sepal Width(Cm)")
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 #Create a KDE Plot of Versicolor - Sepal Length Vs. Sepal Width
 sns.kdeplot(data=VersicolorData[["sepal_length","sepal_width"]], cmap="plasma", shade=True, shade_lowest=False)
@@ -263,7 +311,9 @@ title="KDE Plot of Versicolor - Sepal Length Vs. Sepal Width"
 plt.xlabel("Sepal Length(Cm)")
 plt.ylabel("Sepal Width(Cm)")
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 #Create a KDE Plot of Virginica - Sepal Length Vs. Sepal Width
 sns.kdeplot(data=VirginicaData[["sepal_length","sepal_width"]], cmap="Greens", shade=True, shade_lowest=False)
@@ -271,7 +321,9 @@ title="KDE Plot of Virginica - Sepal Length Vs. Sepal Width"
 plt.xlabel("Sepal Length(Cm)")
 plt.ylabel("Sepal Width(Cm)")
 plt.title(title, fontsize=18)
+plt.tight_layout()
 plt.show()
+pp.savefig()
 
 
 #Create a Pairpot 
@@ -284,10 +336,20 @@ g = g.map_diag(plt.hist, histtype="step", linewidth=3)
 g = g.map_lower(sns.kdeplot)
 #Addition of a legend
 g = g.add_legend()
+#Tight layout to adjust space between elements, limit hight to 95% to allow room for the Title and 90% width to allow room for the Legend
+plt.tight_layout(rect=[0, 0, 0.90, 0.95])
 #Addition of a title at the top of the Plot
-title="Pair Plot for Dataset"
-plt.suptitle(title, fontsize=18)
+plt.suptitle("Pair Plot for Dataset", fontsize = 20)
 plt.show()
+pp.savefig()
+
+
+
+#Close and Save the Visualisation PDF File
+pp.close()
+
+
+
 
 
 
@@ -315,3 +377,4 @@ plt.show()
 #Pairgrid (Change layout results within the Pairplot): https://seaborn.pydata.org/tutorial/distributions.html
 #Histrogram: https://python-graph-gallery.com/25-histogram-with-several-variables-seaborn/
 #Histrogram: https://pythonbasics.org/seaborn-distplot/
+# Plt.tigh_layout: https://matplotlib.org/3.2.1/tutorials/intermediate/tight_layout_guide.html
