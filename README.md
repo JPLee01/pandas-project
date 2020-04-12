@@ -509,7 +509,7 @@ plt.tight_layout()
 plt.savefig("Visualisations/Boxplot comparing the Distributions of Petal Length of Each Species.png")
 plt.show()
 ```
-  * Note the above code creates a boxplot displaying the Petal Length of each of the species. To create a boxplot displaying the Petal Width and Sepal Length/Width of each of the Species the following changes would have to be made to the code:
+  * Note the above code creates a Boxplot displaying the Petal Length of each of the species. To create a Boxplot displaying the Petal Width and Sepal Length/Width of each of the Species the following changes would have to be made to the code:
     * **Petal Width:** Replace petal_length with petal_width.
     * **Sepal Length:** Replace petal_length with sepal_length.
     * **Sepal Width:** Replace petal_length with sepal_width.
@@ -524,8 +524,7 @@ The following plots will be produced as a result of the above code:
 Reinforcing our obserations from the pervious Plots we can see in the Boxplots that there is little or no overlap between measurements for Setosa as compared to the other two species.
 
 ####  Creation of a Violin Plot Comparing the Sepal Length/Width and Petal Length/Width of each of the Species
-Very similiar to the above Boxplot a Violin Plot depicts distributions of numeric data for one or more groups using density curves<sup>[10](#myfootnote10)</sup>. Within a Violin Plot the white dot represents the Median
-the thick black bar in the center represents the interquartile range, the thin gray line represents the rest of the distribution, except for points that are determined to be “outliers” using a method that is a function of the interquartile range. On each side of the black line is a kernel density estimation to show the distribution shape of the data. Wider sections of the Violin Plot represent a higher probability that members of the population will take on the given value; the skinnier sections represent a lower probability<sup>[11](#myfootnote11)</sup>.
+Very similiar to the above Boxplot a Violin Plot depicts distributions of numeric data for one or more groups using density curves<sup>[10](#myfootnote10)</sup>. Within a Violin Plot the white dot represents the Median value the thick black bar in the center represents the interquartile range, the thin black line represents the rest of the distribution, except for points that are determined to be “outliers” using a method that is a function of the interquartile range. On each side of the black line is a Kernel Density Estimation (KDE) to show the distribution shape of the data. Wider sections of the Violin Plot represent a higher probability that members of the population will take on the given value, the skinnier sections represent a lower probability<sup>[11](#myfootnote11)</sup>.
 
 To create a Violin Plot displaying the Sepal Length/Width and Petal Length/Width of each of the species the following code is executed:
 ```
@@ -537,6 +536,11 @@ plt.tight_layout()
 plt.savefig("Visualisations/Violin Plot of comparing the Petal Length of each of the Species.png")
 plt.show()
 ```
+  * Note the above code creates a Violin Plot displaying the Petal Length of each of the species. To create a Violin Plot displaying the Petal Width and Sepal Length/Width of each of the Species the following changes would have to be made to the code:
+    * **Petal Width:** Replace petal_length with petal_width.
+    * **Sepal Length:** Replace petal_length with sepal_length.
+    * **Sepal Width:** Replace petal_length with sepal_width.
+
 The following plots will be produced as a result of the above code:
 
 <img align="left" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Violin%20Plot%20of%20comparing%20the%20Petal%20Length%20of%20each%20of%20the%20Species.png"> &nbsp;<img align="righ" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Violin%20Plot%20of%20comparing%20the%20Petal%20Width%20of%20each%20of%20the%20Species.png">
@@ -544,6 +548,12 @@ The following plots will be produced as a result of the above code:
 <img align="left" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Violin%20Plot%20of%20comparing%20the%20Sepal%20Length%20of%20each%20of%20the%20Species.png"> &nbsp;<img align="righ" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Violin%20Plot%20of%20comparing%20the%20Sepal%20Width%20of%20each%20of%20the%20Species.png">
 
 ####  Observations 
+While the Violin Plot may be slightly more complex concept than a Box Plot to understand it does offer the advantage of adding the Kernel Density Estimation. 
+
+From the above Violin Plots it can be seen that the Virginica has the highest Median value in Patel length, Petal width and Sepal length, while the Setosa has the highest Sepal Width Median value. These observations are easier to make in a Violin Plot thanks to the white dot. 
+
+### Creation of a a Scatter Plot depicting the relationship between Sepal/Petal Length and Sepal/Petal Width of the Species
+
 
 
 

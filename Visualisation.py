@@ -233,7 +233,7 @@ plt.savefig("Visualisations/Violin Plot of comparing the Sepal Width of each of 
 plt.show()
 
 
-#Create a Scatter plot depicting the relationship between Sepal Length and Sepal Width of the Species
+#Create a Scatter Plot depicting the relationship between Sepal Length and Sepal Width of the Species
 sns.scatterplot(x="sepal_length", y="sepal_width", hue="species", data=f)
 plt.xlabel("Sepal Length(Cm)", fontsize=12)
 plt.ylabel("Sepal Width(Cm)", fontsize=12)
@@ -245,7 +245,7 @@ plt.tight_layout()
 #pp.savefig()
 
 
-#Create a Scatter plot depicting the relationship between Petal Length and Petal Width of the Species
+#Create a Scatter Plot depicting the relationship between Petal Length and Petal Width of the Species
 sns.scatterplot(x="petal_length", y="petal_width", hue="species", data=f)
 plt.xlabel("Petal Length(Cm)", fontsize=12)
 plt.ylabel("Petal Width(Cm)", fontsize=12)
