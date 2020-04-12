@@ -411,6 +411,16 @@ sys.stdout.close()
 ```
 
 ### 7.2 Visualisation.py Program Explained
+As seen above the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program if primarily concerned with the production of visualisations of the data set.
+
+#### Importing the Libaries
+As well as the libaires imported in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program the following extra libaries are imported to the Visualisation.py program:
+```
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+
+
 
 
 ##  References
