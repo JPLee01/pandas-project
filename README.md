@@ -463,7 +463,7 @@ This code produces the following Plot:
 #![Histrogram Comparing the Frequency of Sepal Width of Each of the Species]#(ttps://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Width%20of%20Each%20of%20the%20Species.png)
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Width%20of%20Each%20of%20the%20Species.png)/460/300">
+  <img width="460" height="300" src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Width%20of%20Each%20of%20the%20Species.png/460/300">
 </p>
 
 
