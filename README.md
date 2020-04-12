@@ -469,7 +469,7 @@ The following plots will be produced as a result of the above code:
 <img align="left" width="400" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Petal%20Length%20of%20Each%20of%20the%20Species.png"> <img align="righ" width="400" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Petal%20Width%20of%20Each%20of%20the%20Species.png">
 
 ####  Observations 
-As seen from the above Plots there is a clear concentration and overlap of the species within the Sepal Length (4-8 Cm) and Sepal Width (2-4.5 Cm) Histograms. However in the Petal Length and Width Histograms it can be seen that there is a clear differentiation between the Setosa species and the Versicolor and Virginica species.The Setosa species in the Petal Length and Width are concentrated is smaller size (Cm) than the other two species. 
+As seen from the above Plots there is a concentration and overlap of the species within the Sepal Length (4-8 Cm) and Sepal Width (2-4.5 Cm) Histograms. However in the Petal Length and Width Histograms it can be seen that there is a differentiation between the Setosa species and the Versicolor and Virginica species.The Setosa species in the Petal Length and Width are concentrated is smaller size (Cm) than the other two species. 
 
 ### Creation of Boxplots Displaying the Distribution of the Data of Each of the Species
 A Boxplot (also known as a Box-and-Whisker Plot) displays a summary of a set of data containing the minimum, first quartile, median, third quartile, and maximum. In a box plot, we draw a box from the first quartile to the third quartile. A vertical line goes through the box at the median. The whiskers go from each quartile to the minimum or maximum. Additionally, outliers (if present) are shown by points outside the minimum and maximum lines<sup>[9](#myfootnote9)</sup>. A Boxplot is created for each of the species to display the distribution of data within each of the species and highlight any areas of commonality.
@@ -491,6 +491,9 @@ plt.show()
 The following plots will be produced as a result of the above code:
 
 <img align="left" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Setosa%20Data.png"> <img align="center" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Versicolor%20Data.png"><img align="right" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Virginica%20Data.png">
+
+####  Observations 
+It can be seen from the above Plots there does seem to be an overlap across the Species within the Sepal Width as all the boxs are concentrated within the 3 Cm area. Also within the Sepal Length all the Species minimums and maximums occupy within the 5.5 - 7 Cm area, while the Setosa Species Petal Length and Width results are much smaller than the other two Species. This reinforces the observations made from the Histogram plots. It should also be noted that within each Species at least one outlier is present. 
 
 
 
