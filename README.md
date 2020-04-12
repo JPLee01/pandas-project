@@ -441,7 +441,7 @@ VirginicaData = df[df.species == "virginica"]
 ```
 
 ### Creation of Histograms Comparing the Frequency of Sepal Length/Width and Petal Length/Width of Each of the Species
-Histograms are created to allow for the quick comparison between the frequency of Sepal Length/Width and Petal Length/Width of each of the Species. Histograms provide a visual interpretation of numerical data and are an excellent to highlight the normal distribution, outliers, skewness etc. 
+Histograms provide a visual interpretation of numerical data and are an excellent to highlight the normal distribution, outliers, skewness etc<sup>[8](#myfootnote8)</sup>. Histograms are created to allow for the quick comparison between the frequency of Sepal Length/Width and Petal Length/Width of each of the Species.
 
 To create a histogram comparing the frequency of Sepal Length/Width and Petal Length/Width of each of the Species the following code is executed:
 ```
@@ -464,14 +464,32 @@ plt.show()
 
 The following plots will be produced as a result of the above code:
 
-<img align="left" width="450" height="450" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Length%20of%20Each%20of%20the%20Species.png"> <img align="righ" width="450" height="450" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Width%20of%20Each%20of%20the%20Species.png">
+<img align="left" width="400" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Length%20of%20Each%20of%20the%20Species.png"> <img align="righ" width="400" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Width%20of%20Each%20of%20the%20Species.png">
 
 <img align="left" width="400" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Petal%20Length%20of%20Each%20of%20the%20Species.png"> <img align="righ" width="400" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Petal%20Width%20of%20Each%20of%20the%20Species.png">
 
 ####  Observations 
 As seen from the above Plots there is a clear concentration and overlap of the species within the Sepal Length (4-8 Cm) and Sepal Width (2-4.5 Cm) Histograms. However in the Petal Length and Width Histograms it can be seen that there is a clear differentiation between the Setosa species and the Versicolor and Virginica species.The Setosa species in the Petal Length and Width are concentrated is smaller size (Cm) than the other two species. 
 
+### Creation of Boxplots Displaying the Distribution of the Data of Each of the Species
+A Boxplot (also known as a Box-and-Whisker Plot) displays a summary of a set of data containing the minimum, first quartile, median, third quartile, and maximum. In a box plot, we draw a box from the first quartile to the third quartile. A vertical line goes through the box at the median. The whiskers go from each quartile to the minimum or maximum. Additionally, outliers (if present) are shown by points outside the minimum and maximum lines<sup>[9](#myfootnote9)</sup>. A Boxplot is created for each of the species to display the distribution of data within each of the species and highlight any areas of commonality.
 
+To create a boxplots displaying the distribution of the data of each of the species the following code is executed:
+```
+sns.boxplot(data=SetosaData, orient="h")
+plt.xlabel("Size (Cm)", fontsize=12)
+plt.ylabel("Setosa Data", fontsize=12)
+plt.title("Distribution of Setosa Data", fontsize=18)
+plt.tight_layout()
+plt.savefig("Visualisations/Boxplot Displaying the Distribution of the Setosa Data.png")
+plt.show()
+```
+  * Note the above code creates a boxplot displaying the distribution of the Setosa data. To create a a boxplot displaying the distribution of the data of the other two species the following changes would have to be made to the code:
+    * **Versicolor:** Replace SetosaData with VersicolorData
+    * **Virginica:** Replace SetosaData with VirginicaData.
+
+The following plots will be produced as a result of the above code:
+<img align="left" width="200" height="200" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Setosa%20Data.png"> <img align="centre" width="200" height="200" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Versicolor%20Data.png"><img align="righ" width="200" height="200" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Virginica%20Data.png">
 
 
 
@@ -491,3 +509,7 @@ As seen from the above Plots there is a clear concentration and overlap of the s
 <a name="myfootnote6">6</a>: Pandas Round Command, <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.round.html>
 
 <a name="myfootnote7">7</a>: How to redirect the print to a .txt file using the [Sys](https://docs.python.org/3/library/sys.html) module within Python, <https://stackoverflow.com/questions/7152762/how-to-redirect-print-output-to-a-file-using-python>
+
+<a name="myfootnote8">8</a>: Histogram, <https://corporatefinanceinstitute.com/resources/excel/study/histogram/>
+
+<a name="myfootnote9">9</a>: Boxplot, <https://www.tutorialspoint.com/matplotlib/matplotlib_box_plot.htm>
