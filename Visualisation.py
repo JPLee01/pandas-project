@@ -128,21 +128,19 @@ plt.show()
 sns.boxplot(data=VersicolorData, orient="h")
 plt.xlabel("Size (Cm)", fontsize=12)
 plt.ylabel("Versicolor Data", fontsize=12)
-title="Distribution of Versicolor Data"
-plt.title(title, fontsize=18)
+plt.title("Distribution of Versicolor Data", fontsize=18)
 plt.tight_layout()
-#plt.show()
-#pp.savefig()
+plt.savefig("Visualisations/Boxplot Displaying the Distribution of the Versicolor Data.png")
+plt.show()
 
 #Create a Boxplot Displaying the Distribution of the Virginica Data
 sns.boxplot(data=VirginicaData, orient="h")
 plt.xlabel("Size (Cm)", fontsize=12)
 plt.ylabel("Virginica Data", fontsize=12)
-title="Distribution of Virginica Data"
-plt.title(title, fontsize=18)
+plt.title("Distribution of Virginica Data", fontsize=18)
 plt.tight_layout()
-#plt.show()
-#pp.savefig()
+plt.savefig("Visualisations/Boxplot Displaying the Distribution of the Virginica Data.png")
+plt.show()
 
 
 #Create a Boxplot comparing the Distributions of Petal Length of Each Species
