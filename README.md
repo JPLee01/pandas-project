@@ -411,7 +411,7 @@ print()
 sys.stdout.close()
 ```
 
-### 7.2 Visualisation.py Program Explained
+### 8.2 Visualisation.py Program Explained
 As seen above the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program if primarily concerned with the production of visualisations of the data set.
 
 All Plots produced by the program are saved in .png formal to the Visualisations folder. 
@@ -424,6 +424,44 @@ As well as the libaires imported in the [Analysis.py](https://github.com/JPLee01
 import matplotlib.pyplot as plt
 import seaborn as sns
 ```
+
+### Setting of Global Styles for Seaborn Plots
+Global styles are set for all Seaborn Plots in the program, this will allow for uniformity within the program:
+```
+sns.set(style='darkgrid')
+sns.set_palette("colorblind",3)
+```
+
+### Creation of a DataFrame
+The process in Analysis.py repeated and this DataFrame is further broken down into Species Specific Data Sets easier visualisation:
+```
+SetosaData = df[df.species == "setosa"]
+VersicolorData = df[df.species == "versicolor"]
+VirginicaData = df[df.species == "virginica"]
+```
+
+### Creation of Histograms Comparing the Frequency of Sepal Length/Width and Petal Length/Width of Each of the Species
+Histograms are created to allow for the quick comparison between the frequency of Sepal Length/Width and Petal Length/Width of each of the Species. Histograms provide a visual interpretation of numerical data and are an excellent to highlight the normal distribution, outliers, skewness etc. 
+
+To create a histogram comparing the frequency of Sepal Width of each of the Species the following code is executed:
+```
+bins = np.linspace(0, 5, 30)
+plt.hist(SetosaData.sepal_width, bins, alpha=0.5, label="Setosa")
+plt.hist(VersicolorData.sepal_width, bins, alpha=0.5, label="Versicolor")
+plt.hist(VirginicaData.sepal_width, bins, alpha=0.5, label="Virginica")
+plt.xlabel("Sepal Width (Cm)", fontsize=12)
+plt.ylabel("Frequency of Occurrence", fontsize=12)
+plt.legend(loc='upper right')
+plt.title("Species Sepal Width", fontsize=18)
+#The tight_layout command is used to fit the Plot within the Figure
+plt.tight_layout()
+plt.savefig("Visualisations/Histrogram Comparing the Frequency of Sepal Width of Each of the Species.png")
+plt.show()
+```
+This code produces the following Plot:
+![Histrogram Comparing the Frequency of Sepal Width of Each of the Species](Visualisations/Histrogram_Comparing_the_Frequency_of_Sepal_Width_of_Each_of_the_Species.png)
+
+
 
 
 
