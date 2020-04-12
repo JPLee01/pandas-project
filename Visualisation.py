@@ -166,8 +166,8 @@ plt.ylabel("Petal Width (Cm)", fontsize=12)
 title="Compare the Distributions of Petal Width"
 plt.title(title, fontsize=18)
 plt.tight_layout()
-#plt.show()
-#pp.savefig()
+plt.savefig("Visualisations/Boxplot comparing the Distributions of Petal Width of Each Species.png")
+plt.show()
 
 #Create a Boxplot comparing the Distributions of Sepal Length of Each Species
 sns.boxplot(x="species" , y="sepal_length" , data=f)
@@ -176,8 +176,8 @@ plt.ylabel("Sepal Length (Cm)", fontsize=12)
 title="Compare the Distributions of Sepal Length"
 plt.title(title, fontsize=18)
 plt.tight_layout()
-#plt.show()
-#pp.savefig()
+plt.savefig("Visualisations/Boxplot comparing the Distributions of Sepal Length of Each Species.png")
+plt.show()
 
 #Create a Boxplot comparing the Distributions of Sepal Width of Each Species
 sns.boxplot(x="species" , y="sepal_width" , data=f)
@@ -186,8 +186,8 @@ plt.ylabel("Sepal Width (Cm)", fontsize=12)
 title="Compare the Distributions of Sepal Width"
 plt.title(title, fontsize=18)
 plt.tight_layout()
-#plt.show()
-#pp.savefig()
+plt.savefig("Visualisations/Boxplot comparing the Distributions of Sepal Width of Each Species.png")
+plt.show()
 
 
 #Create a Violin Plot of comparing the Petal Length of each of the Species

@@ -460,7 +460,7 @@ plt.show()
   * Note the above code creates a histogram comparing the frequency of Sepal Width of each of the Species. To create a histogram comparing the frequency of Sepal Length and Petal Length/Width of each of the Species the following changes would have to be made to the code:
     * **Sepal Length:** Replace sepal_width with sepal_length.
     * **Petal Width:** Replace sepal_width with petal_width.
-    * **Sepal Length:** Replace sepal_width with petal_length.
+    * **Petal Length:** Replace sepal_width with petal_length.
 
 The following plots will be produced as a result of the above code:
 
@@ -468,7 +468,8 @@ The following plots will be produced as a result of the above code:
 
 <img align="left" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Petal%20Length%20of%20Each%20of%20the%20Species.png"> <img align="right" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Petal%20Width%20of%20Each%20of%20the%20Species.png">
 
-\\
+
+
 ####  Observations 
 As seen from the above Plots there is a concentration and overlap of the species within the Sepal Length (4-8 Cm) and Sepal Width (2-4.5 Cm) Histograms. However in the Petal Length and Width Histograms it can be seen that there is a differentiation between the Setosa species and the Versicolor and Virginica species.The Setosa species in the Petal Length and Width are concentrated is smaller size (Cm) than the other two species. 
 
@@ -496,9 +497,25 @@ The following plots will be produced as a result of the above code:
 ####  Observations 
 It can be seen from the above Plots there does seem to be an overlap across the Species within the Sepal Width as all the boxs are concentrated within the 3 Cm area. Also within the Sepal Length all the Species minimums and maximums occupy within the 5.5-7 Cm area, while the Setosa Species Petal Length and Width results are much smaller than the other two Species. This reinforces the observations made from the Histogram plots. It should also be noted that within each Species at least one outlier is present. 
 
+####  Creation of a Boxplot comparing the Sepal Length/Width and Petal Length/Width of each of the Species
+These Boxplots draw on the observations made in the pervious two sets of Plots to give a greater understanding into the relationship between the Sepal Length/Width and Petal Length/Width of each of the Species.
 
-####  Creation of a Boxplot comparing the Length/Width and Petal Length/Width of each of the Species
-The 
+To create a boxplot displaying the Sepal Length/Width and Petal Length/Width of each of the species the following code is executed:
+```
+sns.boxplot(x="species" , y="petal_length" , data=f)
+plt.xlabel("Species", fontsize=12)
+plt.ylabel("Petal Length (Cm)", fontsize=12)
+plt.title("Compare the Distributions of Petal Length", fontsize=18)
+plt.tight_layout()
+plt.savefig("Visualisations/Boxplot comparing the Distributions of Petal Length of Each Species.png")
+plt.show()
+```
+  * Note the above code creates a boxplot displaying the Petal Length of each of the species. To create a boxplot displaying the Petal Width and Sepal Length/Width of each of the Species the following changes would have to be made to the code:
+    * **Petal Width:** Replace petal_length with petal_width.
+    * **Sepal Length:** Replace petal_length with sepal_length.
+    * **Sepal Width:** Replace petal_length with sepal_width.
+
+The following plots will be produced as a result of the above code:
 
 
 
