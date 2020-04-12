@@ -464,16 +464,9 @@ plt.show()
 
 The following plots will be produced as a result of the above code:
 
-<p align="left">
-  <img width="400" height="400" src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Length%20of%20Each%20of%20the%20Species.png"></img>
-<p align="right">
-  <img width="400" height="400" src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Width%20of%20Each%20of%20the%20Species.png"></img> 
-</p>
-<p align="left">
-  <img width="400" height="400" src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Petal%20Length%20of%20Each%20of%20the%20Species.png"></img>
-<p align="right">
-  <img width="400" height="400" src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Petal%20Width%20of%20Each%20of%20the%20Species.png"></img> 
-</p>
+<img align="left" width="400" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Length%20of%20Each%20of%20the%20Species.png"> <img align="righ" width="400" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Width%20of%20Each%20of%20the%20Species.png">
+
+<img align="left" width="400" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Petal%20Length%20of%20Each%20of%20the%20Species.png"> <img align="righ" width="400" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Petal%20Width%20of%20Each%20of%20the%20Species.png">
 
 ####  Observations 
 As seen from the above Plots there is a clear concentration and overlap of the species within the Sepal Length (4-8 Cm) and Sepal Width (2-4.5 Cm) Histograms. However in the Petal Length and Width Histograms it can be seen that there is a clear differentiation between the Setosa species and the Versicolor and Virginica species.The Setosa species in the Petal Length and Width are concentrated is smaller size (Cm) than the other two species. 
@@ -497,15 +490,8 @@ plt.show()
 
 The following plots will be produced as a result of the above code:
 
-<p align="center">
-  <img width="450" height="450" src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Setosa%20Data.png"></img>
-</p>
-<p align="center">
-  <img width="450" height="450" src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Versicolor%20Data.png"></img>
-</p>
-<p align="center">
-  <img width="450" height="450" src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Virginica%20Data.png"></img>
-</p>
+<img align="left" width="300" height="300" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Setosa%20Data.png"> <img align="righ" width="300" height="300" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Versicolor%20Data.png"><img align="righ" width="300" height="300" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Virginica%20Data.png">
+
 
 
 
