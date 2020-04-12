@@ -459,7 +459,7 @@ plt.savefig("Visualisations/Histrogram Comparing the Frequency of Sepal Width of
 plt.show()
 ```
 This code produces the following Plot:
-![Histrogram Comparing the Frequency of Sepal Width of Each of the Species](Visualisations/Histrogram_Comparing_the_Frequency_of_Sepal_Width_of_Each_of_the_Species.png)
+![Histrogram Comparing the Frequency of Sepal Width of Each of the Species](https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Width%20of%20Each%20of%20the%20Species.png)
 
 
 
