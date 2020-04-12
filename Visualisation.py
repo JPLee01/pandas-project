@@ -53,8 +53,8 @@ title="Species Sepal Width"
 plt.title(title, fontsize=18)
 plt.tight_layout()
 plt.show()
-plt.savefig("Histrogram Comparing the Frequency of Sepal Width of Each of the Species.png", dpi=72,)
-pp.savefig("Histrogram Comparing the Frequency of Sepal Width of Each of the Species")
+plt.savefig("Histrogram Comparing the Frequency of Sepal Width of Each of the Species.png")
+#pp.savefig("Histrogram Comparing the Frequency of Sepal Width of Each of the Species")
 
 
 
