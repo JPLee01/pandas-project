@@ -136,7 +136,7 @@ To download the repository, do the following:
 4.  Navigate to where  the ZIP files are located on your computer and extract the compressed (.zip) files.
 
 ### 7.2 Running the Program
-Once the repository has been downloaded, you will need to ensure that you are running it in the correct environment. It should be noted that this repository has been written using Python 3.8.2, and consequently it will require a Python version of 3.7 at a minimum to run as designed. The repository also requires a number of external Python libraries [seen below](#6.3-Libaries) to execute correctly. Once the correct version of Python has been installed complete with necessary libaries, and the ZIP has been downloaded and extracted the user can run the program. The running of any of the programs from the command line can be executed as follows:
+Once the repository has been downloaded, you will need to ensure that you are running it in the correct environment. It should be noted that this repository has been written using Python 3.8.2, and consequently it will require a Python version of 3.7 at a minimum to run as designed. The repository also requires a number of external Python libraries [seen below](#7.3-Libaries) to execute correctly. Once the correct version of Python has been installed complete with necessary libaries, and the ZIP has been downloaded and extracted the user can run the program. The running of any of the programs from the command line can be executed as follows:
 1.  Open a command prompt (cmd) or equivalent on your computer.([Cmdr](https://cmder.net) is recommended for Windows computers, Mac Computers via the terminal)
 2.  Navigate to the desired location through the use of the change directory (cd) command.
 3.  Run the program by typing:  
@@ -284,6 +284,7 @@ Random sample of 10 Rows of Data:
 38            4.4          3.0           1.3          0.2      setosa
 35            5.0          3.2           1.2          0.2      setosa 
 ```
+* Note the result for this code will change everytime the program is run.
 
 #### Print the Middle 10 Rows of Data (70-80)
 To display the middle 10 rows of data the Pandas.DataFrame.slice command is used within the code:
@@ -309,7 +310,7 @@ Sample of Rows 70-80 of Data:
 
 #### Print Summary Statistics for all the Species (Rounded to 3 Decimal Places)
 To display a Summary Statistics for all the Species the Pandas.DataFrame.describe command is used within the code:
-  * Note the Pandas.Round command is also implemented to round the results to 3 decimal places for aesthetics [3](#references).
+  * Note the Pandas.Round command is also implemented to round the results to 3 decimal places for aesthetics <sup>[6](#myfootnote6)</sup>.
 ```
 print("Summary Statistics of all the Species (Rounded to 3 Decimal Places):")
 print(round(df.describe(),3),'\n') 
@@ -393,7 +394,7 @@ max           7.900        3.800         6.900        2.500
 ```
 
 ### To create a Text File and Save the Results of the Analysis.py to it
-In oder to create a text file and save the results to it we make use of the [Sys](https://docs.python.org/3/library/sys.html) module within Python [4](#references).
+In oder to create a text file and save the results to it we make use of the [Sys](https://docs.python.org/3/library/sys.html) module within Python<sup>[7](#myfootnote7)</sup>
 1.  Fist at the begining of the program we import the sys module:
 ```
 import sys
@@ -412,6 +413,10 @@ sys.stdout.close()
 
 ### 7.2 Visualisation.py Program Explained
 As seen above the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program if primarily concerned with the production of visualisations of the data set.
+
+All Plots produced by the program are saved in .png formal to the Visualisations folder. 
+
+  * Note that any exisiting Plots in the folder will be overwritten is new Plots are generated through the program. 
 
 #### Importing the Libaries
 As well as the libaires imported in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program the following extra libaries are imported to the Visualisation.py program:
@@ -436,6 +441,6 @@ import seaborn as sns
 
 <a name="myfootnote5">5</a>: Binu - Seaborn Matplotlib plot to visualize Iris data, <https://www.kaggle.com/biphili/seaborn-matplotlib-plot-to-visualize-iris-data>
 
-3.  Pandas Round Command, <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.round.html>
+<a name="myfootnote6">6</a>: Pandas Round Command, <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.round.html>
 
-4.  How to redirect the print to a .txt file using the [Sys](https://docs.python.org/3/library/sys.html) module within Python, <https://stackoverflow.com/questions/7152762/how-to-redirect-print-output-to-a-file-using-python>
+<a name="myfootnote7">7</a>: How to redirect the print to a .txt file using the [Sys](https://docs.python.org/3/library/sys.html) module within Python, <https://stackoverflow.com/questions/7152762/how-to-redirect-print-output-to-a-file-using-python>
