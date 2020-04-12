@@ -490,7 +490,9 @@ plt.show()
 
 The following plots will be produced as a result of the above code:
 
-<img align="left" width="300" height="300" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Setosa%20Data.png"> <img align="centre" width="300" height="300" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Versicolor%20Data.png"><img align="righ" width="300" height="300" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Virginica%20Data.png">
+<img align="centre" width="450" height="450" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Setosa%20Data.png"> 
+<img align="centre" width="450" height="450" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Versicolor%20Data.png">
+<img align="centre"width="450" height="450" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Virginica%20Data.png">
 
 
 
