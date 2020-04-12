@@ -144,14 +144,20 @@ plt.show()
 
 
 #Create a Boxplot comparing the Distributions of Petal Length of Each Species
+#Set the X and Y Axes and the data to be used in the Boxplot
 sns.boxplot(x="species" , y="petal_length" , data=f)
+#Set the name and size of the X Label
 plt.xlabel("Species", fontsize=12)
+#Set the name and size of the Y Label
 plt.ylabel("Petal Length (Cm)", fontsize=12)
-title="Compare the Distributions of Petal Length"
-plt.title(title, fontsize=18)
+#Set the name and size of the Title
+plt.title("Compare the Distributions of Petal Length", fontsize=18)
+#The tight_layout command is used to fit the Plot within the Figure
 plt.tight_layout()
-#plt.show()
-#pp.savefig()
+#The Figure is Saved as a .png file in the Visualisations folder and a name is given to it
+plt.savefig("Visualisations/Boxplot comparing the Distributions of Petal Length of Each Species.png")
+#The Figure is displayed
+plt.show()
 
 #Create a Boxplot comparing the Distributions of Petal Width of Each Species
 sns.boxplot(x="species" , y="petal_width" , data=f)
