@@ -552,8 +552,10 @@ While the Violin Plot may be slightly more complex concept than a Box Plot to un
 
 From the above Violin Plots it can be seen that the Virginica has the highest Median value in Patel length, Petal width and Sepal length, while the Setosa has the highest Sepal Width Median value. These observations are easier to make in a Violin Plot thanks to the white dot. 
 
-### Creation of a a Scatter Plot depicting the relationship between Sepal/Petal Length and Sepal/Petal Width of the Species
+#### Creation of a a Scatter Plot depicting the relationship between Sepal/Petal Length and Sepal/Petal Width of the Species
+A Scatter Plot uses dots to represent values for two different numeric variables. The position of each dot on the horizontal and vertical axis indicates values for an individual data point. Scatter plots are used to observe relationships between variables<sup>[12](#myfootnote12)</sup>. 
 
+If the data points show an "up-hill" pattern from left to right, then there is a positive correlation between X & Y. Conversely if the pattern is "downhill" there is a positive correlation between X & Y. If the dats is scattered then there is no relationship between the X & Y.
 
 
 
@@ -581,3 +583,6 @@ From the above Violin Plots it can be seen that the Virginica has the highest Me
 <a name="myfootnote10">10</a>:  Mike Yi - What is a Violin Plot?, <https://chartio.com/learn/charts/violin-plot-complete-guide/>
 
 <a name="myfootnote11">11</a>: Joel Carron - Violin Plots 101: Visualizing Distribution and Probability Density, <https://mode.com/blog/violin-plot-examples>
+
+<a name="myfootnote11">11</a>: Mike Yi - What is a Scatter Plot?, <https://chartio.com/learn/charts/what-is-a-scatter-plot/>
+
