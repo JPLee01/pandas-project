@@ -465,7 +465,7 @@ plt.show()
 The following plots will be produced as a result of the above code:
 
 <img align="left" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Length%20of%20Each%20of%20the%20Species.png"> <img align="right" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Width%20of%20Each%20of%20the%20Species.png">
-
+&nbsp;
 <img align="left" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Petal%20Length%20of%20Each%20of%20the%20Species.png"> <img align="right" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Petal%20Width%20of%20Each%20of%20the%20Species.png">
 &nbsp;
 &nbsp;
@@ -519,13 +519,14 @@ plt.show()
 The following plots will be produced as a result of the above code:
 
 <img align="left" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20comparing%20the%20Distributions%20of%20Petal%20Length%20of%20Each%20Species.png"> <img align="right" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20comparing%20the%20Distributions%20of%20Petal%20Width%20of%20Each%20Species.png">
-
+&nbsp;
 <img align="left" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20comparing%20the%20Distributions%20of%20Sepal%20Length%20of%20Each%20Species.png"> <img align="right" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20comparing%20the%20Distributions%20of%20Sepal%20Width%20of%20Each%20Species.png">
 &nbsp;
 &nbsp;
 &nbsp;
 
 ####  Observations 
+
 
 
 
