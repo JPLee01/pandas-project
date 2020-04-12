@@ -443,7 +443,7 @@ VirginicaData = df[df.species == "virginica"]
 ### Creation of Histograms Comparing the Frequency of Sepal Length/Width and Petal Length/Width of Each of the Species
 Histograms are created to allow for the quick comparison between the frequency of Sepal Length/Width and Petal Length/Width of each of the Species. Histograms provide a visual interpretation of numerical data and are an excellent to highlight the normal distribution, outliers, skewness etc. 
 
-To create a histogram comparing the frequency of Sepal Width of each of the Species the following code is executed:
+To create a histogram comparing the frequency of Sepal Length/Width and Petal Length/Width of each of the Species the following code is executed:
 ```
 bins = np.linspace(0, 5, 30)
 plt.hist(SetosaData.sepal_width, bins, alpha=0.5, label="Setosa")
@@ -458,13 +458,19 @@ plt.tight_layout()
 plt.savefig("Visualisations/Histrogram Comparing the Frequency of Sepal Width of Each of the Species.png")
 plt.show()
 ```
-This code produces the following Plot:
+  * Note the above code creates a histogram comparing the frequency of Sepal Width of each of the Species. To create a histogram comparing the frequency of Sepal Length and Petal Length/Width of each of the Species the following changes would have to be made to the code:
+    * **Sepal Length:** Replace sepal_width with sepal_length.
+    * **Petal Width:** Replace sepal_width with petal_width.
+    * **Sepal Length:** Replace sepal_width with petal_length.
 
-#![Histrogram Comparing the Frequency of Sepal Width of Each of the Species]#(ttps://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Width%20of%20Each%20of%20the%20Species.png)
-
-<p align="center">
+The following plots will be produced as a result of the above code:
+<p align="left">
+  <img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Width%20of%20Each%20of%20the%20Species.png">
+ <p align="righ">
   <img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Width%20of%20Each%20of%20the%20Species.png">
 </p>
+
+
 
 
 
