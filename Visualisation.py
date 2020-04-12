@@ -31,7 +31,7 @@ f = pd.read_csv("IrisData.csv")
 #Create a DataFrame from the Csv file to allow for easier analysis
 df = pd.DataFrame(f)
 
-#Create Species Specific Datasets to allow for easier visualisation
+#Create Species Specific Data Sets to allow for easier visualisation
 SetosaData = df[df.species == "setosa"]
 VersicolorData = df[df.species == "versicolor"]
 VirginicaData = df[df.species == "virginica"]
@@ -41,24 +41,36 @@ VirginicaData = df[df.species == "virginica"]
 #from matplotlib.backends.backend_pdf import PdfPages
 #pp = PdfPages('Visualisation.pdf')
 
-#Create a Histrogram Comparing the Frequency of Sepal Width of Each of the Species
+#Create a Histogram Comparing the Frequency of Sepal Width of Each of the Species
+#Use Numpy Linspace command to set the start and end point as well as the specify the number of intervals (30 chosen to allow for 10 for each specie)
 bins = np.linspace(0, 5, 30)
+#Set the parameters for the Setosa Histogram
+#Data is Sepal Width within the Setosa Data Set, above bins are imposed, alpha (transparency) is set and a label is added
 plt.hist(SetosaData.sepal_width, bins, alpha=0.5, label="Setosa")
+#Set the parameters for the Versicolor Histogram
 plt.hist(VersicolorData.sepal_width, bins, alpha=0.5, label="Versicolor")
+#Set the parameters for the Virginica Histogram
 plt.hist(VirginicaData.sepal_width, bins, alpha=0.5, label="Virginica")
+#Set the name and size of the X Label
 plt.xlabel("Sepal Width (Cm)", fontsize=12)
+#Set the name and size of the Y Label
 plt.ylabel("Frequency of Occurrence", fontsize=12)
+#Add a legend and locate it in the top right
 plt.legend(loc='upper right')
+#Set the name and size of the Title
 plt.title("Species Sepal Width", fontsize=18)
+#The tight_layout command is used to fit the Plot within the Figure
 plt.tight_layout()
+#The Figure is Saved as a .png file in the Visualisations folder and a name is given to it
 plt.savefig("Visualisations/Histrogram Comparing the Frequency of Sepal Width of Each of the Species.png")
+#The Figure is displayed
 plt.show()
 
 
 
 
 
-#Create a Histrogram Comparing the Frequency of Sepal Length of Each of the Species
+#Create a Histogram Comparing the Frequency of Sepal Length of Each of the Species
 bins = np.linspace(0, 10, 30)
 plt.hist(SetosaData.sepal_length, bins, alpha=0.5, label="Setosa")
 plt.hist(VersicolorData.sepal_length, bins, alpha=0.5, label="Versicolor")
@@ -66,14 +78,12 @@ plt.hist(VirginicaData.sepal_length, bins, alpha=0.5, label="Virginica")
 plt.xlabel("Sepal Length (Cm)", fontsize=12)
 plt.ylabel("Frequency of Occurrence", fontsize=12)
 plt.legend(loc='best')
-title="Species Sepal Length"
-plt.title(title, fontsize=18)
+plt.title("Species Sepal Length", fontsize=18)
 plt.tight_layout()
-#plt.show()
-#pp.savefig()
-######plt.savefig("Frequency of Sepal Length of Each of the Species.png", dpi=72,)#########
+plt.savefig("Visualisations/Histrogram Comparing the Frequency of Sepal Length of Each of the Species.png")
+plt.show()
 
-#Create a Histrogram Comparing the Frequency of Petal Width of Each of the Species
+#Create a Histogram Comparing the Frequency of Petal Width of Each of the Species
 bins = np.linspace(0, 3, 30)
 plt.hist(SetosaData.petal_width, bins, alpha=0.5, label="Setosa")
 plt.hist(VersicolorData.petal_width, bins, alpha=0.5, label="Versicolor")
@@ -84,12 +94,11 @@ plt.legend(loc='upper right')
 title="Species Petal Width"
 plt.title(title, fontsize=18)
 plt.tight_layout()
-#plt.show()
-#pp.savefig()
-######plt.savefig("Frequency of Petal Width of Each of the Species.png", dpi=72,)#########
+plt.savefig("Visualisations/Histrogram Comparing the Frequency of Petal Width of Each of the Species.png")
+plt.show()
 
 
-#Create a Histrogram Comparing the Frequency of Petal Length of Each of the Species
+#Create a Histogram Comparing the Frequency of Petal Length of Each of the Species
 bins = np.linspace(0, 8, 30)
 plt.hist(SetosaData.petal_length, bins, alpha=0.5, label="Setosa")
 plt.hist(VersicolorData.petal_length, bins, alpha=0.5, label="Versicolor")
@@ -100,9 +109,8 @@ plt.legend(loc='upper right')
 title="Species Petal Length"
 plt.title(title, fontsize=18)
 plt.tight_layout()
-#plt.show()
-#pp.savefig()
-######plt.savefig("Frequency of Petal Lengthof Each of the Species.png", dpi=72,)#########
+plt.savefig("Visualisations/Histrogram Comparing the Frequency of Petal Length of Each of the Species.png")
+plt.show()
 
 
 #Create a Boxplot Displaying the Distribution of the Setosa Data
