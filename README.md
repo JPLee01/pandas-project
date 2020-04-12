@@ -453,7 +453,6 @@ plt.xlabel("Sepal Width (Cm)", fontsize=12)
 plt.ylabel("Frequency of Occurrence", fontsize=12)
 plt.legend(loc='upper right')
 plt.title("Species Sepal Width", fontsize=18)
-#The tight_layout command is used to fit the Plot within the Figure
 plt.tight_layout()
 plt.savefig("Visualisations/Histrogram Comparing the Frequency of Sepal Width of Each of the Species.png")
 plt.show()
@@ -465,9 +464,12 @@ plt.show()
 
 The following plots will be produced as a result of the above code:
 
-<img align="left" width="400" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Length%20of%20Each%20of%20the%20Species.png"> <img align="righ" width="400" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Width%20of%20Each%20of%20the%20Species.png">
+<img align="left" width="450" height="450" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Length%20of%20Each%20of%20the%20Species.png"> <img align="righ" width="450" height="450" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Sepal%20Width%20of%20Each%20of%20the%20Species.png">
 
 <img align="left" width="400" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Petal%20Length%20of%20Each%20of%20the%20Species.png"> <img align="righ" width="400" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Petal%20Width%20of%20Each%20of%20the%20Species.png">
+
+####  Observations 
+As seen from the above Plots there is a clear concentration and overlap of the species within the Sepal Length (4-8 Cm) and Sepal Width (2-4.5 Cm) Histograms. However in the Petal Length and Width Histograms it can be seen that there is a clear differentiation between the Setosa species and the Versicolor and Virginica species.The Setosa species in the Petal Length and Width are concentrated is smaller size (Cm) than the other two species. 
 
 
 

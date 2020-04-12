@@ -67,9 +67,6 @@ plt.savefig("Visualisations/Histrogram Comparing the Frequency of Sepal Width of
 plt.show()
 
 
-
-
-
 #Create a Histogram Comparing the Frequency of Sepal Length of Each of the Species
 bins = np.linspace(0, 10, 30)
 plt.hist(SetosaData.sepal_length, bins, alpha=0.5, label="Setosa")
@@ -91,8 +88,7 @@ plt.hist(VirginicaData.petal_width, bins, alpha=0.5, label="Virginica")
 plt.xlabel("Petal Width (Cm)", fontsize=12)
 plt.ylabel("Frequency of Occurrence", fontsize=12)
 plt.legend(loc='upper right')
-title="Species Petal Width"
-plt.title(title, fontsize=18)
+plt.title("Species Petal Width", fontsize=18)
 plt.tight_layout()
 plt.savefig("Visualisations/Histrogram Comparing the Frequency of Petal Width of Each of the Species.png")
 plt.show()
@@ -106,22 +102,27 @@ plt.hist(VirginicaData.petal_length, bins, alpha=0.5, label="Virginica")
 plt.xlabel("Petal Length (Cm)", fontsize=12)
 plt.ylabel("Frequency of Occurrence", fontsize=12)
 plt.legend(loc='upper right')
-title="Species Petal Length"
-plt.title(title, fontsize=18)
+plt.title("Species Petal Length", fontsize=18)
 plt.tight_layout()
 plt.savefig("Visualisations/Histrogram Comparing the Frequency of Petal Length of Each of the Species.png")
 plt.show()
 
 
 #Create a Boxplot Displaying the Distribution of the Setosa Data
+#Set the data to be displayed in the Boxplot and it's orientation
 sns.boxplot(data=SetosaData, orient="h")
+#Set the name and size of the X Label
 plt.xlabel("Size (Cm)", fontsize=12)
+#Set the name and size of the Y Label
 plt.ylabel("Setosa Data", fontsize=12)
-title="Distribution of Setosa Data"
-plt.title(title, fontsize=18)
+#Set the name and size of the Title
+plt.title("Distribution of Setosa Data", fontsize=18)
+#The tight_layout command is used to fit the Plot within the Figure
 plt.tight_layout()
-#plt.show()
-#pp.savefig()
+#The Figure is Saved as a .png file in the Visualisations folder and a name is given to it
+plt.savefig("Visualisations/Boxplot Displaying the Distribution of the Setosa Data.png")
+#The Figure is displayed
+plt.show()
 
 #Create a Boxplot Displaying the Distribution of the Versicolor Data
 sns.boxplot(data=VersicolorData, orient="h")
