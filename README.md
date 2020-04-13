@@ -651,7 +651,7 @@ As seen with a Pairplot the creation of a multigraph resperesntation of the data
 ### 8.3 Interactive.py Program Explained
 As seen above the [Interactive.py](https://github.com/JPLee01/pandas-project/blob/master/Interactive.py) program is primarily concerned with highlighting the potential and capability of the Pandas Profiling module.
 
-Upon investigation into potential advanced uses of the Iris Data Set an article by Nistrup<sup>[17](#myfootnote17)</sup> was discovered which spoke about the potential of the Pandas Profiling module. Upon further investigation a GitHub repository by sbrugman<sup>[18](#myfootnote18)</sup> was discovered which explained the Pandas Profiling module in great detail. These two references have been heavily used in the creation of the [Interactive.py](https://github.com/JPLee01/pandas-project/blob/master/Interactive.py) program.
+Upon investigation into potential advanced uses of the Iris Data Set an article by Peter Nistrup<sup>[17](#myfootnote17)</sup> was discovered which spoke about the potential of the Pandas Profiling module. Upon further investigation a GitHub repository by sbrugman<sup>[18](#myfootnote18)</sup> was discovered which explained the Pandas Profiling module in great detail. These two references have been heavily used in the creation of the [Interactive.py](https://github.com/JPLee01/pandas-project/blob/master/Interactive.py) program.
 
 The report produced by the program are saved in .html format within the repository. 
 
@@ -679,7 +679,10 @@ As a result of running the program the following Interactive Report is created:
 
 ![Interactive Report](Interactive-Report.gif)
 
-The above example is a 30 second Gif highlighting the 
+The above example is a 30 second Gif highlighting the process of executing the Interactive.py program from the command line and interacting with the Interactive Report. As seen from the Gif the Interactive Report 
+
+
+The process of uploading of Gif to the Readme file can be seen in an article by Kelli Blaock<sup>[19](#myfootnote19)</sup>.
 
 
 
@@ -721,3 +724,6 @@ The above example is a 30 second Gif highlighting the
 <a name="myfootnote17">17</a>: Peter Nistrup - Exploring your data with just 1 line of Python, <https://towardsdatascience.com/exploring-your-data-with-just-1-line-of-python-4b35ce21a82d>
 
 <a name="myfootnote18">18</a>: sbrugman - GitHub Repository, <https://github.com/pandas-profiling/pandas-profiling>
+
+<a name="myfootnote19">19</a>: Kelli Blaock - Demo your App in your GitHub README with an Animated GIF, https://dev.to/kelli/demo-your-app-in-your-github-readme-with-an-animated-gif-2o3c
+
