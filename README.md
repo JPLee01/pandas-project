@@ -70,16 +70,20 @@ located [here](https://github.com/JPLee01/pandas-project):
   README.md   |    This file; A Description of the Project and Instructions
   IrisData.csv |  Iris Flower Data Set
   Analysis.py | Python Programme for carrying out analysis of the Iris Data set
+  Analysis.txt | The results from the Analysis.py Program saved onto a Text File
   Visualisation.py | Python Programme for creating visualisations of the Iris Data set
+  Visualisations | A folder containing all of the Plots of the Visualisation.py Program
+  Project Instructions.pdf | A PDF copy of the Project Instructions
+  .gitignore | A Text File explicitly explaining to Git which files or folders to ignore in the Project 
 
 ## 3 Fishers Iris Data Set
 ------------------------------------------------------------------------------------------------
 ### 3.1 Background
 
 The data analysed in this project is the \"Iris Flower Data
-Set\"<sup>[1](#myfootnote1)</sup>. This data set was collected by R.A. Fisher and presented
+Set\".<sup>[1](#myfootnote1)</sup> This data set was collected by R.A. Fisher and presented
 as a data set in 1936 in his paper \"The Use of Multiple Measurements in
-Taxonomic Problems.\"<sup>[2](#myfootnote2)</sup>. In this paper Fisher studied the
+Taxonomic Problems\".<sup>[2](#myfootnote2)</sup> In this paper Fisher studied the
 use of linear combinations of multiple characterising features of a
 species to discriminate it from related species. Within the paper Fisher
 studied the following three related species of Iris flowers:
@@ -115,7 +119,7 @@ Through an oline search it can be seen that a number of previous iterations of t
 
 ##  6 Issues and Inconsistencies with Data Set
 ------------------------------------------------------------------------------------------------
-It should be noted that there are three inconsistencies between the data set sourced from UCI<sup>[1](#myfootnote1)</sup> and the data set presented by Fisher<sup>[2](#myfootnote2)</sup>. These three inconsistencies are as follows:
+It should be noted that there are three inconsistencies between the data set sourced from UCI<sup>[1](#myfootnote1)</sup> and the data set presented by Fisher.<sup>[2](#myfootnote2)</sup> These three inconsistencies are as follows:
 1.  35th sample: the fourth feature is given as "0.1" where Fisher had originally given "0.2".
 2.  38th sample: the second feature is given as "3.1" where Fisher had originally given "3.6".
 3.  38th sample: the third feature is given as "1.5" where Fisher had originally given "1.4".
@@ -311,7 +315,7 @@ Sample of Rows 70-80 of Data:
 
 #### Print Summary Statistics for all the Species (Rounded to 3 Decimal Places)
 To display a Summary Statistics for all the Species the Pandas.DataFrame.describe command is used within the code:
-  * Note the Pandas.Round command is also implemented to round the results to 3 decimal places for aesthetics <sup>[6](#myfootnote6)</sup>.
+  * Note the Pandas.Round command is also implemented to round the results to 3 decimal places for aesthetics.<sup>[6](#myfootnote6)</sup>
 ```
 print("Summary Statistics of all the Species (Rounded to 3 Decimal Places):")
 print(round(df.describe(),3),'\n') 
@@ -395,7 +399,7 @@ max           7.900        3.800         6.900        2.500
 ```
 
 ### To create a Text File and Save the Results of the Analysis.py to it
-In oder to create a text file and save the results to it we make use of the [Sys](https://docs.python.org/3/library/sys.html) module within Python<sup>[7](#myfootnote7)</sup>
+In oder to create a text file and save the results to it we make use of the [Sys](https://docs.python.org/3/library/sys.html) module within Python.<sup>[7](#myfootnote7)</sup>
 1.  Fist at the begining of the program we import the sys module:
 ```
 import sys
@@ -442,7 +446,7 @@ VirginicaData = df[df.species == "virginica"]
 ```
 
 ### Creation of Histograms Comparing the Frequency of Sepal Length/Width and Petal Length/Width of Each of the Species
-Histograms provide a visual interpretation of numerical data and are an excellent to highlight the normal distribution, outliers, skewness etc<sup>[8](#myfootnote8)</sup>. Histograms are created to allow for the quick comparison between the frequency of Sepal Length/Width and Petal Length/Width of each of the Species.
+Histograms provide a visual interpretation of numerical data and are an excellent to highlight the normal distribution, outliers, skewness etc.<sup>[8](#myfootnote8)</sup> Histograms are created to allow for the quick comparison between the frequency of Sepal Length/Width and Petal Length/Width of each of the Species.
 
 To create a histogram comparing the frequency of Sepal Length/Width and Petal Length/Width of each of the Species the following code is executed:
 ```
@@ -473,7 +477,7 @@ The following plots will be produced as a result of the above code:
 As seen from the above Plots there is a concentration and overlap of the species within the Sepal Length (4-8 Cm) and Sepal Width (2-4.5 Cm) Histograms. However in the Petal Length and Width Histograms it can be seen that there is a differentiation between the Setosa species and the Versicolor and Virginica species.The Setosa species in the Petal Length and Width are concentrated is smaller size (Cm) than the other two species. 
 
 ### Creation of Boxplots Displaying the Distribution of the Data of Each of the Species
-A Boxplot (also known as a Box-and-Whisker Plot) displays a summary of a set of data containing the minimum, first quartile, median, third quartile, and maximum. In a box plot, we draw a box from the first quartile to the third quartile. A vertical line goes through the box at the median. The whiskers go from each quartile to the minimum or maximum. Additionally, outliers (if present) are shown by points outside the minimum and maximum lines<sup>[9](#myfootnote9)</sup>. A Boxplot is created for each of the species to display the distribution of data within each of the species and highlight any areas of commonality.
+A Boxplot (also known as a Box-and-Whisker Plot) displays a summary of a set of data containing the minimum, first quartile, median, third quartile, and maximum. In a box plot, we draw a box from the first quartile to the third quartile. A vertical line goes through the box at the median. The whiskers go from each quartile to the minimum or maximum. Additionally, outliers (if present) are shown by points outside the minimum and maximum lines.<sup>[9](#myfootnote9)</sup> A Boxplot is created for each of the species to display the distribution of data within each of the species and highlight any areas of commonality.
 
 To create a boxplots displaying the distribution of the data of each of the species the following code is executed:
 ```
@@ -524,7 +528,7 @@ The following plots will be produced as a result of the above code:
 Reinforcing our obserations from the pervious Plots we can see in the Boxplots that there is little or no overlap between measurements for Setosa as compared to the other two species.
 
 ####  Creation of a Violin Plot Comparing the Sepal Length/Width and Petal Length/Width of each of the Species
-Very similiar to the above Boxplot a Violin Plot depicts distributions of numeric data for one or more groups using density curves<sup>[10](#myfootnote10)</sup>. Within a Violin Plot the white dot represents the Median value the thick black bar in the center represents the interquartile range, the thin black line represents the rest of the distribution, except for points that are determined to be “outliers” using a method that is a function of the interquartile range. On each side of the black line is a Kernel Density Estimation (KDE) to show the distribution shape of the data. Wider sections of the Violin Plot represent a higher probability that members of the population will take on the given value, the skinnier sections represent a lower probability<sup>[11](#myfootnote11)</sup>.
+Very similiar to the above Boxplot a Violin Plot depicts distributions of numeric data for one or more groups using density curves.<sup>[10](#myfootnote10)</sup> Within a Violin Plot the white dot represents the Median value the thick black bar in the center represents the interquartile range, the thin black line represents the rest of the distribution, except for points that are determined to be “outliers” using a method that is a function of the interquartile range. On each side of the black line is a Kernel Density Estimation (KDE) to show the distribution shape of the data. Wider sections of the Violin Plot represent a higher probability that members of the population will take on the given value, the skinnier sections represent a lower probability.<sup>[11](#myfootnote11)</sup>
 
 To create a Violin Plot displaying the Sepal Length/Width and Petal Length/Width of each of the species the following code is executed:
 ```
@@ -553,9 +557,9 @@ While the Violin Plot may be slightly more complex concept than a Box Plot to un
 From the above Violin Plots it can be seen that the Virginica has the highest Median value in Patel length, Petal width and Sepal length, while the Setosa has the highest Sepal Width Median value. These observations are easier to make in a Violin Plot thanks to the white dot. 
 
 #### Creation of a a Scatter Plot depicting the relationship between Sepal/Petal Length and Sepal/Petal Width of each of the Species
-A Scatter Plot uses dots to represent values for two different numeric variables. The position of each dot on the horizontal and vertical axis indicates values for an individual data point. Scatter plots are used to observe relationships between variables<sup>[12](#myfootnote12)</sup>. 
+A Scatter Plot uses dots to represent values for two different numeric variables. The position of each dot on the horizontal and vertical axis indicates values for an individual data point. Scatter plots are used to observe relationships between variables.<sup>[12](#myfootnote12)</sup>
 
-If the data points show an "up-hill" pattern from left to right, then there is a positive correlation between X & Y. Conversely if the pattern is "downhill" there is a negative correlation between X & Y. If the dats is scattered then there is no relationship between the X & Y<sup>[13](#myfootnote13)</sup>.
+If the data points show an "up-hill" pattern from left to right, then there is a positive correlation between X & Y. Conversely if the pattern is "downhill" there is a negative correlation between X & Y. If the dats is scattered then there is no relationship between the X & Y.<sup>[13](#myfootnote13)</sup>
 
 The creation of a Scatter Plot depicting the relationship between Sepal/Petal Length and Sepal/Petal will indicate if a positive or negtive correlation exisits within any of the species.
 
@@ -584,7 +588,7 @@ From the Scatter Plots it can be seen that a positive correlation exists for all
 
 ### Creation of a KDE Plot of each of the Species displayig Sepal/Petal Length Vs. Sepal/Petal Width
 A KDE (Kernel Density Estimate) Plot is used for visualizing the Probability Density of a specific variable.
-The plot can either be One-Dimensional or Two-Dimensional and is mainly used in the field of non-parametric analysis<sup>[14](#myfootnote14)</sup>.
+The plot can either be One-Dimensional or Two-Dimensional and is mainly used in the field of non-parametric analysis.<sup>[14](#myfootnote14)</sup>
 
 The output for this KDE Plot will be a Two-Dimensional representation of the relationship of the Sepal/Petal Length Vs. Sepal/Petal Width of each of the species.
 
@@ -616,7 +620,7 @@ The above KDE Plots highlight the observations made in the pervious plots with r
   * Please also note when running the Plots the following message is observed: "UserWarning: Passing a 2D dataset for a bivariate plot is deprecated in favor of kdeplot(x, y), and it will cause an error in future versions. Please update your code." This error can appear when dealing with Two-Dimensional representations and users should be aware of this when running the program.
 
 ### Creation of a Pairplot of the Data Set
-A Pairplot is a plot in which one variable in the same data row is matched with another variable's value. Pairplots show all variables paired with all the other variables and allow users to see both distribution of single variables and relationships between two variables<sup>[15](#myfootnote15)</sup>. By creating a multigraph resperesntation of the data it is easy for the user to identify the differing relationships between the variable's.
+A Pairplot is a plot in which one variable in the same data row is matched with another variable's value. Pairplots show all variables paired with all the other variables and allow users to see both distribution of single variables and relationships between two variables.<sup>[15](#myfootnote15)</sup> By creating a multigraph resperesntation of the data it is easy for the user to identify the differing relationships between the variable's.
 
 To create a Pairplot of the Data Set the following code is executed:
 ```
@@ -630,7 +634,7 @@ plt.suptitle("Pair Plot for Dataset", fontsize = 20)
 plt.savefig("Visualisations/Pairplot of the Data Set.png")
 plt.show()
 ```
-  * Note the above code creates a Pairplot with Scatterplots as the upper plots, Stepped Histrograms as the diagional plots and KDE Plots as the lower plots. With a Pairplot there is a lot of flexability with regards to the type of plots.
+  * Note the above code creates a Pairplot with Scatterplots as the upper plots, Stepped Histrograms as the diagional plots and KDE Plots as the lower plots. With a Pairplot there is a lot of flexability with regards to the type of plots which can be used.
 
 The following plots will be produced as a result of the above code:
 <img align="center" width="925" height="925" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Pairplot%20of%20the%20Data%20Set.png">
@@ -638,7 +642,7 @@ The following plots will be produced as a result of the above code:
 ####  Observations
 Within the Pair plot seen above it can be stated the Setosa can be clearly distinguished from the other two species in each subplot. Within the Petal Length and Width this is particularly apparent. 
 
-As seen with a Pairplot the creation of a multigraph resperesntation of the data offers the user an overview of the Data Set. This it could be argued, would aid the user in identifying relationships within the Data Set. Pair plots also seen as a useful tool within bivariate analysis. A Pair plot can identify the bivariate relation between each variable and can be used in the construction of hypotheses of associations between variables.<sup>[16](#myfootnote16)</sup>. 
+As seen with a Pairplot the creation of a multigraph resperesntation of the data offers the user an overview of the Data Set. This it could be argued, would aid the user in identifying relationships within the Data Set. Pair plots also seen as a useful tool within bivariate analysis. A Pair plot can identify the bivariate relation between each variable and can be used in the construction of hypotheses of associations between variables.<sup>[16](#myfootnote16)</sup>
 
 
 
