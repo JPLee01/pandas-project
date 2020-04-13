@@ -323,6 +323,7 @@ plt.savefig("Visualisations/KDE Plot of Virginica - Petal Length Vs. Petal Width
 plt.show()
 
 #Create a Pairplot of the Data Set
+#Set the parameters for the Pairplot
 g = sns.pairplot(data=f,hue="species")
 #Changing of the Upper Plots to Scatterplots
 g = g.map_upper(sns.scatterplot)

@@ -158,7 +158,7 @@ The following Python libraries were used in the writing of the programs code and
 * [Matplotlib.pyplot](https://matplotlib.org/tutorials/introductory/pyplot.html) - Used for the manipulation of elements and the creation of certain plots graphs, plots and charts within the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program.
 * [Seaborn](https://seaborn.pydata.org/) - Used for the creation and manipulation of all plots in the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program. (Seaborn allows for the extetion of the functionality of Matplotlib).
 * [Sys](https://docs.python.org/3/library/sys.html) - A module more than a library within Python used for the creation and writing of text files in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program.
-* [Pandas Profiling](https://towardsdatascience.com/exploratory-data-analysis-with-pandas-profiling-de3aae2ddff3) - A module more than a library within Python used for the creation of interactive reports as seen in the [Interactive.py]() program.
+* [Pandas Profiling](https://towardsdatascience.com/exploratory-data-analysis-with-pandas-profiling-de3aae2ddff3) - A module more than a library within Python used for the creation of interactive reports through ProfileReport as seen in the [Interactive.py](https://github.com/JPLee01/pandas-project/blob/master/Interactive.py) program.
 
 ## 8 Python Programs and Results Explained
 ------------------------------------------------------------------------------------------------
@@ -167,7 +167,7 @@ This section will describe the Pyton programs and subsequent code which was crea
 It should be noted that two separate python programmes have been written for this project:
 1.  [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) - A program which was created to carry out the general and statistical analysis of the data set. It outputs results were produced into the [Analysis.txt](https://github.com/JPLee01/pandas-project/blob/master/Analysis.txt) file.
 2.  [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) - A program which was created to produce visualisations of the data set. It outputs were stored as .png files in the [repository](https://github.com/JPLee01/pandas-project#2-project-repository) the programe is stored in.
-3. [Interactive.py] - A program which was created to show the potential and capability of the Pandas Profiling module.
+3. [Interactive.py](https://github.com/JPLee01/pandas-project/blob/master/Interactive.py) - A program which was created to show the potential and capability of the Pandas Profiling module.
 
 For clarity comments within the code have been removed from this document, but these can be viewed within the specific Python programmes.
 
@@ -421,11 +421,11 @@ sys.stdout.close()
 ```
 
 ### 8.2 Visualisation.py Program Explained
-As seen above the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program if primarily concerned with the production of visualisations of the data set.
+As seen above the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program is primarily concerned with the production of visualisations of the data set.
 
 All Plots produced by the program are saved in .png formal to the Visualisations folder. 
 
-  * Note that any exisiting Plots in the folder will be overwritten is new Plots are generated through the program. 
+  * Note that any exisiting Plots in the folder will be overwritten as new Plots are generated through the program. 
 
 #### Importing the Libaries
 As well as the libaires imported in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program the following extra libaries are imported to the Visualisation.py program:
@@ -649,6 +649,37 @@ Within the Pair plot seen above it can be stated the Setosa can be clearly disti
 As seen with a Pairplot the creation of a multigraph resperesntation of the data offers the user an overview of the Data Set. This it could be argued, would aid the user in identifying relationships within the Data Set. Pair plots also seen as a useful tool within bivariate analysis. A Pair plot can identify the bivariate relation between each variable and can be used in the construction of hypotheses of associations between variables.<sup>[16](#myfootnote16)</sup>
 
 ### 8.3 Interactive.py Program Explained
+As seen above the [Interactive.py](https://github.com/JPLee01/pandas-project/blob/master/Interactive.py) program is primarily concerned with highlighting the potential and capability of the Pandas Profiling module.
+
+Upon investigation into potential advanced uses of the Iris Data Set an article by Nistrup<sup>[17](#myfootnote17)</sup> was discovered which spoke about the potential of the Pandas Profiling module. Upon further investigation a GitHub repository by sbrugman<sup>[18](#myfootnote18)</sup> was discovered which explained the Pandas Profiling module in great detail. These two references have been heavily used in the creation of the [Interactive.py](https://github.com/JPLee01/pandas-project/blob/master/Interactive.py) program.
+
+The report produced by the program are saved in .html format within the repository. 
+
+  * Note that the exisiting the report in the repository will be overwritten as a new report generated through the program. 
+
+#### Importing the Libaries
+As well as the [Pandas](https://pandas.pydata.org/) libary imported in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) and [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) programs the following extra libary is imported to the Interactive.py program:
+```
+from pandas_profiling import ProfileReport
+```
+
+### Creation of a DataFrame
+The process in [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) is repeated for this program.
+
+### Creation of the Interactive Report
+In order to create and save the Interactive Report the following code is executed:
+```
+profile = ProfileReport(df, title="Iris Data Interactive Report", html={'style':{'full_width':True}})
+df.profile_report()
+profile.to_file(output_file="Iris Data Interactive Report.html")
+```
+  * Note the above code requires the installation of the Pandas Profiling module by the user. If this is not present the program will not run and the report will not be grnerated. It is advised that if the the Pandas Profiling module is not installed, the detail instructions on sbrugman GitHub repository is followed<sup>[18](#myfootnote18)</sup>.
+
+As a result of running the program the following Interactive Report is created:
+
+
+
+
 
 ##  References
 ------------------------------------------------------------------------------------------------
@@ -683,4 +714,8 @@ As seen with a Pairplot the creation of a multigraph resperesntation of the data
 
 <a name="myfootnote15">15</a>: Will Koehrsen - Visualizing Data with Pairs Plots in Python, <https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166>
 
-<a name="myfootnote15">15</a>: Alessandro Bertani et al. - How to describe Bivariate Data, <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5864614/#__sec3title>
+<a name="myfootnote16">16</a>: Alessandro Bertani et al. - How to describe Bivariate Data, <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5864614/#__sec3title>
+
+<a name="myfootnote17">17</a>: Peter Nistrup - Exploring your data with just 1 line of Python, <https://towardsdatascience.com/exploring-your-data-with-just-1-line-of-python-4b35ce21a82d>
+
+<a name="myfootnote18">18</a>: sbrugman - GitHub Repository, <https://github.com/pandas-profiling/pandas-profiling>

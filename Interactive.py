@@ -15,6 +15,7 @@ f =pd.read_csv("IrisData.csv")
 #Create a DataFrame from the Csv file to allow for easier analysis
 df = pd.DataFrame(f)
 
+#Set the parameters for the Interactive Report
 profile = ProfileReport(df, title="Iris Data Interactive Report", html={'style':{'full_width':True}})
 
 #Run the Report
