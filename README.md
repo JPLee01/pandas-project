@@ -676,7 +676,8 @@ profile.to_file(output_file="Iris Data Interactive Report.html")
   * Note the above code requires the installation of the Pandas Profiling module by the user. If this is not present the program will not run and the report will not be grnerated. It is advised that if the the Pandas Profiling module is not installed, the detail instructions on sbrugman GitHub repository is followed<sup>[18](#myfootnote18)</sup>.
 
 As a result of running the program the following Interactive Report is created:
-![](Interactive Report.gif)
+
+![Interactive Report](Interactive-Report.gif)
 
 The above example is a 30 second Gif highlighting the 
 
