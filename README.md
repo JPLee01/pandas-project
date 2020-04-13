@@ -491,7 +491,7 @@ plt.show()
 
 The following plots will be produced as a result of the above code:
 
-<img align="left" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Setosa%20Data.png"> <img align="center" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Versicolor%20Data.png"><img align="right" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Virginica%20Data.png">
+<img align="left" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Setosa%20Data.png"> <img align="centre" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Versicolor%20Data.png"><img align="right" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Boxplot%20Displaying%20the%20Distribution%20of%20the%20Virginica%20Data.png">
 
 ####  Observations 
 It can be seen from the above Plots there does seem to be an overlap across the Species within the Sepal Width as all the boxs are concentrated within the 3 Cm area. Also within the Sepal Length all the Species minimums and maximums occupy within the 5.5-7 Cm area, while the Setosa Species Petal Length and Width results are much smaller than the other two Species. This reinforces the observations made from the Histogram plots. It should also be noted that within each Species at least one outlier is present. 
@@ -607,8 +607,8 @@ plt.show()
 
 The following plots will be produced as a result of the above code:
 
-<img align="left" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Setosa%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png"> <img align="center" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Versicolor%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png"><img align="right" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Virginica%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png">
-<img align="left" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Setosa%20-%20Petal%20Length%20Vs.%20Petal%20Width.png"> <img align="center" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Versicolor%20-%20Petal%20Length%20Vs.%20Petal%20Width.png"><img align="right" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Virginica%20-%20Petal%20Length%20Vs.%20Petal%20Width.png">
+<img align="left" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Setosa%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png"> <img align="centre" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Versicolor%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png"><img align="right" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Virginica%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png">
+<img align="left" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Setosa%20-%20Petal%20Length%20Vs.%20Petal%20Width.png"> <img align="centre" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Versicolor%20-%20Petal%20Length%20Vs.%20Petal%20Width.png"><img align="right" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Virginica%20-%20Petal%20Length%20Vs.%20Petal%20Width.png">
 
 ####  Observations 
 The above KDE Plots highlight the observations made in the pervious plots with regards to the Sepal/Petal Length Vs. Sepal/Petal Width of each of the species but offers the visualisation through a different perspective which some users may find helpful for highlighting trends/patterns.
@@ -633,7 +633,7 @@ plt.show()
   * Note the above code creates a Pairplot with Scatterplots as the upper plots, Stepped Histrograms as the diagional plots and KDE Plots as the lower plots. With a Pairplot there is a lot of flexability with regards to the type of plots.
 
 The following plots will be produced as a result of the above code:
-<img align="center" width="600" height="600" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Pairplot%20of%20the%20Data%20Set.png">
+<img align="centre" width="900" height="900" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Pairplot%20of%20the%20Data%20Set.png">
 
 ####  Observations
 As seen with a Pairplot 
