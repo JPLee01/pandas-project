@@ -468,7 +468,6 @@ The following plots will be produced as a result of the above code:
 
 <img align="left" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Petal%20Length%20of%20Each%20of%20the%20Species.png"> <img align="righ" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histrogram%20Comparing%20the%20Frequency%20of%20Petal%20Width%20of%20Each%20of%20the%20Species.png">
 
-
 ####  Observations 
 As seen from the above Plots there is a concentration and overlap of the species within the Sepal Length (4-8 Cm) and Sepal Width (2-4.5 Cm) Histograms. However in the Petal Length and Width Histograms it can be seen that there is a differentiation between the Setosa species and the Versicolor and Virginica species.The Setosa species in the Petal Length and Width are concentrated is smaller size (Cm) than the other two species. 
 
@@ -608,13 +607,15 @@ plt.show()
 The following plots will be produced as a result of the above code:
 
 <img align="left" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Setosa%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png"> <img align="center" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Versicolor%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png"><img align="right" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Virginica%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png">
-<img align="left" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Setosa%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png"> <img align="center" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Versicolor%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png"><img align="right" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Virginica%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png">
-
+<img align="left" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Setosa%20-%20Petal%20Length%20Vs.%20Petal%20Width.png"> <img align="center" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Versicolor%20-%20Petal%20Length%20Vs.%20Petal%20Width.png"><img align="right" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Virginica%20-%20Petal%20Length%20Vs.%20Petal%20Width.png>
 
 ####  Observations 
 The above KDE Plots highlight the observations made in the pervious plots with regards to the Sepal/Petal Length Vs. Sepal/Petal Width of each of the species but offers the visualisation through a different perspective which some users may find helpful for highlighting trends/patterns.
   * Note the KDE Plot could also have been constructed to include all species in one plot but due to the large overlaps thi was decided against for aesthetic purposes. 
   * Please also note when running the Plots the following message is observed: "UserWarning: Passing a 2D dataset for a bivariate plot is deprecated in favor of kdeplot(x, y), and it will cause an error in future versions. Please update your code." This error can appear when dealing with Two-Dimensional representations and users should be aware of this when running the program.
+
+### Creation of a Pairpot of the Data Set
+
 
 
 
