@@ -603,9 +603,13 @@ plt.show()
 
 The following plots will be produced as a result of the above code:
 
+<img align="left" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Setosa%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png"> <img align="center" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Versicolor%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png"><img align="right" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Virginica%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png">
 
 
+####  Observations 
 
+
+* Note 
 
 
 
