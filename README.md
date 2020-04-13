@@ -602,12 +602,12 @@ plt.savefig("Visualisations/KDE Plot of Setosa - Sepal Length Vs. Sepal Width.pn
 plt.show()
 ```
   * Note the above code creates a KDE Plot depicting the relationship between Sepal Length Vs. Sepal Width of the Setosa species. To create a KDE Plot depicting the relationship between Sepal Length Vs. Sepal Width of the other two species the following changes would have to be made to the code:
-    * **Versicolor:** Replace SetosaData with VersicolorData[["sepal_length","sepal_width"]].
-    * **Virgnica:** Replace SetosaData with VirginicaData[["sep_length","sepal_width"]].
+    * **Versicolor:** Replace SetosaData[["sepal_length","sepal_width"]] with VersicolorData[["sepal_length","sepal_width"]].
+    * **Virgnica:** Replace SetosaData[["sepal_length","sepal_width"]] with VirginicaData[["sep_length","sepal_width"]].
   * While to create a KDE Plot depicting the relationship between Petal Length Vs. Petal Width of the species the following changes would have to be made to the code:
-    * **Setosa:** Replace sepal_length and sepal_width with petal_length and petal_width
-    * **Versicolor:** Replace SetosaData with VersicolorData[["petal_length","petal_width"]].
-    * **Virgnica:** Replace SetosaData with VirginicaData[["petal_length","petal_width"]].
+    * **Setosa:** Replace SetosaData[["sepal_length","sepal_width"]] with SetosaData[["petal_length","petal_width"]].
+    * **Versicolor:** Replace SetosaData[["sepal_length","sepal_width"]] with VersicolorData[["petal_length","petal_width"]].
+    * **Virgnica:** Replace SetosaData[["sepal_length","sepal_width"]] with VirginicaData[["petal_length","petal_width"]].
 
 The following plots will be produced as a result of the above code:
 
@@ -637,7 +637,7 @@ plt.show()
   * Note the above code creates a Pairplot with Scatterplots as the upper plots, Stepped Histrograms as the diagional plots and KDE Plots as the lower plots. With a Pairplot there is a lot of flexability with regards to the type of plots which can be used.
 
 The following plots will be produced as a result of the above code:
-<img align="center" width="925" height="925" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Pairplot%20of%20the%20Data%20Set.png">
+<img align="center" width="950" height="950" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Pairplot%20of%20the%20Data%20Set.png">
 
 ####  Observations
 Within the Pair plot seen above it can be stated the Setosa can be clearly distinguished from the other two species in each subplot. Within the Petal Length and Width this is particularly apparent. 
