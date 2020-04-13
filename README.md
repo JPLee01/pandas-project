@@ -633,12 +633,12 @@ plt.show()
   * Note the above code creates a Pairplot with Scatterplots as the upper plots, Stepped Histrograms as the diagional plots and KDE Plots as the lower plots. With a Pairplot there is a lot of flexability with regards to the type of plots.
 
 The following plots will be produced as a result of the above code:
-<img align="center" width="900" height="900" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Pairplot%20of%20the%20Data%20Set.png">
+<img align="center" width="925" height="925" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Pairplot%20of%20the%20Data%20Set.png">
 
 ####  Observations
-As seen with a Pairplot 
+Within the Pair plot seen above it can be stated the Setosa can be clearly distinguished from the other two species in each subplot. Within the Petal Length and Width this is particularly apparent. 
 
-
+As seen with a Pairplot the creation of a multigraph resperesntation of the data offers the user an overview of the Data Set. This it could be argued, would aid the user in identifying relationships within the Data Set. Pair plots also seen as a useful tool within bivariate analysis. A Pair plot can identify the bivariate relation between each variable and can be used in the construction of hypotheses of associations between variables.<sup>[16](#myfootnote16)</sup>. 
 
 
 
@@ -674,3 +674,5 @@ As seen with a Pairplot
 <a name="myfootnote14">14</a>: Geeks for Geeks - KDE Plot Visualization with Pandas and Seaborn, <https://www.geeksforgeeks.org/kde-plot-visualization-with-pandas-and-seaborn/>
 
 <a name="myfootnote15">15</a>: Will Koehrsen - Visualizing Data with Pairs Plots in Python, <https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166>
+
+<a name="myfootnote15">15</a>: Alessandro Bertani et al. - How to describe Bivariate Data, <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5864614/#__sec3title>
