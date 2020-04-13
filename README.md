@@ -598,12 +598,12 @@ plt.savefig("Visualisations/KDE Plot of Setosa - Sepal Length Vs. Sepal Width.pn
 plt.show()
 ```
   * Note the above code creates a KDE Plot depicting the relationship between Sepal Length Vs. Sepal Width of the Setosa species. To create a KDE Plot depicting the relationship between Sepal Length Vs. Sepal Width of the other two species the following changes would have to be made to the code:
-    * **Versicolor:** Replace SetosaData with VersicolorData[["sepal_length","sepal_width"].
-    * **Virgnica:** Replace SetosaData with VirginicaData[["sep_length","sepal_width"].
+    * **Versicolor:** Replace SetosaData with VersicolorData[["sepal_length","sepal_width"]].
+    * **Virgnica:** Replace SetosaData with VirginicaData[["sep_length","sepal_width"]].
   * While to create a KDE Plot depicting the relationship between Petal Length Vs. Petal Width of the species the following changes would have to be made to the code:
     * **Setosa:** Replace sepal_length and sepal_width with petal_length and petal_width
-    * **Versicolor:** Replace SetosaData with VersicolorData[["petal_length","petal_width"].
-    * **Virgnica:** Replace SetosaData with VirginicaData[["petal_length","petal_width"].
+    * **Versicolor:** Replace SetosaData with VersicolorData[["petal_length","petal_width"]].
+    * **Virgnica:** Replace SetosaData with VirginicaData[["petal_length","petal_width"]].
 
 The following plots will be produced as a result of the above code:
 
@@ -615,7 +615,23 @@ The above KDE Plots highlight the observations made in the pervious plots with r
   * Note the KDE Plot could also have been constructed to include all species in one plot but due to the large overlaps this was decided against for aesthetic purposes. 
   * Please also note when running the Plots the following message is observed: "UserWarning: Passing a 2D dataset for a bivariate plot is deprecated in favor of kdeplot(x, y), and it will cause an error in future versions. Please update your code." This error can appear when dealing with Two-Dimensional representations and users should be aware of this when running the program.
 
-### Creation of a Pairpot of the Data Set
+### Creation of a Pairplot of the Data Set
+A Pairplot is a plot in which one variable in the same data row is matched with another variable's value. Pairplots show all variables paired with all the other variables and allow users to see both distribution of single variables and relationships between two variables<sup>[15](#myfootnote15)</sup>. By creating a multigraph resperesntation of the data it is easy for the user to identify the differing relationships between the variable's.
+
+To create a Pairplot of the Data Set the following code is executed:
+```
+g = sns.pairplot(data=f,hue="species")
+g = g.map_upper(sns.scatterplot)
+g = g.map_diag(plt.hist, histtype="step", linewidth=3)
+g = g.map_lower(sns.kdeplot)
+g = g.add_legend()
+plt.tight_layout(rect=[0, 0, 0.90, 0.95])
+plt.suptitle("Pair Plot for Dataset", fontsize = 20)
+plt.savefig("Visualisations/Pairplot of the Data Set.png")
+plt.show()
+```
+
+The following plots will be produced as a result of the above code:
 
 
 
@@ -653,3 +669,5 @@ The above KDE Plots highlight the observations made in the pervious plots with r
 <a name="myfootnote13">13</a>: ASQ - What is a Scatter Diagram?, <https://asq.org/quality-resources/scatter-diagram>
 
 <a name="myfootnote14">14</a>: Geeks for Geeks - KDE Plot Visualization with Pandas and Seaborn, <https://www.geeksforgeeks.org/kde-plot-visualization-with-pandas-and-seaborn/>
+
+<a name="myfootnote15">15</a>: Will Koehrsen - Visualizing Data with Pairs Plots in Python, <https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166>

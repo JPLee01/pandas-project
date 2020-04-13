@@ -322,7 +322,7 @@ plt.title("KDE Plot of Virginica - Petal Length Vs. Petal Width", fontsize=18)
 plt.savefig("Visualisations/KDE Plot of Virginica - Petal Length Vs. Petal Width.png")
 plt.show()
 
-#Create a Pairpot 
+#Create a Pairplot of the Data Set
 g = sns.pairplot(data=f,hue="species")
 #Changing of the Upper Plots to Scatterplots
 g = g.map_upper(sns.scatterplot)
@@ -336,8 +336,10 @@ g = g.add_legend()
 plt.tight_layout(rect=[0, 0, 0.90, 0.95])
 #Addition of a title at the top of the Plot
 plt.suptitle("Pair Plot for Dataset", fontsize = 20)
-#plt.show()
-#pp.savefig()
+#The Figure is Saved as a .png file in the Visualisations folder and a name is given to it
+plt.savefig("Visualisations/Pairplot of the Data Set.png")
+#The Figure is displayed
+plt.show()
 
 
 
