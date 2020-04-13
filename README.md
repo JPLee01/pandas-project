@@ -46,6 +46,8 @@ Table of Contents
 
   [8.2 Visualisation.py Program Explained](#8.2-Visualisation.py-Program-Explained)
 
+  [8.3 Interactive.py Program Explained](#8.3-Interactive.py-Program-Explained)
+
 [References](#References)
 
 ## 1 Introduction
@@ -156,6 +158,7 @@ The following Python libraries were used in the writing of the programs code and
 * [Matplotlib.pyplot](https://matplotlib.org/tutorials/introductory/pyplot.html) - Used for the manipulation of elements and the creation of certain plots graphs, plots and charts within the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program.
 * [Seaborn](https://seaborn.pydata.org/) - Used for the creation and manipulation of all plots in the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program. (Seaborn allows for the extetion of the functionality of Matplotlib).
 * [Sys](https://docs.python.org/3/library/sys.html) - A module more than a library within Python used for the creation and writing of text files in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program.
+* [Pandas Profiling](https://towardsdatascience.com/exploratory-data-analysis-with-pandas-profiling-de3aae2ddff3) - A module more than a library within Python used for the creation of interactive reports as seen in the [Interactive.py]() program.
 
 ## 8 Python Programs and Results Explained
 ------------------------------------------------------------------------------------------------
@@ -164,6 +167,7 @@ This section will describe the Pyton programs and subsequent code which was crea
 It should be noted that two separate python programmes have been written for this project:
 1.  [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) - A program which was created to carry out the general and statistical analysis of the data set. It outputs results were produced into the [Analysis.txt](https://github.com/JPLee01/pandas-project/blob/master/Analysis.txt) file.
 2.  [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) - A program which was created to produce visualisations of the data set. It outputs were stored as .png files in the [repository](https://github.com/JPLee01/pandas-project#2-project-repository) the programe is stored in.
+3. [Interactive.py] - A program which was created to show the potential and capability of the Pandas Profiling module.
 
 For clarity comments within the code have been removed from this document, but these can be viewed within the specific Python programmes.
 
@@ -644,7 +648,7 @@ Within the Pair plot seen above it can be stated the Setosa can be clearly disti
 
 As seen with a Pairplot the creation of a multigraph resperesntation of the data offers the user an overview of the Data Set. This it could be argued, would aid the user in identifying relationships within the Data Set. Pair plots also seen as a useful tool within bivariate analysis. A Pair plot can identify the bivariate relation between each variable and can be used in the construction of hypotheses of associations between variables.<sup>[16](#myfootnote16)</sup>
 
-
+### 8.3 Interactive.py Program Explained
 
 ##  References
 ------------------------------------------------------------------------------------------------

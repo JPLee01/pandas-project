@@ -433,4 +433,5 @@ plt.tight_layout()
 #Pairgrid (Change layout results within the Pairplot): https://seaborn.pydata.org/tutorial/distributions.html
 #Histrogram: https://python-graph-gallery.com/25-histogram-with-several-variables-seaborn/
 #Histrogram: https://pythonbasics.org/seaborn-distplot/
-# Plt.tigh_layout: https://matplotlib.org/3.2.1/tutorials/intermediate/tight_layout_guide.html
+#Plt.tigh_layout: https://matplotlib.org/3.2.1/tutorials/intermediate/tight_layout_guide.html
+#Saving Images to a Sub Folder: https://discuss.codecademy.com/t/where-do-images-get-saved-in-matplotlib-when-using-savefig/353086
