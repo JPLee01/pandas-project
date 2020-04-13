@@ -682,8 +682,9 @@ As a result of running the program the following Interactive Report is created:
 The above example is a 30 second Gif highlighting the process of executing the Interactive.py program from the command line and interacting with the Interactive Report. As seen from the Gif the Interactive Report 
 
 
-The process of uploading of Gif to the Readme file can be seen in an article by Kelli Blaock<sup>[19](#myfootnote19)</sup>.
+The process of uploading of Gif to the Readme file can be seen in an article by Kelli Blaock.<sup>[19](#myfootnote19)</sup>
 
+The [Iris Data Interactive Report](https://github.com/JPLee01/pandas-project/blob/master/Iris%20Data%20Interactive%20Report.html) is available online within the repository however due to it's size it can not be viewed through the GitHub website. It is recommended that should the report wished to be viewed the steps in [7.2  Running the Program](#7.2-Running-the-Program) are followed. 
 
 
 ##  References
