@@ -297,6 +297,30 @@ plt.title("KDE Plot of Virginica - Sepal Length Vs. Sepal Width", fontsize=18)
 plt.savefig("Visualisations/KDE Plot of Virginica - Sepal Length Vs. Sepal Width.png")
 plt.show()
 
+#Create a KDE Plot of Setosa - Petal Length Vs. Petal Width
+sns.kdeplot(data=SetosaData[["petal_length","petal_width"]], cmap="Purples_d", shade=True, shade_lowest=False)
+plt.xlabel("Petal Length(Cm)")
+plt.ylabel("Petal Width(Cm)")
+plt.title("KDE Plot of Setosa - Petal Length Vs. Petal Width", fontsize=18)
+plt.savefig("Visualisations/KDE Plot of Setosa - Petal Length Vs. Petal Width.png")
+plt.show()
+
+#Create a KDE Plot of Versicolor - Petal Length Vs. Petal Width
+sns.kdeplot(data=VersicolorData[["petal_length","petal_width"]], cmap="plasma", shade=True, shade_lowest=False)
+plt.xlabel("Petal Length(Cm)")
+plt.ylabel("Petal Width(Cm)")
+plt.title("KDE Plot of Versicolor - Petal Length Vs. Petal Width", fontsize=18)
+plt.savefig("Visualisations/KDE Plot of Versicolor - Petal Length Vs. Petal Width.png")
+plt.show()
+
+
+#Create a KDE Plot of Virginica - Petal Length Vs. Petal Width
+sns.kdeplot(data=VirginicaData[["petal_length","petal_width"]], cmap="Greens", shade=True, shade_lowest=False)
+plt.xlabel("Petal Length(Cm)")
+plt.ylabel("Petal Width(Cm)")
+plt.title("KDE Plot of Virginica - Petal Length Vs. Petal Width", fontsize=18)
+plt.savefig("Visualisations/KDE Plot of Virginica - Petal Length Vs. Petal Width.png")
+plt.show()
 
 #Create a Pairpot 
 g = sns.pairplot(data=f,hue="species")

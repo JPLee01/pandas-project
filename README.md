@@ -582,13 +582,13 @@ The following plots will be produced as a result of the above code:
 ####  Observations 
 From the Scatter Plots it can be seen that a positive correlation exists for all three species for the relationship between Petal Length and Petal Width. Also it can be seen that their is a large distinction between the Setosa species the other two species (Setosa occupys the lower left quartile for Petal Length and Petal Width and upper left  quartile for Sepal Length and Sepal Width). It can also be argued that while differentiation exists between Versicolor and Virgnica for the relationship between Petal Length and Petal Width (apart from a few outliers), for the the relationship between Sepal Length and Sepal Width it does not exist. 
 
-### Creation of a KDE Plot of each of the Species displayig Sepal Length Vs. Sepal Width
+### Creation of a KDE Plot of each of the Species displayig Sepal/Petal Length Vs. Sepal/Petal Width
 A KDE (Kernel Density Estimate) Plot is used for visualizing the Probability Density of a specific variable.
 The plot can either be One-Dimensional or Two-Dimensional and is mainly used in the field of non-parametric analysis<sup>[14](#myfootnote14)</sup>.
 
-The output for this KDE Plot will be a Two-Dimensional representation of the relationship  of the Sepal Length Vs. Sepal Width of each of the species.
+The output for this KDE Plot will be a Two-Dimensional representation of the relationship of the Sepal/Petal Length Vs. Sepal/Petal Width of each of the species.
 
-To create a KDE Plot of each of the species displayig Sepal Length Vs. Sepal Width the following code is executed:
+To create a KDE Plot of each of the species displayig Sepal/Petal Length Vs. Sepal/Petal Width the following code is executed:
 ```
 sns.kdeplot(data=SetosaData[["sepal_length","sepal_width"]], cmap="Purples_d", shade=True, shade_lowest=False)
 plt.xlabel("Sepal Length(Cm)")
@@ -597,23 +597,28 @@ plt.title("KDE Plot of Setosa - Sepal Length Vs. Sepal Width", fontsize=18)
 plt.savefig("Visualisations/KDE Plot of Setosa - Sepal Length Vs. Sepal Width.png")
 plt.show()
 ```
-* Note the above code creates a KDE Plot depicting the relationship between Sepal Length Vs. Sepal Width of the Setosa species. To create a KDE Plot depicting the relationship between Sepal Length Vs. Sepal Width of the other two species the following changes would have to be made to the code:
-    * **Versicolor:** Replace SetosaData with VersicolorData.
-    * **Virgnica:** Replace SetosaData with VirginicaData.
+  * Note the above code creates a KDE Plot depicting the relationship between Sepal Length Vs. Sepal Width of the Setosa species. To create a KDE Plot depicting the relationship between Sepal Length Vs. Sepal Width of the other two species the following changes would have to be made to the code:
+    * **Versicolor:** Replace SetosaData with VersicolorData[["sepal_length","sepal_width"].
+    * **Virgnica:** Replace SetosaData with VirginicaData[["sep_length","sepal_width"].
+  * While to create a KDE Plot depicting the relationship between Petal Length Vs. Petal Width of the species the following changes would have to be made to the code:
+    * **Setosa:** Replace sepal_length and sepal_width with petal_length and petal_width
+    * **Versicolor:** Replace SetosaData with VersicolorData[["petal_length","petal_width"].
+    * **Virgnica:** Replace SetosaData with VirginicaData[["petal_length","petal_width"].
 
 The following plots will be produced as a result of the above code:
 
 <img align="left" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Setosa%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png"> <img align="center" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Versicolor%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png"><img align="right" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Virginica%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png">
+<img align="left" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Setosa%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png"> <img align="center" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Versicolor%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png"><img align="right" width="285" height="400" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/KDE%20Plot%20of%20Virginica%20-%20Sepal%20Length%20Vs.%20Sepal%20Width.png">
 
 
 ####  Observations 
+The above KDE Plots highlight the observations made in the pervious plots with regards to the Sepal/Petal Length Vs. Sepal/Petal Width of each of the species but offers the visualisation through a different perspective which some users may find helpful for highlighting trends/patterns.
+  * Note the KDE Plot could also have been constructed to include all species in one plot but due to the large overlaps thi was decided against for aesthetic purposes. 
+  * Please also note when running the Plots the following message is observed: "UserWarning: Passing a 2D dataset for a bivariate plot is deprecated in favor of kdeplot(x, y), and it will cause an error in future versions. Please update your code." This error can appear when dealing with Two-Dimensional representations and users should be aware of this when running the program.
 
 
-* Note 
 
 
-
-KDE Plot described as Kernel Density Estimate is used for visualizing the Probability Density of a continuous variable. It depicts the probability density at different values in a continuous variable. We can also plot a single graph for multiple samples which helps in more efficient data visualization
 
 
 ##  References
