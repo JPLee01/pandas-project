@@ -630,10 +630,13 @@ plt.suptitle("Pair Plot for Dataset", fontsize = 20)
 plt.savefig("Visualisations/Pairplot of the Data Set.png")
 plt.show()
 ```
+  * Note the above code creates a Pairplot with Scatterplots as the upper plots, Stepped Histrograms as the diagional plots and KDE Plots as the lower plots. With a Pairplot there is a lot of flexability with regards to the type of plots.
 
 The following plots will be produced as a result of the above code:
+<img align="center" width="600" height="600" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Pairplot%20of%20the%20Data%20Set.png">
 
-
+####  Observations
+As seen with a Pairplot 
 
 
 
