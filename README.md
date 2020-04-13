@@ -576,7 +576,10 @@ plt.show()
 
 The following plots will be produced as a result of the above code:
 
+<img align="left" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Scatter%20Plot%20depicting%20the%20relationship%20between%20Petal%20Length%20and%20Petal%20Width%20of%20each%20of%20the%20Species.png"> &nbsp;<img align="righ" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Scatter%20Plot%20depicting%20the%20relationship%20between%20Sepal%20Length%20and%20Sepal%20Width%20of%20each%20of%20the%20Species.png">
 
+
+####  Observations 
 
 
 ##  References
