@@ -109,6 +109,7 @@ plt.show()
 
 
 #Create a Boxplot Displaying the Distribution of the Setosa Data
+#Set the parameters for the Boxplot
 #Set the data to be displayed in the Boxplot and it's orientation
 sns.boxplot(data=SetosaData, orient="h")
 #Set the name and size of the X Label
@@ -144,6 +145,7 @@ plt.show()
 
 
 #Create a Boxplot comparing the Distributions of Petal Length of Each Species
+#Set the parameters for the Boxplot
 #Set the X and Y Axes and the data to be used in the Boxplot
 sns.boxplot(x="species" , y="petal_length" , data=f)
 #Set the name and size of the X Label
@@ -188,6 +190,7 @@ plt.show()
 
 
 #Create a Violin Plot of comparing the Petal Length of each of the Species
+#Set the parameters for the Violin Plot
 #Set the X and Y Axes and the data to be used in the Violin Plot 
 sns.violinplot(x="species",y="petal_length",data=f)
 #Set the name and size of the X Label
@@ -233,6 +236,7 @@ plt.savefig("Visualisations/Violin Plot of comparing the Sepal Width of each of 
 plt.show()
 
 #Create a Scatter Plot depicting the relationship between Petal Length and Petal Width of each of the Species
+#Set the parameters for the Scatter Plot
 #Set the X and Y Axes, the colmun of data to be used in the Scatter Plot 
 sns.scatterplot(x="petal_length", y="petal_width", hue="species", data=f)
 #Set the name and size of the X Label
@@ -261,6 +265,56 @@ plt.tight_layout()
 plt.savefig("Visualisations/Scatter Plot depicting the relationship between Sepal Length and Sepal Width of each of the Species.png")
 plt.show()
 
+#Create a KDE Plot of Setosa - Sepal Length Vs. Sepal Width
+#Set the parameters for the KDE Plot of Setosa - Sepal Length Vs. Sepal Width
+#Data is Sepal Length and Sepal Width within the Setosa Data Set, colour and shading is set 
+sns.kdeplot(data=SetosaData[["sepal_length","sepal_width"]], cmap="Purples_d", shade=True, shade_lowest=False)
+#Set the name and size of the X Label
+plt.xlabel("Sepal Length(Cm)")
+#Set the name and size of the Y Label
+plt.ylabel("Sepal Width(Cm)")
+#Set the name and size of the Title
+plt.title("KDE Plot of Setosa - Sepal Length Vs. Sepal Width", fontsize=18)
+#The Figure is Saved as a .png file in the Visualisations folder and a name is given to it
+plt.savefig("Visualisations/KDE Plot of Setosa - Sepal Length Vs. Sepal Width.png")
+#The Figure is displayed
+plt.show()
+
+#Create a KDE Plot of Versicolor - Sepal Length Vs. Sepal Width
+sns.kdeplot(data=VersicolorData[["sepal_length","sepal_width"]], cmap="plasma", shade=True, shade_lowest=False)
+plt.xlabel("Sepal Length(Cm)")
+plt.ylabel("Sepal Width(Cm)")
+plt.title("KDE Plot of Versicolor - Sepal Length Vs. Sepal Width", fontsize=18)
+plt.savefig("Visualisations/KDE Plot of Versicolor - Sepal Length Vs. Sepal Width.png")
+plt.show()
+
+
+#Create a KDE Plot of Virginica - Sepal Length Vs. Sepal Width
+sns.kdeplot(data=VirginicaData[["sepal_length","sepal_width"]], cmap="Greens", shade=True, shade_lowest=False)
+plt.xlabel("Sepal Length(Cm)")
+plt.ylabel("Sepal Width(Cm)")
+plt.title("KDE Plot of Virginica - Sepal Length Vs. Sepal Width", fontsize=18)
+plt.savefig("Visualisations/KDE Plot of Virginica - Sepal Length Vs. Sepal Width.png")
+plt.show()
+
+
+#Create a Pairpot 
+g = sns.pairplot(data=f,hue="species")
+#Changing of the Upper Plots to Scatterplots
+g = g.map_upper(sns.scatterplot)
+#Changing of the Diagional Plots to a Stepped Histrogram
+g = g.map_diag(plt.hist, histtype="step", linewidth=3)
+#Changing of the Lower Plots to KDE Plots
+g = g.map_lower(sns.kdeplot)
+#Addition of a legend
+g = g.add_legend()
+#Tight layout to adjust space between elements, limit hight to 95% to allow room for the Title and 90% width to allow room for the Legend
+plt.tight_layout(rect=[0, 0, 0.90, 0.95])
+#Addition of a title at the top of the Plot
+plt.suptitle("Pair Plot for Dataset", fontsize = 20)
+#plt.show()
+#pp.savefig()
+
 
 
 #Create a Histogram for Sepal Length of each of the Species
@@ -286,7 +340,7 @@ plt.legend(loc='best')
 title="Histogram for Sepal Width of each of the Species"
 plt.title(title, fontsize=18)
 plt.tight_layout()
-plt.show()
+#plt.show()
 #pp.savefig()
 
 #Create a Histogram for Petal Length of each of the Species
@@ -299,7 +353,7 @@ plt.legend(loc='upper right')
 title="Histogram for Petal Length of each of the Species"
 plt.title(title, fontsize=18)
 plt.tight_layout()
-plt.show()
+#plt.show()
 #pp.savefig()
 
 #Create a Histogram for Petal Width of each of the Species
@@ -312,53 +366,12 @@ plt.legend(loc='upper right')
 title="Histogram for Petal Width of each of the Species"
 plt.title(title, fontsize=18)
 plt.tight_layout()
-plt.show()
-#pp.savefig()
-
-#Create a KDE Plot of Setosa - Sepal Length Vs. Sepal Width
-sns.kdeplot(data=SetosaData[["sepal_length","sepal_width"]], cmap="Purples_d", shade=True, shade_lowest=False)
-title="KDE Plot of Setosa - Sepal Length Vs. Sepal Width"
-plt.xlabel("Sepal Length(Cm)")
-plt.ylabel("Sepal Width(Cm)")
-plt.title(title, fontsize=18)
-#plt.show()
-#pp.savefig()
-
-#Create a KDE Plot of Versicolor - Sepal Length Vs. Sepal Width
-sns.kdeplot(data=VersicolorData[["sepal_length","sepal_width"]], cmap="plasma", shade=True, shade_lowest=False)
-title="KDE Plot of Versicolor - Sepal Length Vs. Sepal Width"
-plt.xlabel("Sepal Length(Cm)")
-plt.ylabel("Sepal Width(Cm)")
-plt.title(title, fontsize=18)
-#plt.show()
-#pp.savefig()
-
-#Create a KDE Plot of Virginica - Sepal Length Vs. Sepal Width
-sns.kdeplot(data=VirginicaData[["sepal_length","sepal_width"]], cmap="Greens", shade=True, shade_lowest=False)
-title="KDE Plot of Virginica - Sepal Length Vs. Sepal Width"
-plt.xlabel("Sepal Length(Cm)")
-plt.ylabel("Sepal Width(Cm)")
-plt.title(title, fontsize=18)
 #plt.show()
 #pp.savefig()
 
 
-#Create a Pairpot 
-g = sns.pairplot(data=f,hue="species")
-#Changing of the Upper Plots to Scatterplots
-g = g.map_upper(sns.scatterplot)
-#Changing of the Diagional Plots to a Stepped Histrogram
-g = g.map_diag(plt.hist, histtype="step", linewidth=3)
-#Changing of the Lower Plots to KDE Plots
-g = g.map_lower(sns.kdeplot)
-#Addition of a legend
-g = g.add_legend()
-#Tight layout to adjust space between elements, limit hight to 95% to allow room for the Title and 90% width to allow room for the Legend
-plt.tight_layout(rect=[0, 0, 0.90, 0.95])
-#Addition of a title at the top of the Plot
-plt.suptitle("Pair Plot for Dataset", fontsize = 20)
-#plt.show()
-#pp.savefig()
+
+
 
 
 

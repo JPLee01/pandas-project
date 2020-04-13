@@ -580,6 +580,36 @@ The following plots will be produced as a result of the above code:
 
 
 ####  Observations 
+From the Scatter Plots it can be seen that a positive correlation exists for all three species for the relationship between Petal Length and Petal Width. Also it can be seen that their is a large distinction between the Setosa species the other two species (Setosa occupys the lower left quartile for Petal Length and Petal Width and upper left  quartile for Sepal Length and Sepal Width). It can also be argued that while differentiation exists between Versicolor and Virgnica for the relationship between Petal Length and Petal Width (apart from a few outliers), for the the relationship between Sepal Length and Sepal Width it does not exist. 
+
+### Creation of a KDE Plot of each of the Species displayig Sepal Length Vs. Sepal Width
+A KDE (Kernel Density Estimate) Plot is used for visualizing the Probability Density of a specific variable.
+The plot can either be One-Dimensional or Two-Dimensional and is mainly used in the field of non-parametric analysis<sup>[14](#myfootnote14)</sup>.
+
+The output for this KDE Plot will be a Two-Dimensional representation of the relationship  of the Sepal Length Vs. Sepal Width of each of the species.
+
+To create a KDE Plot of each of the species displayig Sepal Length Vs. Sepal Width the following code is executed:
+```
+sns.kdeplot(data=SetosaData[["sepal_length","sepal_width"]], cmap="Purples_d", shade=True, shade_lowest=False)
+plt.xlabel("Sepal Length(Cm)")
+plt.ylabel("Sepal Width(Cm)")
+plt.title("KDE Plot of Setosa - Sepal Length Vs. Sepal Width", fontsize=18)
+plt.savefig("Visualisations/KDE Plot of Setosa - Sepal Length Vs. Sepal Width.png")
+plt.show()
+```
+* Note the above code creates a KDE Plot depicting the relationship between Sepal Length Vs. Sepal Width of the Setosa species. To create a KDE Plot depicting the relationship between Sepal Length Vs. Sepal Width of the other two species the following changes would have to be made to the code:
+    * **Versicolor:** Replace SetosaData with VersicolorData.
+    * **Virgnica:** Replace SetosaData with VirginicaData.
+
+The following plots will be produced as a result of the above code:
+
+
+
+
+
+
+
+KDE Plot described as Kernel Density Estimate is used for visualizing the Probability Density of a continuous variable. It depicts the probability density at different values in a continuous variable. We can also plot a single graph for multiple samples which helps in more efficient data visualization
 
 
 ##  References
@@ -611,3 +641,4 @@ The following plots will be produced as a result of the above code:
 
 <a name="myfootnote13">13</a>: ASQ - What is a Scatter Diagram?, <https://asq.org/quality-resources/scatter-diagram>
 
+<a name="myfootnote14">14</a>: Geeks for Geeks - KDE Plot Visualization with Pandas and Seaborn, <https://www.geeksforgeeks.org/kde-plot-visualization-with-pandas-and-seaborn/>
