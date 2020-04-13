@@ -232,29 +232,36 @@ plt.tight_layout()
 plt.savefig("Visualisations/Violin Plot of comparing the Sepal Width of each of the Species.png")
 plt.show()
 
+#Create a Scatter Plot depicting the relationship between Petal Length and Petal Width of each of the Species
+#Set the X and Y Axes, the colmun of data to be used in the Scatter Plot 
+sns.scatterplot(x="petal_length", y="petal_width", hue="species", data=f)
+#Set the name and size of the X Label
+plt.xlabel("Petal Length(Cm)", fontsize=12)
+#Set the name and size of the Y Label
+plt.ylabel("Petal Width(Cm)", fontsize=12)
+#Set the location and size of the Legend
+plt.legend(loc='best', fontsize=10)
+#Set the name and size of the Title
+plt.title("Relationship Between Petal Length and Petal Width", fontsize=18)
+#The tight_layout command is used to fit the Plot within the Figure
+plt.tight_layout()
+#The Figure is Saved as a .png file in the Visualisations folder and a name is given to it
+plt.savefig("Visualisations/Scatter Plot depicting the relationship between Petal Length and Petal Width of each of the Species.png")
+#The Figure is displayed
+plt.show()
 
-#Create a Scatter Plot depicting the relationship between Sepal Length and Sepal Width of the Species
+
+#Create a Scatter Plot depicting the relationship between Sepal Length and Sepal Width of each of the Species
 sns.scatterplot(x="sepal_length", y="sepal_width", hue="species", data=f)
 plt.xlabel("Sepal Length(Cm)", fontsize=12)
 plt.ylabel("Sepal Width(Cm)", fontsize=12)
 plt.legend(loc='best', fontsize=10)
-title="Relationship Between Sepal Length and Sepal Width"
-plt.title(title, fontsize=18)
+plt.title("Relationship Between Sepal Length and Sepal Width", fontsize=18)
 plt.tight_layout()
-#plt.show()
-#pp.savefig()
+plt.savefig("Visualisations/Scatter Plot depicting the relationship between Sepal Length and Sepal Width of each of the Species.png")
+plt.show()
 
 
-#Create a Scatter Plot depicting the relationship between Petal Length and Petal Width of the Species
-sns.scatterplot(x="petal_length", y="petal_width", hue="species", data=f)
-plt.xlabel("Petal Length(Cm)", fontsize=12)
-plt.ylabel("Petal Width(Cm)", fontsize=12)
-plt.legend(loc='best', fontsize=10)
-title="Relationship Between Petal Length and Petal Width"
-plt.title(title, fontsize=18)
-plt.tight_layout()
-#plt.show()
-#pp.savefig()
 
 #Create a Histogram for Sepal Length of each of the Species
 sns.distplot(SetosaData.sepal_length, label="Setosa")
@@ -279,7 +286,7 @@ plt.legend(loc='best')
 title="Histogram for Sepal Width of each of the Species"
 plt.title(title, fontsize=18)
 plt.tight_layout()
-#plt.show()
+plt.show()
 #pp.savefig()
 
 #Create a Histogram for Petal Length of each of the Species
@@ -292,7 +299,7 @@ plt.legend(loc='upper right')
 title="Histogram for Petal Length of each of the Species"
 plt.title(title, fontsize=18)
 plt.tight_layout()
-#plt.show()
+plt.show()
 #pp.savefig()
 
 #Create a Histogram for Petal Width of each of the Species
@@ -305,7 +312,7 @@ plt.legend(loc='upper right')
 title="Histogram for Petal Width of each of the Species"
 plt.title(title, fontsize=18)
 plt.tight_layout()
-#plt.show()
+plt.show()
 #pp.savefig()
 
 #Create a KDE Plot of Setosa - Sepal Length Vs. Sepal Width

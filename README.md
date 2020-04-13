@@ -552,10 +552,30 @@ While the Violin Plot may be slightly more complex concept than a Box Plot to un
 
 From the above Violin Plots it can be seen that the Virginica has the highest Median value in Patel length, Petal width and Sepal length, while the Setosa has the highest Sepal Width Median value. These observations are easier to make in a Violin Plot thanks to the white dot. 
 
-#### Creation of a a Scatter Plot depicting the relationship between Sepal/Petal Length and Sepal/Petal Width of the Species
+#### Creation of a a Scatter Plot depicting the relationship between Sepal/Petal Length and Sepal/Petal Width of each of the Species
 A Scatter Plot uses dots to represent values for two different numeric variables. The position of each dot on the horizontal and vertical axis indicates values for an individual data point. Scatter plots are used to observe relationships between variables<sup>[12](#myfootnote12)</sup>. 
 
-If the data points show an "up-hill" pattern from left to right, then there is a positive correlation between X & Y. Conversely if the pattern is "downhill" there is a positive correlation between X & Y. If the dats is scattered then there is no relationship between the X & Y.
+If the data points show an "up-hill" pattern from left to right, then there is a positive correlation between X & Y. Conversely if the pattern is "downhill" there is a negative correlation between X & Y. If the dats is scattered then there is no relationship between the X & Y<sup>[13](#myfootnote13)</sup>.
+
+The creation of a Scatter Plot depicting the relationship between Sepal/Petal Length and Sepal/Petal will indicate if a positive or negtive correlation exisits within any of the species.
+
+To create a Scatter Plot depicting the relationship between Sepal/Petal Length and Sepal/Petal Width of each of the species the following code is executed:
+```
+sns.scatterplot(x="petal_length", y="petal_width", hue="species", data=f)
+plt.xlabel("Petal Length(Cm)", fontsize=12)
+plt.ylabel("Petal Width(Cm)", fontsize=12)
+plt.legend(loc='best', fontsize=10)
+plt.title("Relationship Between Petal Length and Petal Width", fontsize=18)
+plt.tight_layout()
+plt.savefig("Visualisations/Scatter Plot depicting the relationship between Petal Length and Petal Width of each of the Species.png")
+plt.show()
+```
+  * Note the above code creates a Scatter Plot depicting the relationship between Petal Length and Petal Width of each of the species. To create a Scatter Plot depicting the relationship between Sepal Length and Sepal Width of each of the species the following changes would have to be made to the code:
+    * **Sepal Length:** Replace petal_length with sepal_length.
+    * **Sepal Width:** Replace petal_length with sepal_width.
+
+The following plots will be produced as a result of the above code:
+
 
 
 
@@ -584,5 +604,7 @@ If the data points show an "up-hill" pattern from left to right, then there is a
 
 <a name="myfootnote11">11</a>: Joel Carron - Violin Plots 101: Visualizing Distribution and Probability Density, <https://mode.com/blog/violin-plot-examples>
 
-<a name="myfootnote11">11</a>: Mike Yi - What is a Scatter Plot?, <https://chartio.com/learn/charts/what-is-a-scatter-plot/>
+<a name="myfootnote12">12</a>: Mike Yi - What is a Scatter Plot?, <https://chartio.com/learn/charts/what-is-a-scatter-plot/>
+
+<a name="myfootnote13">13</a>: ASQ - What is a Scatter Diagram?, <https://asq.org/quality-resources/scatter-diagram>
 
