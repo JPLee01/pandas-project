@@ -436,3 +436,6 @@ plt.tight_layout()
 #Histrogram: https://pythonbasics.org/seaborn-distplot/
 #Plt.tigh_layout: https://matplotlib.org/3.2.1/tutorials/intermediate/tight_layout_guide.html
 #Saving Images to a Sub Folder: https://discuss.codecademy.com/t/where-do-images-get-saved-in-matplotlib-when-using-savefig/353086
+#Aligning Plots: https://gist.github.com/DavidWells/7d2e0e1bc78f4ac59a123ddf8b74932d
+#Creating and Highlighting Code in Readme: https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks
+#Markdown Syntax: https://www.markdownguide.org/basic-syntax/#overview
