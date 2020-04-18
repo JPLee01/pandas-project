@@ -77,6 +77,10 @@ located [here](https://github.com/JPLee01/pandas-project):
   Visualisations | A folder containing all of the Plots of the Visualisation.py Program
   Project Instructions.pdf | A PDF copy of the Project Instructions
   .gitignore | A Text File explicitly explaining to Git which files or folders to ignore in the Project 
+  AdvanceUse.py | Python Program created to explore the potential advanced use of the Iris Data Set
+  Interactive-Report.gif | Gif used in the Readme to highlight the Iris Data Interactive Report
+  Interactive.py | Python Program for creating the Interactive Report of the Iris Data Set
+  Iris Data Interactive Report.html | Interactive Report created through the Interactive.py program
 
 ## 3 Fishers Iris Data Set
 ------------------------------------------------------------------------------------------------
