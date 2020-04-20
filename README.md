@@ -48,6 +48,8 @@ Table of Contents
 
   [8.3 Interactive.py Program Explained](#8.3-Interactive.py-Program-Explained)
 
+  [8.4 AdvancedUse.py Program Explained](#8.4-AdvancedUse.py-Program-Explained)
+
 [References](#References)
 
 ## 1 Introduction
@@ -681,9 +683,9 @@ profile.to_file(output_file="Iris Data Interactive Report.html")
 
 As a result of running the program the following Interactive Report is created:
 
-<p align="center">
+
 ![Interactive Report](Interactive-Report.gif)
-</p>
+
 
 The above example is a 30 second Gif highlighting the process of executing the Interactive.py program from the command line and interacting with the Interactive Report. As seen from the Gif the Interactive Report .
 
@@ -696,9 +698,8 @@ As seen above the [AdvancedUse.py](https://github.com/JPLee01/pandas-project/blo
 
 Machine Learning is one area which has seen an explosion in recent years thanks to advances in technology. Machine learning is defined as an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.<sup>[20](#myfootnote20)</sup> As seen in the article by Dan Shewan<sup>[21](#myfootnote21)</sup> are number of the top companies are beginning to emply machine learning into their operations. Within Machine Learning, the primary aim is to allow the computers learn automatically without human intervention or assistance and adjust actions accordingly. An example of the types of uses of Machine Learning can be seen below:
 
-<p align="center">
 ![Image of Machine Learning](https://www.houseofbots.com/images/news/3736/cover.png)
-</p>
+
 
 Within the Iris Data Set there is the potential to explore the possibilities Machine Learninng can offer. This can be seen in the article by Felipe Trindade.<sup>[22](#myfootnote22)</sup> which is used extensively throughout. 
 
