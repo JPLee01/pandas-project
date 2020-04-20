@@ -681,14 +681,26 @@ profile.to_file(output_file="Iris Data Interactive Report.html")
 
 As a result of running the program the following Interactive Report is created:
 
+<p align="center">
 ![Interactive Report](Interactive-Report.gif)
+</p>
 
-The above example is a 30 second Gif highlighting the process of executing the Interactive.py program from the command line and interacting with the Interactive Report. As seen from the Gif the Interactive Report 
+The above example is a 30 second Gif highlighting the process of executing the Interactive.py program from the command line and interacting with the Interactive Report. As seen from the Gif the Interactive Report .
 
-
-The process of uploading of Gif to the Readme file can be seen in an article by Kelli Blaock.<sup>[19](#myfootnote19)</sup>
+The process of uploading of a Gif to the Readme file can be seen in an article by Kelli Blaock.<sup>[19](#myfootnote19)</sup>
 
 The [Iris Data Interactive Report](https://github.com/JPLee01/pandas-project/blob/master/Iris%20Data%20Interactive%20Report.html) is available online within the repository however due to it's size it can not be viewed through the GitHub website. It is recommended that should the report wished to be viewed the steps in [7.2  Running the Program](#7.2-Running-the-Program) are followed. 
+
+### 8.4 AdvancedUse.py Program Explained
+As seen above the [AdvancedUse.py](https://github.com/JPLee01/pandas-project/blob/master/AdvancedUse.py) program is concerned with the potential advanced use of the Iris Data Set. 
+
+Machine Learning is one area which has seen an explosion in recent years thanks to advances in technology. Machine learning is defined as an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.<sup>[20](#myfootnote20)</sup> As seen in the article by Dan Shewan<sup>[21](#myfootnote21)</sup> are number of the top companies are beginning to emply machine learning into their operations. Within Machine Learning, the primary aim is to allow the computers learn automatically without human intervention or assistance and adjust actions accordingly. An example of the types of uses of Machine Learning can be seen below:
+
+<p align="center">
+![Image of Machine Learning](https://www.houseofbots.com/images/news/3736/cover.png)
+</p>
+
+Within the Iris Data Set there is the potential to explore the possibilities Machine Learninng can offer. This can be seen in the article by Felipe Trindade.<sup>[22](#myfootnote22)</sup> which is used extensively throughout. 
 
 
 ##  References
@@ -730,5 +742,11 @@ The [Iris Data Interactive Report](https://github.com/JPLee01/pandas-project/blo
 
 <a name="myfootnote18">18</a>: sbrugman - GitHub Repository, <https://github.com/pandas-profiling/pandas-profiling>
 
-<a name="myfootnote19">19</a>: Kelli Blaock - Demo your App in your GitHub README with an Animated GIF, https://dev.to/kelli/demo-your-app-in-your-github-readme-with-an-animated-gif-2o3c
+<a name="myfootnote19">19</a>: Kelli Blaock - Demo your App in your GitHub README with an Animated GIF, <https://dev.to/kelli/demo-your-app-in-your-github-readme-with-an-animated-gif-2o3c>
+
+<a name="myfootnote20">20</a>: Expert System - What is Machine Learning? A definition, <https://expertsystem.com/machine-learning-definition>
+
+<a name="myfootnote21">21</a>: Dan Shewan - 10 Companies Using Machine Learning in Cool Ways, <https://www.wordstream.com/blog/ws/2017/07/28/machine-learning-applications>
+
+<a name="myfootnote22">22</a>: Felipe Trindade - Start to learn Machine Learning with the Iris Flower Classification Challenge, <https://medium.com/gft-engineering/start-to-learn-machine-learning-with-the-iris-flower-classification-challenge-4859a920e5e3>
 
