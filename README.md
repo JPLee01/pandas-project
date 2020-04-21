@@ -165,15 +165,17 @@ The following Python libraries were used in the writing of the programs code and
 * [Seaborn](https://seaborn.pydata.org/) - Used for the creation and manipulation of all plots in the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program. (Seaborn allows for the extetion of the functionality of Matplotlib).
 * [Sys](https://docs.python.org/3/library/sys.html) - A module more than a library within Python used for the creation and writing of text files in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program.
 * [Pandas Profiling](https://towardsdatascience.com/exploratory-data-analysis-with-pandas-profiling-de3aae2ddff3) - A module more than a library within Python used for the creation of interactive reports through ProfileReport as seen in the [Interactive.py](https://github.com/JPLee01/pandas-project/blob/master/Interactive.py) program.
+* [Scikit-Learn](https://scikit-learn.org/stable/) - A machine learning library for the Python programming language. The use of this library is explored within the [AdvancedUse.py](https://github.com/JPLee01/pandas-project/blob/master/AdvancedUse.py) program.
 
 ## 8 Python Programs and Results Explained
 ------------------------------------------------------------------------------------------------
 This section will describe the Pyton programs and subsequent code which was created as well as the results these progmans yeilded.
 
-It should be noted that two separate python programmes have been written for this project:
+It should be noted that four separate python programmes have been written for this project:
 1.  [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) - A program which was created to carry out the general and statistical analysis of the data set. It outputs results were produced into the [Analysis.txt](https://github.com/JPLee01/pandas-project/blob/master/Analysis.txt) file.
 2.  [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) - A program which was created to produce visualisations of the data set. It outputs were stored as .png files in the [repository](https://github.com/JPLee01/pandas-project#2-project-repository) the programe is stored in.
 3. [Interactive.py](https://github.com/JPLee01/pandas-project/blob/master/Interactive.py) - A program which was created to show the potential and capability of the Pandas Profiling module.
+4.  [AdvancedUse.py](https://github.com/JPLee01/pandas-project/blob/master/AdvancedUse.py) - A program created to investigate the potential advanced uses of the Iris Data Set. 
 
 For clarity comments within the code have been removed from this document, but these can be viewed within the specific Python programmes.
 
@@ -683,7 +685,7 @@ profile.to_file(output_file="Iris Data Interactive Report.html")
 
 As a result of running the program the following Interactive Report is created:
 
-<img align="centre" width="550" height="550" img src="https://github.com/JPLee01/pandas-project/blob/master/Interactive-Report.gif">
+<img align="center" width="550" height="550" img src="https://github.com/JPLee01/pandas-project/blob/master/Interactive-Report.gif">
 
 The above example is a 30 second Gif highlighting the process of executing the Interactive.py program from the command line and interacting with the Interactive Report. As seen from the Gif the Interactive Report .
 
@@ -694,11 +696,22 @@ The [Iris Data Interactive Report](https://github.com/JPLee01/pandas-project/blo
 ### 8.4 AdvancedUse.py Program Explained
 As seen above the [AdvancedUse.py](https://github.com/JPLee01/pandas-project/blob/master/AdvancedUse.py) program is concerned with the potential advanced use of the Iris Data Set. 
 
-Machine Learning is one area which has seen an explosion in recent years thanks to advances in technology. Machine learning is defined as an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.<sup>[20](#myfootnote20)</sup> As seen in the article by Dan Shewan<sup>[21](#myfootnote21)</sup> are number of the top companies are beginning to emply machine learning into their operations. Within Machine Learning, the primary aim is to allow the computers learn automatically without human intervention or assistance and adjust actions accordingly. An example of the types of uses of Machine Learning can be seen below:
+Machine Learning is one area which has seen an explosion in recent years thanks to advances in technology. Machine learning is defined as an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.<sup>[20](#myfootnote20)</sup> As seen in the article by Dan Shewan<sup>[21](#myfootnote21)</sup> a number of the top companies are beginning to employ machine learning into their operations. Within Machine Learning, the primary aim is to allow the computers learn automatically without human intervention or assistance and adjust actions accordingly. An example of the types of uses of Machine Learning can be seen below:
 
-<img align="centre" width="500" height="500" img src="https://www.houseofbots.com/images/news/3736/cover.png">
+<img align="center" width="500" height="500" img src="https://www.houseofbots.com/images/news/3736/cover.png">
 
-Within the Iris Data Set there is the potential to explore the possibilities Machine Learninng can offer. This can be seen in the article by Felipe Trindade<sup>[22](#myfootnote22)</sup> which is used extensively throughout. 
+Within the Iris Data Set there is the potential to explore the possibilities Machine Learninng can offer. This can be seen in the articles by Felipe Trindade<sup>[22](#myfootnote22)</sup> and Muller and Guido<sup>[23](#myfootnote23)</sup> which were used as inspirations. 
+
+#### Importing the Libaries
+As well as the [Pandas](https://pandas.pydata.org/) and [Numpy](https://www.numpy.org/) libaries imported in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) and [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) programs the following extra libary is imported to the AdvancedUse.py program:
+```
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+```
+### Creation of a DataFrame
+The process in [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) is repeated for this program.
+
+### Implementation of Machine Learning
 
 
 ##  References
@@ -748,3 +761,4 @@ Within the Iris Data Set there is the potential to explore the possibilities Mac
 
 <a name="myfootnote22">22</a>: Felipe Trindade - Start to learn Machine Learning with the Iris Flower Classification Challenge, <https://medium.com/gft-engineering/start-to-learn-machine-learning-with-the-iris-flower-classification-challenge-4859a920e5e3>
 
+<a name="myfootnote23">23</a>: Muller and Guido - Introduction - Iris Dataset, <https://rpubs.com/nandong/imlp-ch1-iris>
