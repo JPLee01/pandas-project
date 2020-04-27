@@ -107,6 +107,58 @@ plt.tight_layout()
 plt.savefig("Visualisations/Histrogram Comparing the Frequency of Petal Length of Each of the Species.png")
 plt.show()
 
+#Create a Histogram with the Density Plot Comparing the Sepal Width of Each of the Species
+#Set the parameters for the Sepal Width Histogram with Density Plot
+#Data selected is Sepal Width within the each of the Species Set and a label is added
+sns.distplot(SetosaData.sepal_width, label="Setosa")
+sns.distplot(VersicolorData.sepal_width, label="Versicolor")
+sns.distplot(VirginicaData.sepal_width, label="Virginica")
+#Set the name and size of the X Label
+plt.xlabel("Sepal Width (Cm)", fontsize=12)
+#Add a legend and locate it in the best location
+plt.legend(loc='best')
+#Set the name and size of the Title
+plt.title("Histogram with the Density Plot for Sepal Width of each of the Species", fontsize=14)
+#The tight_layout command is used to fit the Plot within the Figure
+plt.tight_layout()
+#The Figure is Saved as a .png file in the Visualisations folder and a name is given to it
+plt.savefig("Visualisations/Histogram with the Density Plot Comparing the Sepal Width of Each of the Species.png")
+#The Figure is displayed
+plt.show()
+
+#Create a Histogram with the KDE Comparing the Sepal Length of Each of the Species
+sns.distplot(SetosaData.sepal_length, label="Setosa")
+sns.distplot(VersicolorData.sepal_length, label="Versicolor")
+sns.distplot(VirginicaData.sepal_length, label="Virginica")
+plt.xlabel("Sepal Length (Cm)", fontsize=12)
+plt.legend(loc='best')
+plt.title("Histogram with the Density Plot for Sepal Length of each of the Species", fontsize=14)
+plt.tight_layout()
+plt.savefig("Visualisations/Histogram with the Density Plot Comparing the Sepal Length of Each of the Species.png")
+plt.show()
+
+#Create a Histogram with the Density Plot Comparing the Petal Width of Each of the Species
+sns.distplot(SetosaData.petal_width, label="Setosa")
+sns.distplot(VersicolorData.petal_width, label="Versicolor")
+sns.distplot(VirginicaData.petal_width, label="Virginica")
+plt.xlabel("Petal Width (Cm)", fontsize=12)
+plt.legend(loc='best')
+plt.title("Histogram with the Density Plot for Petal Width of each of the Species", fontsize=14)
+plt.tight_layout()
+plt.savefig("Visualisations/Histogram with the Density Plot Comparing the Petal Width of Each of the Species.png")
+plt.show()
+
+#Create a Histogram with the Density Plot Comparing the Petal Length of Each of the Species
+sns.distplot(SetosaData.petal_length, label="Setosa")
+sns.distplot(VersicolorData.petal_length, label="Versicolor")
+sns.distplot(VirginicaData.petal_length, label="Virginica")
+plt.xlabel("Petal Length (Cm)", fontsize=12)
+plt.legend(loc='best')
+plt.title("Histogram with the Density Plot for Petal Length of each of the Species", fontsize=14)
+plt.tight_layout()
+plt.savefig("Visualisations/Histogram with the Density Plot Comparing the Petal Length of Each of the Species.png")
+plt.show()
+
 
 #Create a Boxplot Displaying the Distribution of the Setosa Data
 #Set the parameters for the Boxplot
@@ -219,8 +271,8 @@ plt.show()
 #Create a Violin Plot of Sepalal Length of each of the Species
 sns.violinplot(x="species",y="sepal_length",data=f)
 plt.xlabel("Species", fontsize=12)
-plt.ylabel("Sepalal Length(Cm)", fontsize=12)
-plt.title("Violin Plots of Sepalal Length", fontsize=18)
+plt.ylabel("Sepal Length(Cm)", fontsize=12)
+plt.title("Violin Plots of Sepal Length", fontsize=18)
 plt.tight_layout()
 plt.savefig("Visualisations/Violin Plot of comparing the Sepal Length of each of the Species.png")
 plt.show()
@@ -229,8 +281,8 @@ plt.show()
 #Create a Violin Plot of Sepalal Width of each of the Species
 sns.violinplot(x="species",y="sepal_width",data=f)
 plt.xlabel("Species", fontsize=12)
-plt.ylabel("Sepalal Width(Cm)", fontsize=12)
-plt.title("Violin Plots of Sepalal Width", fontsize=18)
+plt.ylabel("Sepal Width(Cm)", fontsize=12)
+plt.title("Violin Plots of Sepal Width", fontsize=18)
 plt.tight_layout()
 plt.savefig("Visualisations/Violin Plot of comparing the Sepal Width of each of the Species.png")
 plt.show()
@@ -344,57 +396,7 @@ plt.show()
 
 
 
-#Create a Histogram for Sepal Length of each of the Species
-sns.distplot(SetosaData.sepal_length, label="Setosa")
-sns.distplot(VersicolorData.sepal_length, label="Versicolor")
-sns.distplot(VirginicaData.sepal_length, label="Virginica")
-plt.xlabel("Species", fontsize=12)
-plt.ylabel("Sepal Length (Cm)", fontsize=12)
-plt.legend(loc='best')
-title="Histogram for Sepal Length of each of the Species"
-plt.title(title, fontsize=18)
-plt.tight_layout()
-#plt.show()
-#pp.savefig()
 
-#Create a Histogram for Sepal Width of each of the Species
-sns.distplot(SetosaData.sepal_width, label="Setosa")
-sns.distplot(VersicolorData.sepal_width, label="Versicolor")
-sns.distplot(VirginicaData.sepal_width, label="Virginica")
-plt.xlabel("Species", fontsize=12)
-plt.ylabel("Sepal Width (Cm)", fontsize=12)
-plt.legend(loc='best')
-title="Histogram for Sepal Width of each of the Species"
-plt.title(title, fontsize=18)
-plt.tight_layout()
-#plt.show()
-#pp.savefig()
-
-#Create a Histogram for Petal Length of each of the Species
-sns.distplot(SetosaData.petal_length, label="Setosa")
-sns.distplot(VersicolorData.petal_length, label="Versicolor")
-sns.distplot(VirginicaData.petal_length, label="Virginica")
-plt.xlabel("Species", fontsize=12)
-plt.ylabel("Petal Length (Cm)", fontsize=12)
-plt.legend(loc='upper right')
-title="Histogram for Petal Length of each of the Species"
-plt.title(title, fontsize=18)
-plt.tight_layout()
-#plt.show()
-#pp.savefig()
-
-#Create a Histogram for Petal Width of each of the Species
-sns.distplot(SetosaData.petal_width, label="Setosa")
-sns.distplot(VersicolorData.petal_width, label="Versicolor")
-sns.distplot(VirginicaData.petal_width, label="Virginica")
-plt.xlabel("Species", fontsize=12)
-plt.ylabel("Petal Length (Cm)", fontsize=12)
-plt.legend(loc='upper right')
-title="Histogram for Petal Width of each of the Species"
-plt.title(title, fontsize=18)
-plt.tight_layout()
-#plt.show()
-#pp.savefig()
 
 
 

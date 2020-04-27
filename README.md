@@ -488,6 +488,33 @@ The following plots will be produced as a result of the above code:
 ####  Observations 
 As seen from the above Plots there is a concentration and overlap of the species within the Sepal Length (4-8 Cm) and Sepal Width (2-4.5 Cm) Histograms. However in the Petal Length and Width Histograms it can be seen that there is a differentiation between the Setosa species and the Versicolor and Virginica species.The Setosa species in the Petal Length and Width are concentrated is smaller size (Cm) than the other two species. 
 
+### Creation of Histograms complete with Density Plot Comparing the Sepal Length/Width and Petal Length/Width of Each of the Species
+Similiar to the above, the following histograms compare the Sepal Length/Width and Petal Length/Width of each of the Species with the addition of a Density Plot overlaid. 
+
+A Density Plot is a smoothed, continuous version of a histogram estimated from the data. The Density Plot is a variation of a Histogram that uses kernel smoothing to plot values, allowing for smoother distributions by smoothing out the noise.<sup>[9](#myfootnote9)</sup> 
+
+An advantage of Density Plots is that due to thier shape the peaks help display where values are concentrated.Also they're better at determining the distribution shape because they're not affected by the number of bins used (each bar used in a typical histogram).<sup>[10](#myfootnote10)</sup> 
+
+To create a histogram complete with Density Plot comparing the Sepal Length/Width and Petal Length/Width of Each of the Species the following code is executed:
+```
+sns.distplot(SetosaData.sepal_width, label="Setosa")
+sns.distplot(VersicolorData.sepal_width, label="Versicolor")
+sns.distplot(VirginicaData.sepal_width, label="Virginica")
+plt.xlabel("Sepal Width (Cm)", fontsize=12)
+plt.legend(loc='best')
+plt.title("Histogram with the Density Plot for Sepal Width of each of the Species", fontsize=15)
+plt.tight_layout()
+plt.savefig("Visualisations/Histogram with the Density Plot Comparing the Sepal Width of Each of the Species.png")
+plt.show()
+```
+  * Note the above code creates a histogram with a Density Plot comparing the Sepal Width of each of the Species. To create a histogram comparing the  Sepal Length and Petal Length/Width of each of the Species the following changes would have to be made to the code:
+    * **Sepal Length:** Replace sepal_width with sepal_length.
+    * **Petal Width:** Replace sepal_width with petal_width.
+    * **Petal Length:** Replace sepal_width with petal_length.
+
+The following plots will be produced as a result of the above code:
+
+
 ### Creation of Boxplots Displaying the Distribution of the Data of Each of the Species
 A Boxplot (also known as a Box-and-Whisker Plot) displays a summary of a set of data containing the minimum, first quartile, median, third quartile, and maximum. In a box plot, we draw a box from the first quartile to the third quartile. A vertical line goes through the box at the median. The whiskers go from each quartile to the minimum or maximum. Additionally, outliers (if present) are shown by points outside the minimum and maximum lines.<sup>[9](#myfootnote9)</sup> A Boxplot is created for each of the species to display the distribution of data within each of the species and highlight any areas of commonality.
 
@@ -700,7 +727,7 @@ Machine Learning is one area which has seen an explosion in recent years thanks 
 
 <img align="center" width="500" height="500" img src="https://www.houseofbots.com/images/news/3736/cover.png">
 
-Within the Iris Data Set there is the potential to explore the possibilities Machine Learninng can offer. This can be seen in the articles by Felipe Trindade<sup>[22](#myfootnote22)</sup> and Muller and Guido<sup>[23](#myfootnote23)</sup> which were used as inspirations. 
+Within the Iris Data Set there is the potential to explore the possibilities Machine Learninng can offer. This can be seen in the articles by Felipe Trindade<sup>[22](#myfootnote22)</sup> and Muller and Guido<sup>[23](#myfootnote23)</sup> which were used as inspirations for this program. 
 
 #### Importing the Libaries
 As well as the [Pandas](https://pandas.pydata.org/) and [Numpy](https://www.numpy.org/) libaries imported in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) and [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) programs the following extra libary is imported to the AdvancedUse.py program:
@@ -712,6 +739,8 @@ from sklearn.neighbors import KNeighborsClassifier
 The process in [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) is repeated for this program.
 
 ### Implementation of Machine Learning
+
+
 
 
 ##  References
@@ -732,6 +761,10 @@ The process in [Analysis.py](https://github.com/JPLee01/pandas-project/blob/mast
 <a name="myfootnote7">7</a>: How to redirect the print to a .txt file using the [Sys](https://docs.python.org/3/library/sys.html) module within Python, <https://stackoverflow.com/questions/7152762/how-to-redirect-print-output-to-a-file-using-python>
 
 <a name="myfootnote8">8</a>: Histogram, <https://corporatefinanceinstitute.com/resources/excel/study/histogram/>
+
+<a name="myfootnote9">9</a>: Will Koehrsen - Histograms and Density Plots in Python, <https://towardsdatascience.com/histograms-and-density-plots-in-python-f6bda88f5ac0>
+
+<a name="myfootnote10">10</a>: The Data Visualisation Catalogue - Density Plot, <https://datavizcatalogue.com/methods/density_plot.html>
 
 <a name="myfootnote9">9</a>: Boxplot, <https://www.tutorialspoint.com/matplotlib/matplotlib_box_plot.htm>
 
