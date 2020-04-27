@@ -514,6 +514,12 @@ plt.show()
 
 The following plots will be produced as a result of the above code:
 
+<img align="left" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histogram%20with%20the%20Density%20Plot%20Comparing%20the%20Sepal%20Length%20of%20Each%20of%20the%20Species.png"> &nbsp;<img align="righ" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histogram%20with%20the%20Density%20Plot%20Comparing%20the%20Sepal%20Width%20of%20Each%20of%20the%20Species.png">
+
+<img align="left" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histogram%20with%20the%20Density%20Plot%20Comparing%20the%20Petal%20Length%20of%20Each%20of%20the%20Species.png"> <img align="righ" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histogram%20with%20the%20Density%20Plot%20Comparing%20the%20Petal%20Width%20of%20Each%20of%20the%20Species.png">
+
+####  Observations 
+
 
 ### Creation of Boxplots Displaying the Distribution of the Data of Each of the Species
 A Boxplot (also known as a Box-and-Whisker Plot) displays a summary of a set of data containing the minimum, first quartile, median, third quartile, and maximum. In a box plot, we draw a box from the first quartile to the third quartile. A vertical line goes through the box at the median. The whiskers go from each quartile to the minimum or maximum. Additionally, outliers (if present) are shown by points outside the minimum and maximum lines.<sup>[9](#myfootnote9)</sup> A Boxplot is created for each of the species to display the distribution of data within each of the species and highlight any areas of commonality.
