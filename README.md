@@ -752,7 +752,15 @@ from sklearn.neighbors import KNeighborsClassifier
 ### Creation of a DataFrame
 The process in [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) is repeated for this program.
 
-### Implementation of Machine Learning
+### Implementation of Machine Learning - K-Nearest Neighbors (KNN)
+This program will look at the machine learning algorithm of K-Nearest Neighbors (KNN). KNN  is a non-parametric method, where an unknown sample is classified according to a class belonging to the majority of its neighbors, i.e. if K (Number selected for nearest neighbors) = 1, then the case is simply assigned to the class of its nearest neighbor.<sup>[26](#myfootnote26)</sup> Around since the 1970's KNN can be used for both classification and regression predictive problems.<sup>[27](#myfootnote27)</sup> A visual representation of KNN can be viewed below:
+
+<img align="center" width="500" height="500" img src="https://machinelearningknowledge.ai/wp-content/uploads/2018/08/KNN-Classification.gif">
+
+As seen in the above Gif the value designated to K has a profound effect on the result on the unknown sample classification. This can be seen in further detail below in which displays different outcomes as a result of different values for K:
+
+<img align="center" width="500" height="500" img src="https://miro.medium.com/max/1400/0*6IVs874DUMvJh-f0.png">
+
 
 
 
@@ -809,3 +817,7 @@ The process in [Analysis.py](https://github.com/JPLee01/pandas-project/blob/mast
 <a name="myfootnote24">24</a>: Felipe Trindade - Start to learn Machine Learning with the Iris Flower Classification Challenge, <https://medium.com/gft-engineering/start-to-learn-machine-learning-with-the-iris-flower-classification-challenge-4859a920e5e3>
 
 <a name="myfootnote25">25</a>: Muller and Guido - Introduction - Iris Dataset, <https://rpubs.com/nandong/imlp-ch1-iris>
+
+<a name="myfootnote26">26</a>: Science Direct - K Nearest Neighbor Definition, <https://www.sciencedirect.com/topics/immunology-and-microbiology/k-nearest-neighbor>
+
+<a name="myfootnote27">27</a>: Tavish Srivastva - Introduction to k-Nearest Neighbors, <https://www.analyticsvidhya.com/blog/2018/03/introduction-k-neighbours-algorithm-clustering/>

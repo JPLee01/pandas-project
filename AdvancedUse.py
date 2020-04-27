@@ -15,6 +15,9 @@ from sklearn.model_selection import train_test_split
 #Import KNeighborsClassifier module from the Scikit-learn library to implement the K-Nearest Neighbor approach to Machine Learning
 from sklearn.neighbors import KNeighborsClassifier
 
+#Instantiate learning model (k = 1)
+#knn = KNeighborsClassifier(n_neighbors=1)
+
 #Import the data
 f = pd.read_csv("IrisData.csv")
 
@@ -22,69 +25,41 @@ f = pd.read_csv("IrisData.csv")
 df = pd.DataFrame(f)
 
 
+#Slice the DataFrame up to but not inlcuding the last column (i.e. Sepal_length, Sepal_Width, Petal_Length and Petal_Width)
+x = df.iloc[:, :-1].values
+#Slice the DataFrame to inlcude the last column only (i.e. Species)
+y = df.iloc[:, 4].values 
+
+#Divide the DataFrame into two subset as training and test set (80% training, 20% test), set the Random State at 1
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.20, random_state=1)
 
 
+#print("X Train Info:{}".format(x_train.shape))
+#print("Y Train Info:{}".format(y_train.shape))
 
 
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-sns.set(style='darkgrid')
-sns.set_palette("colorblind",3)
-
-SetosaData = df[df.species == "setosa"]
-VersicolorData = df[df.species == "versicolor"]
-VirginicaData = df[df.species == "virginica"]
+#print("X Test Info:{}".format(x_test.shape))
+#print("Y Test Info:{}".format(y_test.shape))
 
 
-#Create a Histogram with the KDE for Sepal Length of each of the Species
-#Set the parameters for the Sepal Length Histogram
-#Data selected is Sepal Width within the each of the Species Set and a label is added
-sns.distplot(SetosaData.sepal_length, label="Setosa")
-sns.distplot(VersicolorData.sepal_length, label="Versicolor")
-sns.distplot(VirginicaData.sepal_length, label="Virginica")
-#Set the name and size of the X Label
-plt.xlabel("Sepal Length (Cm)", fontsize=12)
-#Add a legend and locate it in the best location
-plt.legend(loc='best')
-#Set the name and size of the Title
-plt.title("Histogram with the KDE for Sepal Length of each of the Species", fontsize=16)
-#The tight_layout command is used to fit the Plot within the Figure
-plt.tight_layout()
-#pp.savefig()
-#The Figure is displayed
-plt.show()
+#Use a K-Nearest Neighbors Classifier to make a prediction for a new data entry.
+#One neighbor is chosen for this.
+#knn = KNeighborsClassifier(n_neighbors=1)
 
+knn.fit(x_train, y_train)
 
-#Create a Histogram with the KDE for Sepal Width of each of the Species
-sns.distplot(SetosaData.sepal_width, label="Setosa")
-sns.distplot(VersicolorData.sepal_width, label="Versicolor")
-sns.distplot(VirginicaData.sepal_width, label="Virginica")
-plt.xlabel("Sepal Width (Cm)", fontsize=12)
-plt.legend(loc='best')
-plt.title("Histogram with the KDE for Sepal Width of each of the Species", fontsize=16)
-plt.tight_layout()
-#pp.savefig()
-plt.show()
+a = float(input("Please enter a Sepal Length: "))
+b = float(input("Please enter a Sepal Width: "))
+c = float(input("Please enter a Petal Length: "))
+d = float(input("Please enter a Sepal Width: "))
 
-#Create a Histogram with the KDE for Petal Length of each of the Species
-sns.distplot(SetosaData.petal_length, label="Setosa")
-sns.distplot(VersicolorData.petal_length, label="Versicolor")
-sns.distplot(VirginicaData.petal_length, label="Virginica")
-plt.xlabel("Petal Length (Cm)", fontsize=12)
-plt.legend(loc='best')
-plt.title("Histogram with the KDE for Petal Length of each of the Species", fontsize=16)
-plt.tight_layout()
-#pp.savefig()
-plt.show()
+x_new = np.array([[a, b, c, d]])
 
-#Create a Histogram with the KDE for Petal Width of each of the Species
-sns.distplot(SetosaData.petal_width, label="Setosa")
-sns.distplot(VersicolorData.petal_width, label="Versicolor")
-sns.distplot(VirginicaData.petal_width, label="Virginica")
-plt.xlabel("Petal Length (Cm)", fontsize=12)
-plt.legend(loc='best')
-plt.title("Histogram with the KDE for Petal Width of each of the Species", fontsize=16)
-plt.tight_layout()
-#pp.savefig()
-plt.show()
+prediction = (knn.predict(x_new))
+
+print("Based on your input the predicted Species is:", prediction)
+
+Accuracy = knn.score(x_test, y_test)
+
+print("The mean accuracy of this result is:", Accuracy)
+
