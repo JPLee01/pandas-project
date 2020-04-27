@@ -759,9 +759,34 @@ This program will look at the machine learning algorithm of K-Nearest Neighbors 
 
 As seen in the above Gif the value designated to K has a profound effect on the result on the unknown sample classification. This can be seen in further detail below in which displays different outcomes as a result of different values for K:
 
-<img align="center" width="500" height="500" img src="https://miro.medium.com/max/1400/0*6IVs874DUMvJh-f0.png">
+<img width="600" height="600" img src="https://miro.medium.com/max/1400/0*6IVs874DUMvJh-f0.png">
 
+Dhilip Subramanian in his article<sup>[28](#myfootnote28)</sup> highlights the importance for selecting the right value for K. Choosing too small of a value: "can be noisy and will have a higher influence on the result" while a higher values will: "mean lower variance but increased bias" and also is "computationally expensive." The ideal figure he suggest when choosing the value of K is: "K = sqrt(N) where N stands for the number of samples in your training dataset". While also ensuring: "he value of K odd in order to avoid confusion between two classes of data."
 
+As we have 150 samples of data (N), K is the sqrt(150), which is 12.24744874. However, as this is an even figure will we round up to 13 to ensure an odd figure. To initiate this the follwoing code is entered:
+```
+knn = KNeighborsClassifier(n_neighbors=13)
+```
+
+### Creation of the K-Nearest Neighbors Algorithm
+Once the value for K has been identified the next step is to slice the DataFrame to split the Data Columns from the Species Column. The Data Columns are designated x, while the Species Column is designated y. This is achieved through the following code:
+```
+x = df.iloc[:, :-1].values
+y = df.iloc[:, 4].values 
+```
+
+Once this is completed the DataFrame is divided into two subsets as training and test set. The trainng subset is used to train the model and the trained model is tested on the test subset. This is called cross validation.This is undertaken in order to check how accurately the classifying model is at perdicting<sup>[29](#myfootnote29)</sup>. For simpliciity we will use the same 75/25 split as Felipe Trindade<sup>[24](#myfootnote24)</sup> did in his example. However it should be noted that various different splits may be used.To achieve this split the following code is entered:
+```
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.25, random_state=1)
+```
+  * Please note the above Training/Test split splits arrays or matrices into random train and test subsets. If you don't specify a Random State number, then everytime the program is executed a new random value is generated and the train and test datasets would have different values each time. Due to the fact that the program will be run a number of times (by student and examiner) a Random State number is inserted this will ensure that the no matter how many times the program is executed the result would be the same .i.e, same values in train and test datasets. It also appears from research that the specific number entered for the Random State is not of vital importance, more that a number is enteredsup>[30](#myfootnote30)</sup>.
+
+Next the knn.fit function is used to train the model. This is achieved through the following code:
+```
+knn.fit(x_train, y_train)
+```
+
+Next the user is asked to input a value to 
 
 
 
@@ -821,3 +846,10 @@ As seen in the above Gif the value designated to K has a profound effect on the 
 <a name="myfootnote26">26</a>: Science Direct - K Nearest Neighbor Definition, <https://www.sciencedirect.com/topics/immunology-and-microbiology/k-nearest-neighbor>
 
 <a name="myfootnote27">27</a>: Tavish Srivastva - Introduction to k-Nearest Neighbors, <https://www.analyticsvidhya.com/blog/2018/03/introduction-k-neighbours-algorithm-clustering/>
+
+<a name="myfootnote28">28</a>: Dhilip Subramanian - A Simple Introduction to K-Nearest Neighbors Algorithm, <https://towardsdatascience.com/a-simple-introduction-to-k-nearest-neighbors-algorithm-b3519ed98e>
+
+<a name="myfootnote29">29</a>: Kraj Education - Implementataion of Naive Bayes in python(using Sklearn), <https://kraj3.com.np/blog/2019/07/implementataion-of-naive-bayes-in-pythonusing-scikit-learn/>
+
+<a name="myfootnote30">30</a>: Stack Overflow - Random state (Pseudo-random number) in Scikit learn, <https://stackoverflow.com/questions/28064634/random-state-pseudo-random-number-in-scikit-learn>
+
