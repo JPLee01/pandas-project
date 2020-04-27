@@ -488,6 +488,7 @@ The following plots will be produced as a result of the above code:
 ####  Observations 
 As seen from the above Plots there is a concentration and overlap of the species within the Sepal Length (4-8 Cm) and Sepal Width (2-4.5 Cm) Histograms. However in the Petal Length and Width Histograms it can be seen that there is a differentiation between the Setosa species and the Versicolor and Virginica species.The Setosa species in the Petal Length and Width are concentrated is smaller size (Cm) than the other two species. 
 
+
 ### Creation of Histograms complete with Density Plot Comparing the Sepal Length/Width and Petal Length/Width of Each of the Species
 Similiar to the above, the following histograms compare the Sepal Length/Width and Petal Length/Width of each of the Species with the addition of a Density Plot overlaid. 
 
@@ -519,10 +520,11 @@ The following plots will be produced as a result of the above code:
 <img align="left" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histogram%20with%20the%20Density%20Plot%20Comparing%20the%20Petal%20Length%20of%20Each%20of%20the%20Species.png"> <img align="righ" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Histogram%20with%20the%20Density%20Plot%20Comparing%20the%20Petal%20Width%20of%20Each%20of%20the%20Species.png">
 
 ####  Observations 
+As seen from the above Plots the additon of the Density Plot offers greater clarity with regards areas of concentration. While in the previous Histograms, within any areas of concentration it was very difficult to make obserations because the process of stacking bars on top of another created confusion with regards to the position one bar ended and another continued. Also the stacking bars on top of another created the illusions of different colours which some individuals may take to mean additional species. The addition of the Density Plots however, allows for easier observations because the continuous density lines help the eye keep the distributions separate and also do not change colour where overlapping occurs.
 
 
 ### Creation of Boxplots Displaying the Distribution of the Data of Each of the Species
-A Boxplot (also known as a Box-and-Whisker Plot) displays a summary of a set of data containing the minimum, first quartile, median, third quartile, and maximum. In a box plot, we draw a box from the first quartile to the third quartile. A vertical line goes through the box at the median. The whiskers go from each quartile to the minimum or maximum. Additionally, outliers (if present) are shown by points outside the minimum and maximum lines.<sup>[9](#myfootnote9)</sup> A Boxplot is created for each of the species to display the distribution of data within each of the species and highlight any areas of commonality.
+A Boxplot (also known as a Box-and-Whisker Plot) displays a summary of a set of data containing the minimum, first quartile, median, third quartile, and maximum. In a box plot, we draw a box from the first quartile to the third quartile. A vertical line goes through the box at the median. The whiskers go from each quartile to the minimum or maximum. Additionally, outliers (if present) are shown by points outside the minimum and maximum lines.<sup>[11](#myfootnote11)</sup> A Boxplot is created for each of the species to display the distribution of data within each of the species and highlight any areas of commonality.
 
 To create a boxplots displaying the distribution of the data of each of the species the following code is executed:
 ```
@@ -544,6 +546,7 @@ The following plots will be produced as a result of the above code:
 
 ####  Observations 
 It can be seen from the above Plots there does seem to be an overlap across the Species within the Sepal Width as all the boxs are concentrated within the 3 Cm area. Also within the Sepal Length all the Species minimums and maximums occupy within the 5.5-7 Cm area, while the Setosa Species Petal Length and Width results are much smaller than the other two Species. This reinforces the observations made from the Histogram plots. It should also be noted that within each Species at least one outlier is present. 
+
 
 ####  Creation of a Boxplot Comparing the Sepal Length/Width and Petal Length/Width of each of the Species
 These Boxplots draw on the observations made in the pervious two sets of Plots to give a greater understanding into the relationship between the Sepal Length/Width and Petal Length/Width of each of the Species.
@@ -572,8 +575,9 @@ The following plots will be produced as a result of the above code:
 ####  Observations 
 Reinforcing our obserations from the pervious Plots we can see in the Boxplots that there is little or no overlap between measurements for Setosa as compared to the other two species.
 
+
 ####  Creation of a Violin Plot Comparing the Sepal Length/Width and Petal Length/Width of each of the Species
-Very similiar to the above Boxplot a Violin Plot depicts distributions of numeric data for one or more groups using density curves.<sup>[10](#myfootnote10)</sup> Within a Violin Plot the white dot represents the Median value the thick black bar in the center represents the interquartile range, the thin black line represents the rest of the distribution, except for points that are determined to be “outliers” using a method that is a function of the interquartile range. On each side of the black line is a Kernel Density Estimation (KDE) to show the distribution shape of the data. Wider sections of the Violin Plot represent a higher probability that members of the population will take on the given value, the skinnier sections represent a lower probability.<sup>[11](#myfootnote11)</sup>
+Very similiar to the above Boxplot a Violin Plot depicts distributions of numeric data for one or more groups using density curves.<sup>[12](#myfootnote12)</sup> Within a Violin Plot the white dot represents the Median value the thick black bar in the center represents the interquartile range, the thin black line represents the rest of the distribution, except for points that are determined to be “outliers” using a method that is a function of the interquartile range. On each side of the black line is a Kernel Density Estimation (KDE) to show the distribution shape of the data. Wider sections of the Violin Plot represent a higher probability that members of the population will take on the given value, the skinnier sections represent a lower probability.<sup>[13](#myfootnote13)</sup>
 
 To create a Violin Plot displaying the Sepal Length/Width and Petal Length/Width of each of the species the following code is executed:
 ```
@@ -601,10 +605,11 @@ While the Violin Plot may be slightly more complex concept than a Box Plot to un
 
 From the above Violin Plots it can be seen that the Virginica has the highest Median value in Patel length, Petal width and Sepal length, while the Setosa has the highest Sepal Width Median value. These observations are easier to make in a Violin Plot thanks to the white dot. 
 
-#### Creation of a a Scatter Plot depicting the relationship between Sepal/Petal Length and Sepal/Petal Width of each of the Species
-A Scatter Plot uses dots to represent values for two different numeric variables. The position of each dot on the horizontal and vertical axis indicates values for an individual data point. Scatter plots are used to observe relationships between variables.<sup>[12](#myfootnote12)</sup>
 
-If the data points show an "up-hill" pattern from left to right, then there is a positive correlation between X & Y. Conversely if the pattern is "downhill" there is a negative correlation between X & Y. If the dats is scattered then there is no relationship between the X & Y.<sup>[13](#myfootnote13)</sup>
+#### Creation of a a Scatter Plot depicting the relationship between Sepal/Petal Length and Sepal/Petal Width of each of the Species
+A Scatter Plot uses dots to represent values for two different numeric variables. The position of each dot on the horizontal and vertical axis indicates values for an individual data point. Scatter plots are used to observe relationships between variables.<sup>[14](#myfootnote14)</sup>
+
+If the data points show an "up-hill" pattern from left to right, then there is a positive correlation between X & Y. Conversely if the pattern is "downhill" there is a negative correlation between X & Y. If the dats is scattered then there is no relationship between the X & Y.<sup>[15](#myfootnote15)</sup>
 
 The creation of a Scatter Plot depicting the relationship between Sepal/Petal Length and Sepal/Petal will indicate if a positive or negtive correlation exisits within any of the species.
 
@@ -627,13 +632,13 @@ The following plots will be produced as a result of the above code:
 
 <img align="left" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Scatter%20Plot%20depicting%20the%20relationship%20between%20Petal%20Length%20and%20Petal%20Width%20of%20each%20of%20the%20Species.png"> &nbsp;<img align="righ" width="425" height="425" img src="https://github.com/JPLee01/pandas-project/blob/master/Visualisations/Scatter%20Plot%20depicting%20the%20relationship%20between%20Sepal%20Length%20and%20Sepal%20Width%20of%20each%20of%20the%20Species.png">
 
-
 ####  Observations 
 From the Scatter Plots it can be seen that a positive correlation exists for all three species for the relationship between Petal Length and Petal Width. Also it can be seen that their is a large distinction between the Setosa species the other two species (Setosa occupys the lower left quartile for Petal Length and Petal Width and upper left  quartile for Sepal Length and Sepal Width). It can also be argued that while differentiation exists between Versicolor and Virgnica for the relationship between Petal Length and Petal Width (apart from a few outliers), for the the relationship between Sepal Length and Sepal Width it does not exist. 
 
+
 ### Creation of a KDE Plot of each of the Species displayig Sepal/Petal Length Vs. Sepal/Petal Width
 A KDE (Kernel Density Estimate) Plot is used for visualizing the Probability Density of a specific variable.
-The plot can either be One-Dimensional or Two-Dimensional and is mainly used in the field of non-parametric analysis.<sup>[14](#myfootnote14)</sup>
+The plot can either be One-Dimensional or Two-Dimensional and is mainly used in the field of non-parametric analysis.<sup>[16](#myfootnote16)</sup>
 
 The output for this KDE Plot will be a Two-Dimensional representation of the relationship of the Sepal/Petal Length Vs. Sepal/Petal Width of each of the species.
 
@@ -664,8 +669,9 @@ The above KDE Plots highlight the observations made in the pervious plots with r
   * Note the KDE Plot could also have been constructed to include all species in one plot but due to the large overlaps this was decided against for aesthetic purposes. 
   * Please also note when running the Plots the following message is observed: "UserWarning: Passing a 2D dataset for a bivariate plot is deprecated in favor of kdeplot(x, y), and it will cause an error in future versions. Please update your code." This error can appear when dealing with Two-Dimensional representations and users should be aware of this when running the program.
 
+
 ### Creation of a Pairplot of the Data Set
-A Pairplot is a plot in which one variable in the same data row is matched with another variable's value. Pairplots show all variables paired with all the other variables and allow users to see both distribution of single variables and relationships between two variables.<sup>[15](#myfootnote15)</sup> By creating a multigraph resperesntation of the data it is easy for the user to identify the differing relationships between the variable's.
+A Pairplot is a plot in which one variable in the same data row is matched with another variable's value. Pairplots show all variables paired with all the other variables and allow users to see both distribution of single variables and relationships between two variables.<sup>[17](#myfootnote17)</sup> By creating a multigraph resperesntation of the data it is easy for the user to identify the differing relationships between the variable's.
 
 To create a Pairplot of the Data Set the following code is executed:
 ```
@@ -687,12 +693,13 @@ The following plots will be produced as a result of the above code:
 ####  Observations
 Within the Pair plot seen above it can be stated the Setosa can be clearly distinguished from the other two species in each subplot. Within the Petal Length and Width this is particularly apparent. 
 
-As seen with a Pairplot the creation of a multigraph resperesntation of the data offers the user an overview of the Data Set. This it could be argued, would aid the user in identifying relationships within the Data Set. Pair plots also seen as a useful tool within bivariate analysis. A Pair plot can identify the bivariate relation between each variable and can be used in the construction of hypotheses of associations between variables.<sup>[16](#myfootnote16)</sup>
+As seen with a Pairplot the creation of a multigraph resperesntation of the data offers the user an overview of the Data Set. This it could be argued, would aid the user in identifying relationships within the Data Set. Pair plots also seen as a useful tool within bivariate analysis. A Pair plot can identify the bivariate relation between each variable and can be used in the construction of hypotheses of associations between variables.<sup>[18](#myfootnote18)</sup>
+
 
 ### 8.3 Interactive.py Program Explained
 As seen above the [Interactive.py](https://github.com/JPLee01/pandas-project/blob/master/Interactive.py) program is primarily concerned with highlighting the potential and capability of the Pandas Profiling module.
 
-Upon investigation into potential advanced uses of the Iris Data Set an article by Peter Nistrup<sup>[17](#myfootnote17)</sup> was discovered which spoke about the potential of the Pandas Profiling module. Upon further investigation a GitHub repository by sbrugman<sup>[18](#myfootnote18)</sup> was discovered which explained the Pandas Profiling module in great detail. These two references have been heavily used in the creation of the [Interactive.py](https://github.com/JPLee01/pandas-project/blob/master/Interactive.py) program.
+Upon investigation into potential advanced uses of the Iris Data Set an article by Peter Nistrup<sup>[19](#myfootnote19)</sup> was discovered which spoke about the potential of the Pandas Profiling module. Upon further investigation a GitHub repository by sbrugman<sup>[20](#myfootnote20)</sup> was discovered which explained the Pandas Profiling module in great detail. These two references have been heavily used in the creation of the [Interactive.py](https://github.com/JPLee01/pandas-project/blob/master/Interactive.py) program.
 
 The report produced by the program are saved in .html format within the repository. 
 
@@ -714,7 +721,7 @@ profile = ProfileReport(df, title="Iris Data Interactive Report", html={'style':
 df.profile_report()
 profile.to_file(output_file="Iris Data Interactive Report.html")
 ```
-  * Note the above code requires the installation of the Pandas Profiling module by the user. If this is not present the program will not run and the report will not be grnerated. It is advised that if the the Pandas Profiling module is not installed, the detail instructions on sbrugman GitHub repository is followed<sup>[18](#myfootnote18)</sup>.
+  * Note the above code requires the installation of the Pandas Profiling module by the user. If this is not present the program will not run and the report will not be grnerated. It is advised that if the the Pandas Profiling module is not installed, the detail instructions on sbrugman GitHub repository is followed<sup>[20](#myfootnote20)</sup>.
 
 As a result of running the program the following Interactive Report is created:
 
@@ -722,18 +729,19 @@ As a result of running the program the following Interactive Report is created:
 
 The above example is a 30 second Gif highlighting the process of executing the Interactive.py program from the command line and interacting with the Interactive Report. As seen from the Gif the Interactive Report .
 
-The process of uploading of a Gif to the Readme file can be seen in an article by Kelli Blaock.<sup>[19](#myfootnote19)</sup>
+The process of uploading of a Gif to the Readme file can be seen in an article by Kelli Blaock.<sup>[21](#myfootnote21)</sup>
 
 The [Iris Data Interactive Report](https://github.com/JPLee01/pandas-project/blob/master/Iris%20Data%20Interactive%20Report.html) is available online within the repository however due to it's size it can not be viewed through the GitHub website. It is recommended that should the report wished to be viewed the steps in [7.2  Running the Program](#7.2-Running-the-Program) are followed. 
+
 
 ### 8.4 AdvancedUse.py Program Explained
 As seen above the [AdvancedUse.py](https://github.com/JPLee01/pandas-project/blob/master/AdvancedUse.py) program is concerned with the potential advanced use of the Iris Data Set. 
 
-Machine Learning is one area which has seen an explosion in recent years thanks to advances in technology. Machine learning is defined as an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.<sup>[20](#myfootnote20)</sup> As seen in the article by Dan Shewan<sup>[21](#myfootnote21)</sup> a number of the top companies are beginning to employ machine learning into their operations. Within Machine Learning, the primary aim is to allow the computers learn automatically without human intervention or assistance and adjust actions accordingly. An example of the types of uses of Machine Learning can be seen below:
+Machine Learning is one area which has seen an explosion in recent years thanks to advances in technology. Machine learning is defined as an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.<sup>[22](#myfootnote22)</sup> As seen in the article by Dan Shewan<sup>[23](#myfootnote23)</sup> a number of the top companies are beginning to employ machine learning into their operations. Within Machine Learning, the primary aim is to allow the computers learn automatically without human intervention or assistance and adjust actions accordingly. An example of the types of uses of Machine Learning can be seen below:
 
 <img align="center" width="500" height="500" img src="https://www.houseofbots.com/images/news/3736/cover.png">
 
-Within the Iris Data Set there is the potential to explore the possibilities Machine Learninng can offer. This can be seen in the articles by Felipe Trindade<sup>[22](#myfootnote22)</sup> and Muller and Guido<sup>[23](#myfootnote23)</sup> which were used as inspirations for this program. 
+Within the Iris Data Set there is the potential to explore the possibilities Machine Learninng can offer. This can be seen in the articles by Felipe Trindade<sup>[24](#myfootnote24)</sup> and Muller and Guido<sup>[25](#myfootnote25)</sup> which were used as inspirations for this program. 
 
 #### Importing the Libaries
 As well as the [Pandas](https://pandas.pydata.org/) and [Numpy](https://www.numpy.org/) libaries imported in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) and [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) programs the following extra libary is imported to the AdvancedUse.py program:
@@ -772,32 +780,32 @@ The process in [Analysis.py](https://github.com/JPLee01/pandas-project/blob/mast
 
 <a name="myfootnote10">10</a>: The Data Visualisation Catalogue - Density Plot, <https://datavizcatalogue.com/methods/density_plot.html>
 
-<a name="myfootnote9">9</a>: Boxplot, <https://www.tutorialspoint.com/matplotlib/matplotlib_box_plot.htm>
+<a name="myfootnote11">11</a>: Boxplot, <https://www.tutorialspoint.com/matplotlib/matplotlib_box_plot.htm>
 
-<a name="myfootnote10">10</a>:  Mike Yi - What is a Violin Plot?, <https://chartio.com/learn/charts/violin-plot-complete-guide/>
+<a name="myfootnote12">12</a>:  Mike Yi - What is a Violin Plot?, <https://chartio.com/learn/charts/violin-plot-complete-guide/>
 
-<a name="myfootnote11">11</a>: Joel Carron - Violin Plots 101: Visualizing Distribution and Probability Density, <https://mode.com/blog/violin-plot-examples>
+<a name="myfootnote13">13</a>: Joel Carron - Violin Plots 101: Visualizing Distribution and Probability Density, <https://mode.com/blog/violin-plot-examples>
 
-<a name="myfootnote12">12</a>: Mike Yi - What is a Scatter Plot?, <https://chartio.com/learn/charts/what-is-a-scatter-plot/>
+<a name="myfootnote14">14</a>: Mike Yi - What is a Scatter Plot?, <https://chartio.com/learn/charts/what-is-a-scatter-plot/>
 
-<a name="myfootnote13">13</a>: ASQ - What is a Scatter Diagram?, <https://asq.org/quality-resources/scatter-diagram>
+<a name="myfootnote15">15</a>: ASQ - What is a Scatter Diagram?, <https://asq.org/quality-resources/scatter-diagram>
 
-<a name="myfootnote14">14</a>: Geeks for Geeks - KDE Plot Visualization with Pandas and Seaborn, <https://www.geeksforgeeks.org/kde-plot-visualization-with-pandas-and-seaborn/>
+<a name="myfootnote16">16</a>: Geeks for Geeks - KDE Plot Visualization with Pandas and Seaborn, <https://www.geeksforgeeks.org/kde-plot-visualization-with-pandas-and-seaborn/>
 
-<a name="myfootnote15">15</a>: Will Koehrsen - Visualizing Data with Pairs Plots in Python, <https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166>
+<a name="myfootnote17">17</a>: Will Koehrsen - Visualizing Data with Pairs Plots in Python, <https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166>
 
-<a name="myfootnote16">16</a>: Alessandro Bertani et al. - How to describe Bivariate Data, <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5864614/#__sec3title>
+<a name="myfootnote18">18</a>: Alessandro Bertani et al. - How to describe Bivariate Data, <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5864614/#__sec3title>
 
-<a name="myfootnote17">17</a>: Peter Nistrup - Exploring your data with just 1 line of Python, <https://towardsdatascience.com/exploring-your-data-with-just-1-line-of-python-4b35ce21a82d>
+<a name="myfootnote19">19</a>: Peter Nistrup - Exploring your data with just 1 line of Python, <https://towardsdatascience.com/exploring-your-data-with-just-1-line-of-python-4b35ce21a82d>
 
-<a name="myfootnote18">18</a>: sbrugman - GitHub Repository, <https://github.com/pandas-profiling/pandas-profiling>
+<a name="myfootnote20">20</a>: sbrugman - GitHub Repository, <https://github.com/pandas-profiling/pandas-profiling>
 
-<a name="myfootnote19">19</a>: Kelli Blaock - Demo your App in your GitHub README with an Animated GIF, <https://dev.to/kelli/demo-your-app-in-your-github-readme-with-an-animated-gif-2o3c>
+<a name="myfootnote21">21</a>: Kelli Blaock - Demo your App in your GitHub README with an Animated GIF, <https://dev.to/kelli/demo-your-app-in-your-github-readme-with-an-animated-gif-2o3c>
 
-<a name="myfootnote20">20</a>: Expert System - What is Machine Learning? A definition, <https://expertsystem.com/machine-learning-definition>
+<a name="myfootnote22">22</a>: Expert System - What is Machine Learning? A definition, <https://expertsystem.com/machine-learning-definition>
 
-<a name="myfootnote21">21</a>: Dan Shewan - 10 Companies Using Machine Learning in Cool Ways, <https://www.wordstream.com/blog/ws/2017/07/28/machine-learning-applications>
+<a name="myfootnote23">23</a>: Dan Shewan - 10 Companies Using Machine Learning in Cool Ways, <https://www.wordstream.com/blog/ws/2017/07/28/machine-learning-applications>
 
-<a name="myfootnote22">22</a>: Felipe Trindade - Start to learn Machine Learning with the Iris Flower Classification Challenge, <https://medium.com/gft-engineering/start-to-learn-machine-learning-with-the-iris-flower-classification-challenge-4859a920e5e3>
+<a name="myfootnote24">24</a>: Felipe Trindade - Start to learn Machine Learning with the Iris Flower Classification Challenge, <https://medium.com/gft-engineering/start-to-learn-machine-learning-with-the-iris-flower-classification-challenge-4859a920e5e3>
 
-<a name="myfootnote23">23</a>: Muller and Guido - Introduction - Iris Dataset, <https://rpubs.com/nandong/imlp-ch1-iris>
+<a name="myfootnote25">25</a>: Muller and Guido - Introduction - Iris Dataset, <https://rpubs.com/nandong/imlp-ch1-iris>
