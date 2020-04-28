@@ -28,7 +28,7 @@ Table of Contents
 
 [4. Problem Statement](#4-Problem-Statement)
 
-[5 Previous Case Studies of the Data](#5-Previous-Case-Studies-of-the-Data)
+[5 Previous Case Studies of the Data Set](#5-Previous-Case-Studies-of-the-Data-Set)
 
 [6. Issues and Inconsistencies with Data Set](#6-Issues-and-Inconsistencies-with-Data-Set)
 
@@ -49,6 +49,8 @@ Table of Contents
   [8.3 Interactive.py Program Explained](#8.3-Interactive.py-Program-Explained)
 
   [8.4 AdvancedUse.py Program Explained](#8.4-AdvancedUse.py-Program-Explained)
+
+[9. Summary, Conclusion and Future Possibilities for the Data Set](#9-Summary,-Conclusion-and-Future-Possibilities-for-the-Data-Set)
 
 [References](#References)
 
@@ -99,7 +101,7 @@ studied the following three related species of Iris flowers:
 ![Iris Species](https://miro.medium.com/max/1400/0*Uw37vrrKzeEWahdB)
 
 Fifty samples of each species were collected and analysed. (It should be
-noted that the data for the Setosa and Iris Versicolor were already
+noted that the data for the Setosa and Versicolor were already
 available from a previous study by Fishers colleague Botanist Edgar
 Anderson). Within each species Fisher studied four distinct
 characteristics:
@@ -120,7 +122,7 @@ As part of the assignmnent the student was given a set of instruction which can 
 * saves a histogram of each variable to png files, and
 * outputs a scatter plot of each pair of variables.
 
-##  5 Previous Case Studies of the Data
+##  5 Previous Case Studies of the Data Set
 ------------------------------------------------------------------------------------------------
 Through an oline search it can be seen that a number of previous iterations of the analysis of the data have taken place. These include programs written in Python as well as other computing language. Previous iteration referenced in the sutdy of this project were the works of Venkata Sai Reddy Avuluri<sup>[3](#myfootnote3)</sup> and Oluwasogo Oluwafemi Ogundowole<sup>[4](#myfootnote4)</sup> on Medium who demonstrates the use of Pandas, Numpy, Matplotlib and Seaborn for management of the Iris Data. As well as Binu<sup>[5](#myfootnote5)</sup> on Kaggle who demonstrates in further detail the visualisations which can be created from the Iris Data using Seaborn and Matplotlib.
 
@@ -159,8 +161,8 @@ python <programme_name.py>
 
 ### 7.3 Libaries
 The following Python libraries were used in the writing of the programs code and are required to successfully run the programs:
-* [Numpy](https://www.numpy.org/) - Used for mathematical functions in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) and [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) programs.
-* [Pandas](https://pandas.pydata.org/) - Used for import, management, data manipulation and analysis in both the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) and [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) programs.
+* [Numpy](https://www.numpy.org/) - Used for mathematical functions in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py), [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) and [AdvancedUse.py](https://github.com/JPLee01/pandas-project/blob/master/AdvancedUse.py) programs.
+* [Pandas](https://pandas.pydata.org/) - Used for import, management, data manipulation and analysis in both the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py), [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) and [AdvancedUse.py](https://github.com/JPLee01/pandas-project/blob/master/AdvancedUse.py) programs.
 * [Matplotlib.pyplot](https://matplotlib.org/tutorials/introductory/pyplot.html) - Used for the manipulation of elements and the creation of certain plots graphs, plots and charts within the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program.
 * [Seaborn](https://seaborn.pydata.org/) - Used for the creation and manipulation of all plots in the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program. (Seaborn allows for the extetion of the functionality of Matplotlib).
 * [Sys](https://docs.python.org/3/library/sys.html) - A module more than a library within Python used for the creation and writing of text files in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program.
@@ -174,8 +176,8 @@ This section will describe the Pyton programs and subsequent code which was crea
 It should be noted that four separate python programmes have been written for this project:
 1.  [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) - A program which was created to carry out the general and statistical analysis of the data set. It outputs results were produced into the [Analysis.txt](https://github.com/JPLee01/pandas-project/blob/master/Analysis.txt) file.
 2.  [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) - A program which was created to produce visualisations of the data set. It outputs were stored as .png files in the [repository](https://github.com/JPLee01/pandas-project#2-project-repository) the programe is stored in.
-3. [Interactive.py](https://github.com/JPLee01/pandas-project/blob/master/Interactive.py) - A program which was created to show the potential and capability of the Pandas Profiling module.
-4.  [AdvancedUse.py](https://github.com/JPLee01/pandas-project/blob/master/AdvancedUse.py) - A program created to investigate the potential advanced uses of the Iris Data Set. 
+3. [Interactive.py](https://github.com/JPLee01/pandas-project/blob/master/Interactive.py) - A program which was created to show the potential and capability of the Pandas Profiling module. The output of this program is the creation of the[Iris Data Interactive Report](https://github.com/JPLee01/pandas-project/blob/master/Iris%20Data%20Interactive%20Report.html).
+4.  [AdvancedUse.py](https://github.com/JPLee01/pandas-project/blob/master/AdvancedUse.py) - A program created to investigate the potential advanced uses of the Iris Data Set, namely the K-Nearest Neighbors (KNN) algorithm. 
 
 For clarity comments within the code have been removed from this document, but these can be viewed within the specific Python programmes.
 
@@ -753,7 +755,7 @@ from sklearn.neighbors import KNeighborsClassifier
 The process in [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) is repeated for this program.
 
 ### Implementation of Machine Learning - K-Nearest Neighbors (KNN)
-This program will look at the machine learning algorithm of K-Nearest Neighbors (KNN). KNN  is a non-parametric method, where an unknown sample is classified according to a class belonging to the majority of its neighbors, i.e. if K (Number selected for nearest neighbors) = 1, then the case is simply assigned to the class of its nearest neighbor.<sup>[26](#myfootnote26)</sup> Around since the 1970's KNN can be used for both classification and regression predictive problems.<sup>[27](#myfootnote27)</sup> A visual representation of KNN can be viewed below:
+This program will look at the machine learning algorithm of K-Nearest Neighbors (KNN). KNN is a supervised machine learning algorithm that can be used to solve both classification and regression problems. It is a non-parametric method, where an unknown sample is classified according to a class belonging to the majority of its neighbors, i.e. if K (Number selected for nearest neighbors) = 1, then the case is simply assigned to the class of its nearest neighbor.<sup>[26](#myfootnote26)</sup> Around since the 1970's KNN can be used for both classification and regression predictive problems.<sup>[27](#myfootnote27)</sup> A visual representation of KNN can be viewed below:
 
 <img align="center" width="500" height="500" img src="https://machinelearningknowledge.ai/wp-content/uploads/2018/08/KNN-Classification.gif">
 
@@ -824,9 +826,35 @@ The mean accuracy of this result is: 0.974
 
 As seen the model predicts based on the dimensions entered that the Species would be Setosa and this would be accurate to 0.974 or 97.4%. 
 
-This prediction can also be backed-up based on analysis of the Scatter Plots produced earlier.
+Analysis of the Scatter Plots produced earlier can also be used to reinforced any predicions made by the model.
 
-##  
+##  9 Summary, Conclusion and Future Possibilities for the Data Set
+------------------------------------------------------------------------------------------------
+####  Summary
+Within the project Chapter 1 offered an introduction, while Chapter 2 outlined the files present within the projects repository. Chapter 3 investigated Fishers Iris Data Set, gave a background and described the four variable measurements of each data entry. Chapter 4 outlined the problem statement of the assignmnent, while Chapter 5 dicussed previous case studies of the Data Set. Chapter 6 highlighted issues and inconsistencies with Data Set. Chpater 7 offered a user guide to downloading the repository, running the program and a description of the libaries used. Chapter 8 describeed the Python programs within the project and explained the results generated. Chapter 9 closed the project by offering a summary, conclusion and discussed future possibilities for the Data Set.
+
+In summary it can be seen from this project that the Iris Data Set offers numberous opportunities to explore and visually respresent the data. This is due to its one hundred and fifty data inputs spread over four variable measurements (Petal length, Petal width, Sepal length and Sepal width) and broken into three Species (Setosa, Versicolor and Virginica). 
+
+The statistical summaries of the Data Set developed in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program and outputted to the [Analysis.txt](https://github.com/JPLee01/pandas-project/blob/master/Analysis.txt) file offers the user numerical information about the Data Set. This information including; sample of the first 10 rows of data, sample of the last 10 rows of data and Summary statistics of all the species etc. allows the user to seen a snapshot of the data and how it is structured.
+
+The visualisations of the Data Set produced in the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) program offers the user the ability to observe the data and discover noticable patterns or trends. The visualisations also offer the user the ability to search the data for frequency distributions, while also developing hypothesis with regards to species parameters.
+
+The [Iris Data Interactive Report](https://github.com/JPLee01/pandas-project/blob/master/Iris%20Data%20Interactive%20Report.html) produced from the [Interactive.py](https://github.com/JPLee01/pandas-project/blob/master/Interactive.py) program highlights to the user the potential and capability of the Pandas Profiling module. This offers the user the experience of gererating and interacting with a Pandas Profiling report, something which the author was not aware of prior to this project. 
+
+The invstigation of the K-Nearest Neighbors (KNN) algorithm in the [AdvancedUse.py](https://github.com/JPLee01/pandas-project/blob/master/AdvancedUse.py) program highlights to the user the possibility of implementing Machine Learning on the Data Set and the opportunities it can create. 
+
+####  Conclusion
+In conclusion within this project the author attempted to analyse the Iris Data Set using Python and a number of libaries for data analysis. As the author had no computing or data analysis experience prior to the commencement of the course extensive research was undertaken. This resulted in the author gaining an experience, understanding and overall insight into data analysis. The author now feels a level of confidence with regards to data analysis which was not present before undertaking the project.In essence the entire experience associated with the project can be summarised by the following Carly Fiorina quote “The goal is to turn data into information, and information into insight”<sup>[32](#myfootnote32)</sup>.
+
+####  Future Possibilities for the Data Set
+Due to time constraints three areas the author was investigating were not implemented into the project. These included:
+  1.  The ability the export Plots to a PDF file - Similarly to the [Analysis.txt](https://github.com/JPLee01/pandas-project/blob/master/Analysis.txt) file created from the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program the author attempted to create a PDF file in which the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) programs outputs would have produced to. This the author felt would have enhanced the project as it could offer the user the opportunity to create a download a file which contained all the plots. Unfortunately the author was not able to achieve this. The ability the export Plots to a PDF file was discussed in a Data to Fish article which the author had used in the investigation<sup>[33](#myfootnote33)</sup>.
+  2.  Implementation of the Cufflinks library into the Project - The ability to implement the cufflinks libary the author felt would have greatly imporved the project, particially data available through the Plots. Despite repeated attempts the author was not able to successfully implement the library. The ability to implement the Cufflinks library was originally discovered by the author through a Peter Nistrup article<sup>[34](#myfootnote34)</sup>, and was further investigated through the official Cufflinks webpage<sup>[35](#myfootnote35)</sup>.
+  3.  Implementation of the Dash Platform into the Project - Within the same Peter Nistrup article<sup>[34](#myfootnote34)</sup> the Dash Platform and its capabilities was also discovered. Similarly to implementing the Cufflinks library the author feels the implemetation of the Dash platform would have greatly enhanced the data analysis capability of the project. While the official Dash webpage<sup>[36](#myfootnote36)</sup> offers a guide regards implementation and use, the author felt this was perhaps beyond thier current technical capability, and would require further research to implement.
+
+The author feels there three areas would have enhanced the project greatly should they have been implemented. If more time had been availalbe it was the authors intention to implement all three areas fully into the project. 
+
+
 
 
 ##  References
@@ -893,3 +921,13 @@ This prediction can also be backed-up based on analysis of the Scatter Plots pro
 <a name="myfootnote30">30</a>: Stack Overflow - Random state (Pseudo-random number) in Scikit learn, <https://stackoverflow.com/questions/28064634/random-state-pseudo-random-number-in-scikit-learn>
 
 <a name="myfootnote31">31</a>: Avinash Navlani - KNN Classification using Scikit-learn, <https://www.datacamp.com/community/tutorials/k-nearest-neighbor-classification-scikit-learn>
+
+<a name="myfootnote32">32</a>: Carly Fiorina - Quotes, <https://quotefancy.com/quote/1187260/Carly-Fiorina-The-goal-is-to-turn-data-into-information-and-information-into-insight>
+
+<a name="myfootnote33">33</a>: Data to Fish - How to Export Matplotlib Charts to a PDF, <https://datatofish.com/export-matplotlib-pdf/>
+
+<a name="myfootnote34">34</a>: Peter Nistrup - 7 things to quickly improve your Data Analysis in Python, <https://towardsdatascience.com/7-things-to-quickly-improve-your-data-analysis-in-python-3d434243da7>
+
+<a name="myfootnote35">35</a>: Cufflinks Library, <https://plotly.com/python/cufflinks/>
+
+<a name="myfootnote36">36</a>: Dash Platform, <https://plotly.com/dash/>
