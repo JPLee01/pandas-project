@@ -757,37 +757,76 @@ This program will look at the machine learning algorithm of K-Nearest Neighbors 
 
 <img align="center" width="500" height="500" img src="https://machinelearningknowledge.ai/wp-content/uploads/2018/08/KNN-Classification.gif">
 
-As seen in the above Gif the value designated to K has a profound effect on the result on the unknown sample classification. This can be seen in further detail below in which displays different outcomes as a result of different values for K:
+As seen in the above Gif, the value designated to K has a profound effect on the result on the unknown sample classification. This can be seen in further detail below in which displays different outcomes as a result of different values for K:
 
 <img width="600" height="600" img src="https://miro.medium.com/max/1400/0*6IVs874DUMvJh-f0.png">
 
-Dhilip Subramanian in his article<sup>[28](#myfootnote28)</sup> highlights the importance for selecting the right value for K. Choosing too small of a value: "can be noisy and will have a higher influence on the result" while a higher values will: "mean lower variance but increased bias" and also is "computationally expensive." The ideal figure he suggest when choosing the value of K is: "K = sqrt(N) where N stands for the number of samples in your training dataset". While also ensuring: "he value of K odd in order to avoid confusion between two classes of data."
+Dhilip Subramanian in his article<sup>[28](#myfootnote28)</sup> highlights the importance for selecting the right value for K within a model. Choosing too small of a value: "can be noisy and will have a higher influence on the result", while a higher values will: "mean lower variance but increased bias" and also is "computationally expensive." The ideal figure he suggest when choosing the value of K is: "K = sqrt(N) where N stands for the number of samples in your training dataset". While also ensuring: "he value of K odd in order to avoid confusion between two classes of data."
 
-As we have 150 samples of data (N), K is the sqrt(150), which is 12.24744874. However, as this is an even figure will we round up to 13 to ensure an odd figure. To initiate this the follwoing code is entered:
+As we have 150 samples of data (N), K is the sqrt(150), which is 12.24744874. However, as this is an even figure will we round up to 13 to ensure an odd figure. To initiate this the following code is entered:
 ```
 knn = KNeighborsClassifier(n_neighbors=13)
 ```
 
 ### Creation of the K-Nearest Neighbors Algorithm
-Once the value for K has been identified the next step is to slice the DataFrame to split the Data Columns from the Species Column. The Data Columns are designated x, while the Species Column is designated y. This is achieved through the following code:
+Once the value for K has been identified the next step is to slice the DataFrame and to split the Data Columns (Sepal Length, Sepal Width, Petal Length, Petal Width) from the Species Column. The Data Columns once split is designated x, while the Species Column is designated y. This is achieved through the following code:
 ```
 x = df.iloc[:, :-1].values
 y = df.iloc[:, 4].values 
 ```
 
-Once this is completed the DataFrame is divided into two subsets as training and test set. The trainng subset is used to train the model and the trained model is tested on the test subset. This is called cross validation.This is undertaken in order to check how accurately the classifying model is at perdicting<sup>[29](#myfootnote29)</sup>. For simpliciity we will use the same 75/25 split as Felipe Trindade<sup>[24](#myfootnote24)</sup> did in his example. However it should be noted that various different splits may be used.To achieve this split the following code is entered:
+Once this is completed the DataFrame is divided into two subsets as training and test set. The trainng subset is used to train the model and the trained model is tested on the test subset. This is called cross validation.This is undertaken in order to check how accurately the classifying model is at perdicting<sup>[29](#myfootnote29)</sup>. For simpliciity we will use the same 75/25 split as Felipe Trindade<sup>[24](#myfootnote24)</sup> did in his example. However it should be noted that various different splits may be used. To achieve this split the following code is entered:
 ```
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.25, random_state=1)
 ```
-  * Please note the above Training/Test split splits arrays or matrices into random train and test subsets. If you don't specify a Random State number, then everytime the program is executed a new random value is generated and the train and test datasets would have different values each time. Due to the fact that the program will be run a number of times (by student and examiner) a Random State number is inserted this will ensure that the no matter how many times the program is executed the result would be the same .i.e, same values in train and test datasets. It also appears from research that the specific number entered for the Random State is not of vital importance, more that a number is enteredsup>[30](#myfootnote30)</sup>.
+  * Please note the above Training/Test split splits arrays or matrices into random train and test subsets. If you don't specify a Random State number, then everytime the program is executed a new random value is generated and the train and test datasets would have different values each time. Due to the fact that the program will be run a number of times (by student and examiner) a Random State number is inserted this will ensure that the no matter how many times the program is executed the result would be the same .i.e, same values in train and test datasets. It also appears from research that the specific number entered for the Random State is not of vital importance, more that a number is entered<sup>[30](#myfootnote30)</sup>.
 
-Next the knn.fit function is used to train the model. This is achieved through the following code:
+Next the knn.fit function takes as arguments the array x_train (containing the training data) and the array y_train (containing the corresponding training labels).This way, the model is built on the training set<sup>[31](#myfootnote31)</sup>. This is achieved through the following code:
 ```
 knn.fit(x_train, y_train)
 ```
+Now predictions can be made using the model on any new data for which we might not know the correct labels.
+To initiate new data the user will be asked to input a value for the Sepal Length, Sepal Width, Petal Length and Petal Width. A letter will then be designated for each input. This is achieved through the following code:
+```
+a = float(input("Please enter a Sepal Length(Cm): "))
+b = float(input("Please enter a Sepal Width(Cm): "))
+c = float(input("Please enter a Petal Length(Cm): "))
+d = float(input("Please enter a Sepal Width(Cm): "))
+```
 
-Next the user is asked to input a value to 
+Once all the relevant dimensions have been entered the are grouped together and designated "x_new", as can be seen by the following code:
+```
+x_new = np.array([[a, b, c, d]])
+```
 
+After this a prediction is made on the test set using predict() function based on the users inputs. The result of this prediction is then displayed to the user stating: 'Based on your input the predicted Species is: ______'. This is achieved through the following code: as can be seen by the following code:
+```
+prediction = (knn.predict(x_new))
+print("Based on your input the predicted Species is:", prediction)
+```
+
+In order to offer reassurances to the user about the accuracy of the model the knn.score fuction is used to calculate the mean accuracy of the predicted result (Rounded to 3 Decimal Places). This result is then displayed to the user stating: 'The mean accuracy of this result is: ______'. This is achieved through the following code: as can be seen by the following code:
+```
+Accuracy = round(knn.score(x_test, y_test),3)
+print("The mean accuracy of this result is:", Accuracy)
+```
+
+### Working Example
+To demonstrate the model in action the following is an example of the results generated from the following measurments entered by the user: Sepal Length 5.8 cm, Sepal Width 2.7 cm, Petal Length 1.3 cm and Sepal Width 3.1 cm.
+```
+Please enter a Sepal Length(Cm): 5.8
+Please enter a Sepal Width(Cm): 2.7
+Please enter a Petal Length(Cm): 1.3
+Please enter a Sepal Width(Cm): 3.1
+Based on your input the predicted Species is: ['setosa']
+The mean accuracy of this result is: 0.974
+```
+
+As seen the model predicts based on the dimensions entered that the Species would be Setosa and this would be accurate to 0.974 or 97.4%. 
+
+This prediction can also be backed-up based on analysis of the Scatter Plots produced earlier.
+
+##  
 
 
 ##  References
@@ -853,3 +892,4 @@ Next the user is asked to input a value to
 
 <a name="myfootnote30">30</a>: Stack Overflow - Random state (Pseudo-random number) in Scikit learn, <https://stackoverflow.com/questions/28064634/random-state-pseudo-random-number-in-scikit-learn>
 
+<a name="myfootnote31">31</a>: Avinash Navlani - KNN Classification using Scikit-learn, <https://www.datacamp.com/community/tutorials/k-nearest-neighbor-classification-scikit-learn>

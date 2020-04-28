@@ -1,7 +1,7 @@
 #John Paul Lee
 #Analysis of Iris Data Set
 
-#Created to explore the potential advanced use of the Iris Data Set
+#Created to explore the potential advanced use of the Iris Data Set - K-Nearest Neighbor Machine learning
 
 #Import Pandas for Data Management 
 import pandas as pd
@@ -33,30 +33,27 @@ y = df.iloc[:, 4].values
 #Divide the DataFrame into two subsets; a Training and Test set (75% training, 25% test), set the Random State at 1
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.25, random_state=1)
 
-
-#print("X Train Info:{}".format(x_train.shape))
-#print("Y Train Info:{}".format(y_train.shape))
-
-
-#print("X Test Info:{}".format(x_test.shape))
-#print("Y Test Info:{}".format(y_test.shape))
-
-#Use the knn.fit function to train the model.
+#The knn.fit function is used to train the model.
 knn.fit(x_train, y_train)
 
-#Ask the user to enter t
+#The user is asked to enter a value for the Sepal Length, Sepal Width, Petal Length and Petal Width
 a = float(input("Please enter a Sepal Length(Cm): "))
 b = float(input("Please enter a Sepal Width(Cm): "))
 c = float(input("Please enter a Petal Length(Cm): "))
 d = float(input("Please enter a Sepal Width(Cm): "))
 
+#The users inputs are grouped 
 x_new = np.array([[a, b, c, d]])
 
+#A prediction is made based on the users inputs
 prediction = (knn.predict(x_new))
 
+#The result of the prediction is displayed
 print("Based on your input the predicted Species is:", prediction)
 
-Accuracy = knn.score(x_test, y_test)
+#The mean accuracy of the predicted result is calculated and rounded to 3 decimal places
+Accuracy = round(knn.score(x_test, y_test),3)
 
+#The mean accuracy of the predicted result is displayed (rounded to 3 decimal places)
 print("The mean accuracy of this result is:", Accuracy)
 
