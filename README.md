@@ -1,19 +1,19 @@
 # Fisher\'s Iris Data Set 
 
-* Author: John Paul Lee
-* Github: JPLee01
-* Email: G00387906@gmit.ie
-* Created: 21-03-2020, Last update:
+* **Author:** John Paul Lee
+* **Github:** JPLee01
+* **Email:** G00387906@gmit.ie
+* **Created:** 21-03-2020, **Last update:** 30-04-2020
 ------------------------------------------------------------------------------------------------
-Programming and Scripting: Fisher’s Iris Data Set Project 2020
+**Programming and Scripting:** Fisher’s Iris Data Set Project 2020
 
 This repository details my research and findings to the Fisher’s Iris Data Set Project for Programming and Scripting 2020.
 
-Lecturer: Dr. Ian McLoughlin
+**Lecturer:** Dr. Ian McLoughlin
 
 The Project instructions can be found at: https://github.com/JPLee01/pandas-project/blob/master/Project%20Instructions.pdf
 
-Table of Contents
+**Table of Contents**
 ------------------------------------------------------------------------------------------------
 
 [Fisher\'s Iris Data Set](#fishers-iris-data-set)
@@ -28,7 +28,7 @@ Table of Contents
 
 [4. Problem Statement](#4-Problem-Statement)
 
-[5 Previous Case Studies of the Data Set](#5-Previous-Case-Studies-of-the-Data-Set)
+[5. Previous Case Studies of the Data Set](#5-Previous-Case-Studies-of-the-Data-Set)
 
 [6. Issues and Inconsistencies with Data Set](#6-Issues-and-Inconsistencies-with-Data-Set)
 
@@ -52,7 +52,9 @@ Table of Contents
 
 [9. Summary, Conclusion and Future Possibilities for the Data Set](#9-Summary,-Conclusion-and-Future-Possibilities-for-the-Data-Set)
 
-[References](#References)
+[10. References](#10-References)
+
+[11. Bibliography](#11-Bibliography)
 
 ## 1 Introduction
 ------------------------------------------------------------------------------------------------
@@ -72,24 +74,23 @@ located [here](https://github.com/JPLee01/pandas-project):
 
   **File**    |     **Description**
   ---------   |   --------------------------------------------------------
-  LICENSE     |    MIT License for the project
-  README.md   |    This file; A Description of the Project and Instructions
-  IrisData.csv |  Iris Flower Data Set
+  Visualisations | A folder containing all of the Plots of the Visualisation.py Program
+  .gitignore | A Text File explicitly explaining to Git which files or folders to ignore in the Project 
+  AdvancedUse.py | Python Program created to explore the potential advanced use of the Iris Data Set
   Analysis.py | Python Programme for carrying out analysis of the Iris Data set
   Analysis.txt | The results from the Analysis.py Program saved onto a Text File
-  Visualisation.py | Python Programme for creating visualisations of the Iris Data set
-  Visualisations | A folder containing all of the Plots of the Visualisation.py Program
-  Project Instructions.pdf | A PDF copy of the Project Instructions
-  .gitignore | A Text File explicitly explaining to Git which files or folders to ignore in the Project 
-  AdvanceUse.py | Python Program created to explore the potential advanced use of the Iris Data Set
   Interactive-Report.gif | Gif used in the Readme to highlight the Iris Data Interactive Report
   Interactive.py | Python Program for creating the Interactive Report of the Iris Data Set
   Iris Data Interactive Report.html | Interactive Report created through the Interactive.py program
+  IrisData.csv |  Iris Flower Data Set
+  LICENSE     |    MIT License for the project
+  Project Instructions.pdf | A PDF copy of the Project Instructions
+  README.md   |    This file; A Description of the Project and Instructions
+  Visualisation.py | Python Programme for creating visualisations of the Iris Data set
 
 ## 3 Fishers Iris Data Set
 ------------------------------------------------------------------------------------------------
 ### 3.1 Background
-
 The data analysed in this project is the \"Iris Flower Data
 Set\".<sup>[1](#myfootnote1)</sup> This data set was collected by R.A. Fisher and presented
 as a data set in 1936 in his paper \"The Use of Multiple Measurements in
@@ -126,7 +127,6 @@ As part of the assignmnent the student was given a set of instruction which can 
 ------------------------------------------------------------------------------------------------
 Through an oline search it can be seen that a number of previous iterations of the analysis of the data have taken place. These include programs written in Python as well as other computing language. Previous iteration referenced in the sutdy of this project were the works of Venkata Sai Reddy Avuluri<sup>[3](#myfootnote3)</sup> and Oluwasogo Oluwafemi Ogundowole<sup>[4](#myfootnote4)</sup> on Medium who demonstrates the use of Pandas, Numpy, Matplotlib and Seaborn for management of the Iris Data. As well as Binu<sup>[5](#myfootnote5)</sup> on Kaggle who demonstrates in further detail the visualisations which can be created from the Iris Data using Seaborn and Matplotlib.
 
-
 ##  6 Issues and Inconsistencies with Data Set
 ------------------------------------------------------------------------------------------------
 It should be noted that there are three inconsistencies between the data set sourced from UCI<sup>[1](#myfootnote1)</sup> and the data set presented by Fisher.<sup>[2](#myfootnote2)</sup> These three inconsistencies are as follows:
@@ -141,7 +141,6 @@ Please be advised that these three errors have not been rectified in the data se
 This section will describe the steps required to download and run the files in the repository.
 
 ### 7.1 Downloading the Repository
-
 The repository is stored at the following: https://github.com/JPLee01/pandas-project
 
 To download the repository, do the following:
@@ -238,7 +237,7 @@ virginica     50
 Name: species, dtype: int64 
 ```
 
-#### Print the First 10 Rows of Data
+####  Print the First 10 Rows of Data
 To display the first 10 rows of data from the data set the Pandas.DataFrame.head command is used within the code:
 ```
 print("Sample of the First 10 Rows of Data:")
@@ -412,7 +411,7 @@ min           4.900        2.200         4.500        1.400
 max           7.900        3.800         6.900        2.500 
 ```
 
-### To create a Text File and Save the Results of the Analysis.py to it
+#### To create a Text File and Save the Results of the Analysis.py to it
 In oder to create a text file and save the results to it we make use of the [Sys](https://docs.python.org/3/library/sys.html) module within Python.<sup>[7](#myfootnote7)</sup>
 1.  Fist at the begining of the program we import the sys module:
 ```
@@ -437,21 +436,21 @@ All Plots produced by the program are saved in .png formal to the Visualisations
 
   * Note that any exisiting Plots in the folder will be overwritten as new Plots are generated through the program. 
 
-#### Importing the Libaries
+####  Importing the Libaries
 As well as the libaires imported in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program the following extra libaries are imported to the Visualisation.py program:
 ```
 import matplotlib.pyplot as plt
 import seaborn as sns
 ```
 
-### Setting of Global Styles for Seaborn Plots
+####  Setting of Global Styles for Seaborn Plots
 Global styles are set for all Seaborn Plots in the program, this will allow for uniformity within the program:
 ```
 sns.set(style='darkgrid')
 sns.set_palette("colorblind",3)
 ```
 
-### Creation of a DataFrame
+####  Creation of a DataFrame
 The process in Analysis.py repeated and this DataFrame is further broken down into Species Specific Data Sets easier visualisation:
 ```
 SetosaData = df[df.species == "setosa"]
@@ -459,7 +458,7 @@ VersicolorData = df[df.species == "versicolor"]
 VirginicaData = df[df.species == "virginica"]
 ```
 
-### Creation of Histograms Comparing the Frequency of Sepal Length/Width and Petal Length/Width of Each of the Species
+####  Creation of Histograms Comparing the Frequency of Sepal Length/Width and Petal Length/Width of Each of the Species
 Histograms provide a visual interpretation of numerical data and are an excellent to highlight the normal distribution, outliers, skewness etc.<sup>[8](#myfootnote8)</sup> Histograms are created to allow for the quick comparison between the frequency of Sepal Length/Width and Petal Length/Width of each of the Species.
 
 To create a histogram comparing the frequency of Sepal Length/Width and Petal Length/Width of each of the Species the following code is executed:
@@ -491,7 +490,7 @@ The following plots will be produced as a result of the above code:
 As seen from the above Plots there is a concentration and overlap of the species within the Sepal Length (4-8 Cm) and Sepal Width (2-4.5 Cm) Histograms. However in the Petal Length and Width Histograms it can be seen that there is a differentiation between the Setosa species and the Versicolor and Virginica species.The Setosa species in the Petal Length and Width are concentrated is smaller size (Cm) than the other two species. 
 
 
-### Creation of Histograms complete with Density Plot Comparing the Sepal Length/Width and Petal Length/Width of Each of the Species
+####  Creation of Histograms complete with Density Plot Comparing the Sepal Length/Width and Petal Length/Width of Each of the Species
 Similiar to the above, the following histograms compare the Sepal Length/Width and Petal Length/Width of each of the Species with the addition of a Density Plot overlaid. 
 
 A Density Plot is a smoothed, continuous version of a histogram estimated from the data. The Density Plot is a variation of a Histogram that uses kernel smoothing to plot values, allowing for smoother distributions by smoothing out the noise.<sup>[9](#myfootnote9)</sup> 
@@ -524,8 +523,7 @@ The following plots will be produced as a result of the above code:
 ####  Observations 
 As seen from the above Plots the additon of the Density Plot offers greater clarity with regards areas of concentration. While in the previous Histograms, within any areas of concentration it was very difficult to make obserations because the process of stacking bars on top of another created confusion with regards to the position one bar ended and another continued. Also the stacking bars on top of another created the illusions of different colours which some individuals may take to mean additional species. The addition of the Density Plots however, allows for easier observations because the continuous density lines help the eye keep the distributions separate and also do not change colour where overlapping occurs.
 
-
-### Creation of Boxplots Displaying the Distribution of the Data of Each of the Species
+####  Creation of Boxplots Displaying the Distribution of the Data of Each of the Species
 A Boxplot (also known as a Box-and-Whisker Plot) displays a summary of a set of data containing the minimum, first quartile, median, third quartile, and maximum. In a box plot, we draw a box from the first quartile to the third quartile. A vertical line goes through the box at the median. The whiskers go from each quartile to the minimum or maximum. Additionally, outliers (if present) are shown by points outside the minimum and maximum lines.<sup>[11](#myfootnote11)</sup> A Boxplot is created for each of the species to display the distribution of data within each of the species and highlight any areas of commonality.
 
 To create a boxplots displaying the distribution of the data of each of the species the following code is executed:
@@ -608,7 +606,7 @@ While the Violin Plot may be slightly more complex concept than a Box Plot to un
 From the above Violin Plots it can be seen that the Virginica has the highest Median value in Patel length, Petal width and Sepal length, while the Setosa has the highest Sepal Width Median value. These observations are easier to make in a Violin Plot thanks to the white dot. 
 
 
-#### Creation of a a Scatter Plot depicting the relationship between Sepal/Petal Length and Sepal/Petal Width of each of the Species
+####  Creation of a a Scatter Plot depicting the relationship between Sepal/Petal Length and Sepal/Petal Width of each of the Species
 A Scatter Plot uses dots to represent values for two different numeric variables. The position of each dot on the horizontal and vertical axis indicates values for an individual data point. Scatter plots are used to observe relationships between variables.<sup>[14](#myfootnote14)</sup>
 
 If the data points show an "up-hill" pattern from left to right, then there is a positive correlation between X & Y. Conversely if the pattern is "downhill" there is a negative correlation between X & Y. If the dats is scattered then there is no relationship between the X & Y.<sup>[15](#myfootnote15)</sup>
@@ -638,7 +636,7 @@ The following plots will be produced as a result of the above code:
 From the Scatter Plots it can be seen that a positive correlation exists for all three species for the relationship between Petal Length and Petal Width. Also it can be seen that their is a large distinction between the Setosa species the other two species (Setosa occupys the lower left quartile for Petal Length and Petal Width and upper left  quartile for Sepal Length and Sepal Width). It can also be argued that while differentiation exists between Versicolor and Virgnica for the relationship between Petal Length and Petal Width (apart from a few outliers), for the the relationship between Sepal Length and Sepal Width it does not exist. 
 
 
-### Creation of a KDE Plot of each of the Species displayig Sepal/Petal Length Vs. Sepal/Petal Width
+####  Creation of a KDE Plot of each of the Species displayig Sepal/Petal Length Vs. Sepal/Petal Width
 A KDE (Kernel Density Estimate) Plot is used for visualizing the Probability Density of a specific variable.
 The plot can either be One-Dimensional or Two-Dimensional and is mainly used in the field of non-parametric analysis.<sup>[16](#myfootnote16)</sup>
 
@@ -671,8 +669,7 @@ The above KDE Plots highlight the observations made in the pervious plots with r
   * Note the KDE Plot could also have been constructed to include all species in one plot but due to the large overlaps this was decided against for aesthetic purposes. 
   * Please also note when running the Plots the following message is observed: "UserWarning: Passing a 2D dataset for a bivariate plot is deprecated in favor of kdeplot(x, y), and it will cause an error in future versions. Please update your code." This error can appear when dealing with Two-Dimensional representations and users should be aware of this when running the program.
 
-
-### Creation of a Pairplot of the Data Set
+####  Creation of a Pairplot of the Data Set
 A Pairplot is a plot in which one variable in the same data row is matched with another variable's value. Pairplots show all variables paired with all the other variables and allow users to see both distribution of single variables and relationships between two variables.<sup>[17](#myfootnote17)</sup> By creating a multigraph resperesntation of the data it is easy for the user to identify the differing relationships between the variable's.
 
 To create a Pairplot of the Data Set the following code is executed:
@@ -713,10 +710,10 @@ As well as the [Pandas](https://pandas.pydata.org/) libary imported in the [Anal
 from pandas_profiling import ProfileReport
 ```
 
-### Creation of a DataFrame
+####  Creation of a DataFrame
 The process in [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) is repeated for this program.
 
-### Creation of the Interactive Report
+####  Creation of the Interactive Report
 In order to create and save the Interactive Report the following code is executed:
 ```
 profile = ProfileReport(df, title="Iris Data Interactive Report", html={'style':{'full_width':True}})
@@ -745,16 +742,16 @@ Machine Learning is one area which has seen an explosion in recent years thanks 
 
 Within the Iris Data Set there is the potential to explore the possibilities Machine Learninng can offer. This can be seen in the articles by Felipe Trindade<sup>[24](#myfootnote24)</sup> and Muller and Guido<sup>[25](#myfootnote25)</sup> which were used as inspirations for this program. 
 
-#### Importing the Libaries
+####  Importing the Libaries
 As well as the [Pandas](https://pandas.pydata.org/) and [Numpy](https://www.numpy.org/) libaries imported in the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) and [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) programs the following extra libary is imported to the AdvancedUse.py program:
 ```
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 ```
-### Creation of a DataFrame
+####  Creation of a DataFrame
 The process in [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) is repeated for this program.
 
-### Implementation of Machine Learning - K-Nearest Neighbors (KNN)
+####  Implementation of Machine Learning - K-Nearest Neighbors (KNN)
 This program will look at the machine learning algorithm of K-Nearest Neighbors (KNN). KNN is a supervised machine learning algorithm that can be used to solve both classification and regression problems. It is a non-parametric method, where an unknown sample is classified according to a class belonging to the majority of its neighbors, i.e. if K (Number selected for nearest neighbors) = 1, then the case is simply assigned to the class of its nearest neighbor.<sup>[26](#myfootnote26)</sup> Around since the 1970's KNN can be used for both classification and regression predictive problems.<sup>[27](#myfootnote27)</sup> A visual representation of KNN can be viewed below:
 
 <img align="center" width="500" height="500" img src="https://machinelearningknowledge.ai/wp-content/uploads/2018/08/KNN-Classification.gif">
@@ -770,7 +767,7 @@ As we have 150 samples of data (N), K is the sqrt(150), which is 12.24744874. Ho
 knn = KNeighborsClassifier(n_neighbors=13)
 ```
 
-### Creation of the K-Nearest Neighbors Algorithm
+####  Creation of the K-Nearest Neighbors Algorithm
 Once the value for K has been identified the next step is to slice the DataFrame and to split the Data Columns (Sepal Length, Sepal Width, Petal Length, Petal Width) from the Species Column. The Data Columns once split is designated x, while the Species Column is designated y. This is achieved through the following code:
 ```
 x = df.iloc[:, :-1].values
@@ -813,7 +810,7 @@ Accuracy = round(knn.score(x_test, y_test),3)
 print("The mean accuracy of this result is:", Accuracy)
 ```
 
-### Working Example
+####  Working Example
 To demonstrate the model in action the following is an example of the results generated from the following measurments entered by the user: Sepal Length 5.8 cm, Sepal Width 2.7 cm, Petal Length 1.3 cm and Sepal Width 3.1 cm.
 ```
 Please enter a Sepal Length(Cm): 5.8
@@ -844,20 +841,18 @@ The [Iris Data Interactive Report](https://github.com/JPLee01/pandas-project/blo
 The invstigation of the K-Nearest Neighbors (KNN) algorithm in the [AdvancedUse.py](https://github.com/JPLee01/pandas-project/blob/master/AdvancedUse.py) program highlights to the user the possibility of implementing Machine Learning on the Data Set and the opportunities it can create. 
 
 ####  Conclusion
-In conclusion within this project the author attempted to analyse the Iris Data Set using Python and a number of libaries for data analysis. As the author had no computing or data analysis experience prior to the commencement of the course extensive research was undertaken. This resulted in the author gaining an experience, understanding and overall insight into data analysis. The author now feels a level of confidence with regards to data analysis which was not present before undertaking the project.In essence the entire experience associated with the project can be summarised by the following Carly Fiorina quote “The goal is to turn data into information, and information into insight”<sup>[32](#myfootnote32)</sup>.
+In conclusion within this project the author attempted to analyse the Iris Data Set using Python and a number of libaries for data analysis. As the author had no computing or data analysis experience prior to the commencement of the course extensive research was undertaken. This resulted in the author gaining an experience, understanding and overall insight into data analysis. The author now feels a level of confidence with regards to data analysis which was not present before undertaking the project.In essence the entire experience associated with the project can be summarised by the following Carly Fiorina quote *“The goal is to turn data into information, and information into insight”*<sup>[32](#myfootnote32)</sup>.
 
 ####  Future Possibilities for the Data Set
 Due to time constraints three areas the author was investigating were not implemented into the project. These included:
-  1.  The ability the export Plots to a PDF file - Similarly to the [Analysis.txt](https://github.com/JPLee01/pandas-project/blob/master/Analysis.txt) file created from the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program the author attempted to create a PDF file in which the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) programs outputs would have produced to. This the author felt would have enhanced the project as it could offer the user the opportunity to create a download a file which contained all the plots. Unfortunately the author was not able to achieve this. The ability the export Plots to a PDF file was discussed in a Data to Fish article which the author had used in the investigation<sup>[33](#myfootnote33)</sup>.
-  2.  Implementation of the Cufflinks library into the Project - The ability to implement the cufflinks libary the author felt would have greatly imporved the project, particially data available through the Plots. Despite repeated attempts the author was not able to successfully implement the library. The ability to implement the Cufflinks library was originally discovered by the author through a Peter Nistrup article<sup>[34](#myfootnote34)</sup>, and was further investigated through the official Cufflinks webpage<sup>[35](#myfootnote35)</sup>.
-  3.  Implementation of the Dash Platform into the Project - Within the same Peter Nistrup article<sup>[34](#myfootnote34)</sup> the Dash Platform and its capabilities was also discovered. Similarly to implementing the Cufflinks library the author feels the implemetation of the Dash platform would have greatly enhanced the data analysis capability of the project. While the official Dash webpage<sup>[36](#myfootnote36)</sup> offers a guide regards implementation and use, the author felt this was perhaps beyond thier current technical capability, and would require further research to implement.
+  1.  **The ability the export Plots to a PDF file** - Similarly to the [Analysis.txt](https://github.com/JPLee01/pandas-project/blob/master/Analysis.txt) file created from the [Analysis.py](https://github.com/JPLee01/pandas-project/blob/master/Analysis.py) program the author attempted to create a PDF file in which the [Visualisation.py](https://github.com/JPLee01/pandas-project/blob/master/Visualisation.py) programs outputs would have produced to. This the author felt would have enhanced the project as it could offer the user the opportunity to create a download a file which contained all the plots. Unfortunately the author was not able to achieve this. The ability the export Plots to a PDF file was discussed in a Data to Fish article which the author had used in the investigation<sup>[33](#myfootnote33)</sup>.
+  2.  **Implementation of the Cufflinks library into the Project** - The ability to implement the cufflinks libary the author felt would have greatly imporved the project, particially data available through the Plots. Despite repeated attempts the author was not able to successfully implement the library. The ability to implement the Cufflinks library was originally discovered by the author through a Peter Nistrup article<sup>[34](#myfootnote34)</sup>, and was further investigated through the official Cufflinks webpage<sup>[35](#myfootnote35)</sup>.
+  3.  **Implementation of the Dash Platform into the Project** - Within the same Peter Nistrup article<sup>[34](#myfootnote34)</sup> the Dash Platform and its capabilities was also discovered. Similarly to implementing the Cufflinks library the author feels the implemetation of the Dash platform would have greatly enhanced the data analysis capability of the project. While the official Dash webpage<sup>[36](#myfootnote36)</sup> offers a guide regards implementation and use, the author felt this was perhaps beyond thier current technical capability, and would require further research to implement.
 
 The author feels there three areas would have enhanced the project greatly should they have been implemented. If more time had been availalbe it was the authors intention to implement all three areas fully into the project. 
 
 
-
-
-##  References
+##  10 References
 ------------------------------------------------------------------------------------------------
 
 <a name="myfootnote1">1</a>: UCI Machine Learning Repository - Iris Data Set, <http://archive.ics.uci.edu/ml/datasets/Iris>
@@ -931,3 +926,65 @@ The author feels there three areas would have enhanced the project greatly shoul
 <a name="myfootnote35">35</a>: Cufflinks Library, <https://plotly.com/python/cufflinks/>
 
 <a name="myfootnote36">36</a>: Dash Platform, <https://plotly.com/dash/>
+
+
+##  11 Bibliography
+------------------------------------------------------------------------------------------------
+
+Within the course of this project the following sources were also used for research purposes:
+
+* CMD Line Tips - How to Make Boxplots in Python with Pandas and Seaborn?, <https://cmdlinetips.com/2018/03/how-to-make-boxplots-in-python-with-pandas-and-seaborn/>
+
+* Code Cademy - Where do images get saved in Matplotlib when using savefig?, <https://discuss.codecademy.com/t/where-do-images-get-saved-in-matplotlib-when-using-savefig/353086>
+
+* Corey Schafer - Matplotlib Tutorial (Part 2): Bar Charts and Analyzing Data from CSVs, <https://www.youtube.com/watch?v=nKxLfUrkLE8>
+
+* CS Dojo - Intro to Data Analysis / Visualization with Python, Matplotlib and Pandas. Matplotlib Tutorial, <https://www.youtube.com/watch?v=a9UrKTVEeZA&t=747s>
+
+* Dataquest - Pandas Cheat Sheet, Python for Data Science, <https://www.dataquest.io/blog/pandas-cheat-sheet/>
+
+* Data Camp - Seabon Cheat Sheet, <https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Seaborn_Cheat_Sheet.pdf>
+
+* Geeks for Geeks - Print lists in Python (4 Different Ways), <https://www.geeksforgeeks.org/print-lists-in-python-4-different-ways/>
+
+* Geeks for Geeks - Python Pandas DataFrame, <https://www.geeksforgeeks.org/python-pandas-dataframe/>
+
+* Github - Creating and highlighting Code Blocks, <https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks>
+
+* Github David Wells - Aligning images, <https://gist.github.com/DavidWells/7d2e0e1bc78f4ac59a123ddf8b74932d>
+
+* Karlijn Willems - Pandas Tutorial: DataFrames in Python, <https://www.datacamp.com/community/tutorials/pandas-tutorial-dataframe-python>
+
+* Keith Galli - Complete Python Pandas Data Science Tutorial! (Reading CSV/Excel files, Sorting, Filtering, Groupby), <https://www.youtube.com/watch?v=vmEHCJofslg&feature=youtu.be>
+
+* Kite - How to import Stdout, <https://kite.com/python/docs/sys.stdout/>
+
+* Kite - How to redirect print output to a text file in Python <https://kite.com/python/answers/how-to-redirect-print-output-to-a-text-file-in-python>
+
+* Markdown Guide - Markdown Syntax, <https://www.markdownguide.org/basic-syntax/#overview>
+
+* Mathplotlib - Tight Layout guide, <https://matplotlib.org/3.2.1/tutorials/intermediate/tight_layout_guide.html>
+
+* note.nkmk.me - Pandas Head, Tail, Slice, <https://note.nkmk.me/en/python-pandas-head-tail/>
+
+* Python Basics - Seaborn Distplot, <https://pythonbasics.org/seaborn-distplot/>
+
+* Seaborn.boxplot, <https://seaborn.pydata.org/generated/seaborn.boxplot.html>
+
+* Seaborn.kdeplot, <https://seaborn.pydata.org/generated/seaborn.kdeplot.html#seaborn-kdeplot>
+
+* Seaborn.pairgrid, <https://seaborn.pydata.org/generated/seaborn.PairGrid.html>
+
+* Seaborn.pairplot, <https://seaborn.pydata.org/generated/seaborn.pairplot.html>
+
+* Seaborn.scatterplot, <https://seaborn.pydata.org/generated/seaborn.scatterplot.html>
+
+* Seaborn - Visualizing the distribution of a Dataset, <https://seaborn.pydata.org/tutorial/distributions.html>
+
+* Stack Overflow - Plot two histograms on single chart with Matplotlib, <https://stackoverflow.com/questions/6871201/plot-two-histograms-on-single-chart-with-matplotlib>
+
+* Stack Overflow - Round each number in a Python Pandas data frame by 2 decimals, <https://stackoverflow.com/questions/25272024/round-each-number-in-a-python-pandas-data-frame-by-2-decimals>
+
+* The Python Graph Gallery - Histogram with several variables, <https://python-graph-gallery.com/25-histogram-with-several-variables-seaborn/>
+
+* Towards Data Science - Pandas DataFrame: Playing with CSV files, <https://towardsdatascience.com/pandas-dataframe-playing-with-csv-files-944225d19ff>

@@ -73,25 +73,5 @@ print("Summary Statistics for Virginica (Rounded to 3 Decimal Places):")
 #Rounded to 3 Decimal Places using the Round command
 print(round(virginica.describe(),3),'\n')
 
-#Close and Save the Analyisi Text File
+#Close and Save the Analyisis Text File
 sys.stdout.close()
-
-
-
-
-
-
-
-
-
-#References:
-#DataFrame: https://www.geeksforgeeks.org/python-pandas-dataframe/
-#DataFrame: https://www.datacamp.com/community/tutorials/pandas-tutorial-dataframe-python
-#Lists: https://www.geeksforgeeks.org/print-lists-in-python-4-different-ways/
-#Pandas Head, Tail, Slice: https://note.nkmk.me/en/python-pandas-head-tail/
-#Pandas Cheat Sheet: https://www.dataquest.io/blog/pandas-cheat-sheet/
-#Pandas Rounding of Describe Result: https://stackoverflow.com/questions/25272024/round-each-number-in-a-python-pandas-data-frame-by-2-decimals
-#How to Save the  "Print Results" to a text file: https://kite.com/python/answers/how-to-redirect-print-output-to-a-text-file-in-python
-#How to import Stdout: https://kite.com/python/docs/sys.stdout/
-#General Refernce: https://www.youtube.com/watch?v=vmEHCJofslg&feature=youtu.be
-#How to use CSV files: https://towardsdatascience.com/pandas-dataframe-playing-with-csv-files-944225d19ff

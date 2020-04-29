@@ -10,15 +10,10 @@ import pandas as pd
 #Import Numpty for Analysis of the data 
 import numpy as np
 
-#Import Sys to allow the Plots to be written to a PDF File
-#import sys
-
-#Import matplotlib.pyplot, seaborn and polly.express for Visualisation of the data 
+#Import matplotlib.pyplot and seaborn for Visualisation of the data 
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-#Create a Txt File called Visualisation and excute the Write Function (Allows the "Plots" to be written onto the Visualisation PDF File)
-#sys.stdout = open("Visualisation.docx", "w")
 
 
 #Set a global style for all the Seaborn Plots in the program
@@ -36,10 +31,6 @@ SetosaData = df[df.species == "setosa"]
 VersicolorData = df[df.species == "versicolor"]
 VirginicaData = df[df.species == "virginica"]
 
-
-#Create a PDF File called Visualisation and excute the Write Function (Allows the "Plots" to be written onto the Visualisation PDF File)
-#from matplotlib.backends.backend_pdf import PdfPages
-#pp = PdfPages('Visualisation.pdf')
 
 #Create a Histogram Comparing the Frequency of Sepal Width of Each of the Species
 #Use Numpy Linspace command to set the start and end point as well as the specify the number of intervals (30 chosen to allow for 10 for each specie)
@@ -393,51 +384,3 @@ plt.suptitle("Pair Plot for Dataset", fontsize = 20)
 plt.savefig("Visualisations/Pairplot of the Data Set.png")
 #The Figure is displayed
 plt.show()
-
-
-
-
-
-
-
-
-
-
-
-#Close and Save the Visualisation PDF File
-#pp.close()
-
-
-
-
-
-
-
-
-
-
-
-#References:
-#General Reference: https://www.youtube.com/watch?v=nKxLfUrkLE8
-#General Reference: https://www.youtube.com/watch?v=a9UrKTVEeZA&t=747s
-#General Reference: https://www.kaggle.com/biphili/seaborn-matplotlib-plot-to-visualize-iris-data
-#General Reference: https://www.kaggle.com/kstaud85/iris-data-visualization
-#Violin Plot: https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
-#Plotting of two Histrograms on a Single Chart: https://stackoverflow.com/questions/6871201/plot-two-histograms-on-single-chart-with-matplotlib
-#Seabon Cheat Sheet: https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Seaborn_Cheat_Sheet.pdf
-#Use of plotly.express for Scatter Plots: https://coderzcolumn.com/tutorials/data-science/build-dashboard-using-python-dash-plotly-and-deploy-online-pythonanywhere
-#Use of plotly.express  advanced/interactive Plots: https://plotly.com/python/plotly-express/
-#Box Plots: https://cmdlinetips.com/2018/03/how-to-make-boxplots-in-python-with-pandas-and-seaborn/
-#Box Plots: https://seaborn.pydata.org/generated/seaborn.boxplot.html
-#Scatterplots: https://seaborn.pydata.org/generated/seaborn.scatterplot.html
-#Seaborn.kdeplot: https://seaborn.pydata.org/generated/seaborn.kdeplot.html#seaborn-kdeplot
-#Pairplots: https://seaborn.pydata.org/generated/seaborn.pairplot.html
-#Pairgrid (Change layout results within the Pairplot): https://seaborn.pydata.org/generated/seaborn.PairGrid.html
-#Pairgrid (Change layout results within the Pairplot): https://seaborn.pydata.org/tutorial/distributions.html
-#Histrogram: https://python-graph-gallery.com/25-histogram-with-several-variables-seaborn/
-#Histrogram: https://pythonbasics.org/seaborn-distplot/
-#Plt.tigh_layout: https://matplotlib.org/3.2.1/tutorials/intermediate/tight_layout_guide.html
-#Saving Images to a Sub Folder: https://discuss.codecademy.com/t/where-do-images-get-saved-in-matplotlib-when-using-savefig/353086
-#Aligning Plots: https://gist.github.com/DavidWells/7d2e0e1bc78f4ac59a123ddf8b74932d
-#Creating and Highlighting Code in Readme: https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks
-#Markdown Syntax: https://www.markdownguide.org/basic-syntax/#overview
