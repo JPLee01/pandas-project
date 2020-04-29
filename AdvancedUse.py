@@ -49,7 +49,7 @@ x_new = np.array([[a, b, c, d]])
 prediction = (knn.predict(x_new))
 
 #The result of the prediction is displayed
-print("Based on your input the predicted Species is:", prediction)
+print("Based on your input the predicted species is:", prediction)
 
 #The mean accuracy of the predicted result is calculated and rounded to 3 decimal places
 Accuracy = round(knn.score(x_test, y_test),3)
